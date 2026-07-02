@@ -4,8 +4,7 @@ on:
   schedule:
     # 매일 오전 9시 KST (= UTC 00:00)
     - cron: '0 0 * * *'
-  # 수동 실행 (GitHub Actions 탭에서 "Run workflow" 버튼)
-  workflow_dispatch:
+  workflow_dispatch:  # Actions 탭 "Run workflow" 버튼으로 수동 실행 가능
 
 permissions:
   contents: write
@@ -28,25 +27,47 @@ jobs:
       - name: 📥 의존성 설치
         run: pip install -r crawler/requirements.txt
 
+      - name: 🛡 봇 우회 헤더 검증 (디버그)
+        run: |
+          python -c "
+          import requests
+          hdrs = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
+            'Accept-Language': 'ko-KR,ko;q=0.9',
+            'sec-ch-ua': '\"Google Chrome\";v=\"125\"',
+            'Sec-Fetch-Dest': 'document',
+            'Sec-Fetch-Mode': 'navigate',
+          }
+          r = requests.get('https://linkareer.com', headers=hdrs, timeout=20)
+          print(f'링커리어 홈 HTTP {r.status_code} ({len(r.text)} bytes)')
+          "
+
       - name: 🕷 크롤러 실행
-        # 크롤링이 실패해도 기존 data.json 유지 (continue-on-error)
+        # 크롤링이 실패해도 기존 data.json 유지
         continue-on-error: true
         run: python crawler/crawler.py
 
       - name: 📊 수집 결과 확인
         run: |
           if [ -f data.json ]; then
-            echo "✅ data.json 생성됨"
             python -c "
           import json
+          from datetime import date
           with open('data.json') as f:
               d = json.load(f)
-          print(f'  총 {d[\"total\"]}건, 업데이트: {d[\"updated\"]}')
+          print(f'총 {d[\"total\"]}건  |  업데이트: {d[\"updated\"]}')
           cats = {}
           for item in d['items']:
               cats[item['cat']] = cats.get(item['cat'], 0) + 1
+          labels = {'ship':'조선/기계','ai':'AI/IoT','media':'영상','global':'해외인턴','corp':'대기업인턴','scholar':'장학금','activity':'대외활동'}
           for k, v in cats.items():
-              print(f'  {k}: {v}건')
+              print(f'  {labels.get(k,k)}: {v}건')
+          # 마감 지난 항목 검사
+          expired = [i for i in d['items'] if date.fromisoformat(i['deadline']) < date.today()]
+          if expired:
+              print(f'⚠ 마감 지난 항목 {len(expired)}건 포함됨 (버그)')
+          else:
+              print('✅ 모든 항목 지원 가능 상태 확인')
             "
           else
             echo "⚠ data.json 없음 (크롤링 실패)"
@@ -60,6 +81,6 @@ jobs:
           if git diff --staged --quiet; then
             echo "변경 없음 — 커밋 스킵"
           else
-            git commit -m "🔄 Auto-update $(date '+%Y-%m-%d %H:%M KST')"
+            git commit -m "🔄 Auto-update $(date -u '+%Y-%m-%d %H:%M UTC') — $(python -c \"import json; d=json.load(open('data.json')); print(str(d['total'])+'건')\")"
             git push
           fi
