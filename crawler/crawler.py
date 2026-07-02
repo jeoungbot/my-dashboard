@@ -342,10 +342,10 @@ def scrape_linkareer() -> list[dict]:
     print("📡 링커리어 크롤링...")
     _warm_up(LINKAREER_BASE)
 
+    # 장학금(/list/scholarship)은 링커리어 서버 자체 504 상태 → 제외
     pages = [
-        (f"{LINKAREER_BASE}/list/contest",    "공모전"),
-        (f"{LINKAREER_BASE}/list/club",       "대외활동"),
-        (f"{LINKAREER_BASE}/list/scholarship", "장학금"),
+        (f"{LINKAREER_BASE}/list/contest", "공모전"),
+        (f"{LINKAREER_BASE}/list/club",    "대외활동"),
     ]
 
     results = []
@@ -353,17 +353,25 @@ def scrape_linkareer() -> list[dict]:
         print(f"  → {hint}: {url}")
         soup = fetch(url)
         if not soup:
-            print(f"     수집 실패")
+            print(f"     ✖ 수집 실패 — 다음 페이지로 진행")
             continue
 
-        # 봇 차단 여부 진단
+        # 봇 차단 여부 진단 (본문에 Access Denied 문자열 포함 시)
         page_text = soup.get_text()
         if "access denied" in page_text.lower() or "captcha" in page_text.lower():
-            print(f"     ⚠  봇 차단 응답 수신 (Access Denied / Captcha)")
+            print(f"     ⚠  봇 차단 응답 감지 (Access Denied/Captcha)")
+            print(f"        응답 미리보기: {page_text[:200]!r}")
+            continue
+
+        # __NEXT_DATA__ 존재 여부로 정상 응답 확인
+        nd_tag = soup.find("script", id="__NEXT_DATA__")
+        if not nd_tag:
+            print(f"     ⚠  __NEXT_DATA__ 없음 — 비정상 응답 (HTTP 차단 가능성)")
+            print(f"        본문 미리보기: {soup.get_text()[:200]!r}")
             continue
 
         items = _apollo_items(soup, hint)
-        print(f"     {len(items)}건 (지원 가능)")
+        print(f"     {len(items)}건 (지원 마감일 기준, 활성)")
         results.extend(items)
 
     return results

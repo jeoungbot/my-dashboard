@@ -103,20 +103,16 @@
     }
     .refresh-btn:hover { border-color: var(--accent); color: var(--accent); }
 
-    /* ===== 주의 배너 (샘플 모드) ===== */
-    .notice {
-      background: #fffbeb; border: 1.5px solid #fcd34d;
-      border-radius: var(--rs); padding: 12px 16px;
-      margin-bottom: 16px; font-size: 13px; color: #92400e;
-      display: flex; align-items: flex-start; gap: 10px; line-height: 1.6;
+    /* ===== 빈 상태 배너 (data.json 없을 때) ===== */
+    .empty-banner {
+      background: var(--surface); border: 1.5px solid var(--border);
+      border-radius: var(--r); padding: 52px 24px;
+      text-align: center; color: var(--sub);
+      grid-column: 1 / -1;
     }
-    [data-theme="dark"] .notice { background: #422006; border-color: #78350f; color: #fcd34d; }
-    .notice-ico { font-size: 17px; flex-shrink: 0; }
-    .notice-close {
-      margin-left: auto; flex-shrink: 0; background: none; border: none;
-      color: inherit; font-size: 17px; opacity: .6; padding: 0; line-height: 1;
-    }
-    .notice-close:hover { opacity: 1; }
+    .empty-banner .eb-ico { font-size: 52px; margin-bottom: 16px; }
+    .empty-banner h3 { font-size: 17px; font-weight: 700; color: var(--text); margin-bottom: 8px; }
+    .empty-banner p  { font-size: 13.5px; line-height: 1.7; }
 
     /* ===== 조선/기계 특별 섹션 ===== */
     .featured {
@@ -391,16 +387,6 @@
     <button class="refresh-btn" onclick="loadData(true)">🔄 새로고침</button>
   </div>
 
-  <!-- 샘플 모드 경고 (data.json 없을 때) -->
-  <div class="notice" id="sampleNotice" style="display:none">
-    <span class="notice-ico">⚠️</span>
-    <div>
-      <b>샘플 데이터 표시 중</b> — 실제 공모전 데이터를 가져오지 못했습니다.<br>
-      GitHub Actions가 설정되면 매일 링커리어·공모전코리아에서 자동 수집됩니다.
-      직접 찾은 공모전은 <b>＋ 공고 추가</b> 버튼으로 등록하세요.
-    </div>
-    <button class="notice-close" onclick="this.closest('.notice').style.display='none'">✕</button>
-  </div>
 
   <!-- 조선/기계 특별 섹션 -->
   <div class="featured" id="featuredSection">
@@ -519,119 +505,45 @@ const CATS = {
 };
 
 // ════════════════════════════════════════════════════════
-// 샘플 폴백 데이터 (data.json fetch 실패 시 사용)
-// ════════════════════════════════════════════════════════
-function futureDate(days) {
-  const d = new Date();
-  d.setDate(d.getDate() + days);
-  return d.toISOString().slice(0,10);
-}
-
-const SAMPLE = [
-  { id:'s1', cat:'ship',
-    title:'한화오션 신입사원 채용 (조선해양)',
-    org:'한화오션', deadline:futureDate(14),
-    url:'https://recruit-hanwhaocean.com/ko/2026newrecruits',
-    src:'한화오션 채용 홈', desc:'조선해양 전공 대학(원)생 신입채용. 설계·생산관리·R&D 직무.', tags:['신입','조선해양','설계'] },
-  { id:'s2', cat:'corp',
-    title:'삼성전자 DS부문 대학생 인턴',
-    org:'삼성전자', deadline:futureDate(1),
-    url:'https://linkareer.com/activity/307270',
-    src:'링커리어', desc:'DS부문 반도체 직무 대학생 인턴. 서류→GSAT→면접.', tags:['삼성DS','반도체','하계인턴'] },
-  { id:'s3', cat:'corp',
-    title:'현대자동차 채용전환형 하계 인턴십',
-    org:'현대자동차', deadline:futureDate(40),
-    url:'https://linkareer.com/activity/317673',
-    src:'링커리어', desc:'졸업예정자 대상. 연구개발·생산기술·사업기획 36개 직무.', tags:['현대차','채용전환','하계'] },
-  { id:'s4', cat:'global',
-    title:'KOTRA 2기 체험형 청년인턴 모집',
-    org:'KOTRA', deadline:futureDate(3),
-    url:'https://kotra.applyin.co.kr/jobs/21406',
-    src:'KOTRA 채용 공고', desc:'2026년 2기 체험형 청년인턴 75명 모집. 서울 본사 및 지방.', tags:['KOTRA','청년인턴','체험형'] },
-  { id:'s5', cat:'corp',
-    title:'SK하이닉스 인턴십',
-    org:'SK하이닉스', deadline:futureDate(26),
-    url:'https://recruit.skhynix.com/',
-    src:'SK하이닉스 채용 홈', desc:'반도체 제조/R&D 직무 인턴십. 이천/청주 근무.', tags:['반도체','인턴','R&D'] },
-  { id:'s6', cat:'corp',
-    title:'포스코 하계 스틸캠프 인턴십',
-    org:'POSCO', deadline:futureDate(62),
-    url:'https://recruit.posco.com/',
-    src:'포스코 채용 홈', desc:'포항/광양 체험형 인턴십. 생산기술·설비·공정 직무.', tags:['POSCO','스틸캠프','포항'] },
-  { id:'s7', cat:'scholar',
-    title:'한국장학재단 국가장학금 2학기',
-    org:'한국장학재단', deadline:futureDate(2),
-    url:'https://www.kosaf.go.kr/',
-    src:'한국장학재단 공식 홈', desc:'2026학년도 2학기 국가장학금. 소득분위별 차등 지급.', tags:['국가장학금','1유형','2유형'] },
-  { id:'s8', cat:'activity',
-    title:'KOTRA 대학(원)생 블로그 에디터',
-    org:'KOTRA', deadline:futureDate(22),
-    url:'https://linkareer.com/activity/319183',
-    src:'링커리어', desc:'KOTRA 해외경제정보 블로그 에디터 10명. 원고료 월 10만원.', tags:['KOTRA','에디터','블로그'] },
-  { id:'s9', cat:'activity',
-    title:'갤럭시 대학생 서포터즈 모집',
-    org:'삼성전자', deadline:futureDate(13),
-    url:'https://linkareer.com/activity/280666',
-    src:'링커리어', desc:'갤럭시 브랜드 홍보 대학생 서포터즈. SNS 콘텐츠 제작.', tags:['서포터즈','갤럭시','SNS'] },
-  { id:'s10', cat:'ship',
-    title:'한국선급(KR) 기술논문 공모전',
-    org:'한국선급', deadline:futureDate(32),
-    url:'https://www.krs.co.kr/',
-    src:'한국선급 공식 홈', desc:'선박 안전·스마트선박 기술 논문 공모. IMO 규정 연구 우대.', tags:['논문','선박안전','IMO'] },
-];
-
-// ════════════════════════════════════════════════════════
 // 상태
 // ════════════════════════════════════════════════════════
 const S = {
   tab: 'all',
   query: '',
-  isSample: false,
-  liveItems: [],       // data.json에서 가져온 실시간 데이터
+  liveItems: [],
   custom: JSON.parse(localStorage.getItem('custom') || '[]'),
   bookmarks: new Set(JSON.parse(localStorage.getItem('bms') || '[]')),
-  lastUpdated: null,
 };
 
 function allEntries() {
-  const base = S.liveItems.length > 0 ? S.liveItems : SAMPLE;
-  return [...base, ...S.custom];
+  return [...S.liveItems, ...S.custom];
 }
 
 // ════════════════════════════════════════════════════════
 // 데이터 로딩 (data.json fetch)
 // ════════════════════════════════════════════════════════
 async function loadData(force = false) {
-  const dot = document.getElementById('liveDot');
+  const dot  = document.getElementById('liveDot');
   const info = document.getElementById('updateInfo');
   info.textContent = '데이터 불러오는 중…';
 
   try {
-    // cache-bust only on force refresh
     const url = force ? `./data.json?t=${Date.now()}` : './data.json';
     const res = await fetch(url);
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const json = await res.json();
 
-    const items = json.items || [];
-    if (items.length === 0) throw new Error('항목 없음');
-
+    const items = (json.items || []);
     S.liveItems = items;
-    S.isSample = false;
-    S.lastUpdated = json.updated;
 
     dot.classList.remove('offline');
-    const updated = json.updated ? json.updated.slice(0,16).replace('T', ' ') : '?';
+    const updated = json.updated ? json.updated.slice(0,16).replace('T',' ') : '?';
     info.innerHTML = `<b>${items.length}건</b> 수집됨 · 마지막 업데이트 <b>${updated}</b>`;
-    document.getElementById('sampleNotice').style.display = 'none';
 
   } catch (e) {
-    // 폴백: 샘플 데이터 사용
     S.liveItems = [];
-    S.isSample = true;
     dot.classList.add('offline');
-    info.innerHTML = '실시간 데이터 없음 · <b>샘플 데이터</b> 표시 중 (GitHub Actions 설정 필요)';
-    document.getElementById('sampleNotice').style.display = 'flex';
+    info.innerHTML = '데이터를 불러오지 못했습니다 · GitHub Actions 실행 후 새로고침 해주세요';
   }
 
   render();
@@ -777,12 +689,20 @@ function renderCards() {
   rc.innerHTML = `총 <b>${list.length}건</b>${!showExp && expiredCount > 0 ? ` (마감 ${expiredCount}건 숨김)` : ''}`;
 
   if (!list.length) {
-    grid.innerHTML = `
-      <div class="empty">
-        <div class="empty-ico">🔍</div>
-        <h3>공고가 없습니다</h3>
-        <p>다른 카테고리를 선택하거나 직접 공고를 추가해보세요.</p>
-      </div>`;
+    const noLive = S.liveItems.length === 0 && S.custom.length === 0;
+    grid.innerHTML = noLive
+      ? `<div class="empty-banner">
+           <div class="eb-ico">📭</div>
+           <h3>현재 수집된 공고가 없습니다</h3>
+           <p>GitHub Actions가 아직 실행되지 않았거나 데이터 수집에 실패했습니다.<br>
+              Actions 탭에서 워크플로를 수동 실행하거나,<br>
+              <b>＋ 공고 추가</b> 버튼으로 직접 공고를 등록할 수 있습니다.</p>
+         </div>`
+      : `<div class="empty-banner">
+           <div class="eb-ico">🔍</div>
+           <h3>검색 결과가 없습니다</h3>
+           <p>다른 카테고리를 선택하거나 검색어를 바꿔보세요.</p>
+         </div>`;
     return;
   }
 
