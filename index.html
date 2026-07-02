@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🚢 내 공모전·인턴십 대시보드</title>
+  <style>
+    /* ===== 테마 변수 ===== */
+    :root {
+      --bg: #f0f4f8; --surface: #fff; --surface2: #f8fafc;
+      --text: #1a202c; --sub: #64748b; --border: #e2e8f0;
+      --accent: #2563eb; --accent-h: #1d4ed8; --ship: #0f4c81;
+      --r: 14px; --rs: 9px;
+      --sh: 0 1px 3px rgba(0,0,0,.08); --sh-lg: 0 10px 30px rgba(0,0,0,.12);
+    }
+    [data-theme="dark"] {
+      --bg: #0f172a; --surface: #1e293b; --surface2: #0f172a;
+      --text: #f1f5f9; --sub: #94a3b8; --border: #334155;
+      --accent: #3b82f6; --accent-h: #2563eb; --ship: #60a5fa;
+      --sh: 0 1px 3px rgba(0,0,0,.3); --sh-lg: 0 10px 30px rgba(0,0,0,.4);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo',
+                   'Noto Sans KR', sans-serif;
+      background: var(--bg); color: var(--text);
+      line-height: 1.55; transition: background .3s, color .3s;
+    }
+    button { font-family: inherit; cursor: pointer; }
+    ::-webkit-scrollbar { width: 5px; height: 5px; }
+    ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+    /* ===== 헤더 ===== */
+    header {
+      background: var(--surface); border-bottom: 1px solid var(--border);
+      position: sticky; top: 0; z-index: 200; box-shadow: var(--sh);
+    }
+    .hdr {
+      max-width: 1440px; margin: 0 auto; padding: 0 24px;
+      height: 62px; display: flex; align-items: center; gap: 14px;
+    }
+    .logo {
+      display: flex; align-items: center; gap: 9px;
+      font-size: 19px; font-weight: 800; color: var(--ship);
+      flex-shrink: 0; letter-spacing: -.3px;
+    }
+    .logo-em { font-size: 26px; }
+    .sw { flex: 1; max-width: 480px; position: relative; }
+    .sw input {
+      width: 100%; padding: 9px 14px 9px 40px;
+      border: 1.5px solid var(--border); border-radius: 50px;
+      background: var(--surface2); color: var(--text);
+      font-size: 14px; outline: none;
+      transition: border-color .2s, box-shadow .2s;
+    }
+    .sw input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(37,99,235,.12); }
+    .sw input::placeholder { color: var(--sub); }
+    .sw-ico { position: absolute; left: 13px; top: 50%; transform: translateY(-50%); font-size: 15px; pointer-events: none; }
+    .hdr-r { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+    .btn-ico {
+      width: 38px; height: 38px; border-radius: 50%;
+      border: 1.5px solid var(--border); background: var(--surface);
+      color: var(--text); display: flex; align-items: center; justify-content: center;
+      font-size: 17px; transition: background .2s, border-color .2s;
+    }
+    .btn-ico:hover { background: var(--bg); border-color: var(--accent); }
+    .btn-add {
+      padding: 9px 18px; background: var(--accent); color: #fff;
+      border: none; border-radius: 50px; font-size: 14px; font-weight: 700;
+      display: flex; align-items: center; gap: 5px;
+      box-shadow: 0 2px 8px rgba(37,99,235,.35);
+      transition: background .2s, transform .15s;
+      white-space: nowrap;
+    }
+    .btn-add:hover { background: var(--accent-h); transform: translateY(-1px); }
+
+    /* ===== 레이아웃 ===== */
+    .wrap { max-width: 1440px; margin: 0 auto; padding: 24px 24px 60px; }
+
+    /* ===== 업데이트 배너 ===== */
+    .update-bar {
+      background: var(--surface); border: 1.5px solid var(--border);
+      border-radius: var(--rs); padding: 10px 16px;
+      margin-bottom: 16px; font-size: 13px; color: var(--sub);
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 8px;
+    }
+    .update-bar .left { display: flex; align-items: center; gap: 8px; }
+    .live-dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: #22c55e;
+      box-shadow: 0 0 0 3px rgba(34,197,94,.25);
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse { 0%,100%{box-shadow:0 0 0 3px rgba(34,197,94,.25)} 50%{box-shadow:0 0 0 6px rgba(34,197,94,.1)} }
+    .live-dot.offline { background: #94a3b8; box-shadow: none; animation: none; }
+    .update-bar b { color: var(--text); }
+    .refresh-btn {
+      background: none; border: 1.5px solid var(--border);
+      border-radius: 50px; padding: 4px 12px;
+      font-size: 12px; color: var(--sub);
+      transition: border-color .2s, color .2s;
+    }
+    .refresh-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+    /* ===== 주의 배너 (샘플 모드) ===== */
+    .notice {
+      background: #fffbeb; border: 1.5px solid #fcd34d;
+      border-radius: var(--rs); padding: 12px 16px;
+      margin-bottom: 16px; font-size: 13px; color: #92400e;
+      display: flex; align-items: flex-start; gap: 10px; line-height: 1.6;
+    }
+    [data-theme="dark"] .notice { background: #422006; border-color: #78350f; color: #fcd34d; }
+    .notice-ico { font-size: 17px; flex-shrink: 0; }
+    .notice-close {
+      margin-left: auto; flex-shrink: 0; background: none; border: none;
+      color: inherit; font-size: 17px; opacity: .6; padding: 0; line-height: 1;
+    }
+    .notice-close:hover { opacity: 1; }
+
+    /* ===== 조선/기계 특별 섹션 ===== */
+    .featured {
+      background: linear-gradient(135deg,#083f6e 0%,#1a6fc4 55%,#0a4a80 100%);
+      border-radius: var(--r); padding: 22px 24px 20px;
+      margin-bottom: 22px; color: #fff; position: relative; overflow: hidden;
+    }
+    .featured::after {
+      content:'🚢'; position:absolute; right:-4px; top:50%;
+      transform:translateY(-60%); font-size:96px; opacity:.1; pointer-events:none;
+    }
+    .feat-hdr { display:flex; align-items:center; gap:10px; margin-bottom:14px; flex-wrap:wrap; }
+    .feat-title { font-size:17px; font-weight:800; }
+    .feat-pill {
+      background:rgba(255,255,255,.2); border:1px solid rgba(255,255,255,.3);
+      padding:3px 11px; border-radius:50px; font-size:11px; font-weight:700;
+    }
+    .feat-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:10px; }
+    .fcard {
+      background:rgba(255,255,255,.11); border:1px solid rgba(255,255,255,.18);
+      border-radius:10px; padding:13px 15px;
+      transition:background .2s, transform .2s; cursor:pointer;
+    }
+    .fcard:hover { background:rgba(255,255,255,.2); transform:translateY(-2px); }
+    .fcard-title { font-size:13.5px; font-weight:700; margin-bottom:5px; line-height:1.4; }
+    .fcard-org { font-size:12px; opacity:.75; margin-bottom:10px; }
+    .fcard-foot { display:flex; justify-content:space-between; align-items:center; }
+    .fcard-dday {
+      font-size:11.5px; font-weight:800; padding:2px 9px;
+      border-radius:50px; background:rgba(255,255,255,.18);
+    }
+    .fcard-dday.urgent { background:#ef4444; }
+    .fcard-dday.soon { background:#f59e0b; }
+    .fcard-bm {
+      background:none; border:none; color:rgba(255,255,255,.6);
+      font-size:18px; line-height:1; padding:2px;
+      transition:color .2s, transform .2s;
+    }
+    .fcard-bm:hover, .fcard-bm.on { color:#fbbf24; transform:scale(1.2); }
+    .src-tag {
+      display:inline-block; font-size:10px; font-weight:700;
+      padding:1px 7px; border-radius:4px; margin-top:6px;
+      background:rgba(255,255,255,.15); color:rgba(255,255,255,.8);
+    }
+
+    /* ===== 통계 ===== */
+    .stats { display:flex; gap:10px; margin-bottom:18px; flex-wrap:wrap; }
+    .stat {
+      background:var(--surface); border:1.5px solid var(--border);
+      border-radius:50px; padding:6px 15px;
+      font-size:13px; color:var(--sub);
+      display:flex; align-items:center; gap:5px;
+    }
+    .stat b { color:var(--text); font-weight:700; }
+
+    /* ===== 탭 ===== */
+    .tabs-scroll {
+      overflow-x:auto; -webkit-overflow-scrolling:touch;
+      scrollbar-width:none; margin-bottom:18px;
+    }
+    .tabs-scroll::-webkit-scrollbar { display:none; }
+    .tabs { display:flex; gap:7px; width:max-content; padding-bottom:2px; }
+    .tab {
+      padding:8px 17px; border:1.5px solid var(--border);
+      border-radius:50px; background:var(--surface);
+      color:var(--sub); font-size:13.5px; font-weight:600;
+      white-space:nowrap; transition:all .18s;
+      display:flex; align-items:center; gap:6px;
+    }
+    .tab:hover { border-color:var(--accent); color:var(--accent); }
+    .tab.on { background:var(--accent); border-color:var(--accent); color:#fff; }
+    .tab-n {
+      font-size:10.5px; font-weight:800; padding:1px 6px;
+      border-radius:50px; background:var(--border); color:var(--sub);
+    }
+    .tab.on .tab-n { background:rgba(255,255,255,.28); color:#fff; }
+
+    /* ===== 툴바 ===== */
+    .toolbar {
+      display:flex; justify-content:space-between; align-items:center;
+      margin-bottom:15px; gap:10px; flex-wrap:wrap;
+    }
+    .rc { font-size:13px; color:var(--sub); }
+    .toolbar-r { display:flex; align-items:center; gap:10px; }
+    .toggle-exp {
+      display:flex; align-items:center; gap:6px;
+      font-size:13px; color:var(--sub); cursor:pointer; user-select:none;
+    }
+    .toggle-exp input { cursor:pointer; accent-color:var(--accent); width:15px; height:15px; }
+    .sort-sel {
+      padding:7px 11px; border:1.5px solid var(--border);
+      border-radius:var(--rs); background:var(--surface);
+      color:var(--text); font-size:13px; font-family:inherit; outline:none; cursor:pointer;
+    }
+
+    /* ===== 카드 그리드 ===== */
+    .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(310px,1fr)); gap:15px; }
+    .card {
+      background:var(--surface); border:1.5px solid var(--border);
+      border-radius:var(--r); padding:18px 18px 14px;
+      display:flex; flex-direction:column; gap:9px;
+      transition:box-shadow .2s, transform .2s, border-color .2s;
+      cursor:pointer;
+    }
+    .card:hover { box-shadow:var(--sh-lg); transform:translateY(-3px); border-color:var(--accent); }
+    .card.urg { border-left:4px solid #dc2626; }
+    .card-hdr { display:flex; justify-content:space-between; align-items:flex-start; gap:8px; }
+    .cat-badge { font-size:11px; font-weight:800; padding:3px 10px; border-radius:50px; flex-shrink:0; }
+    .bm-btn {
+      background:none; border:none; color:var(--sub);
+      font-size:20px; line-height:1; flex-shrink:0;
+      transition:color .2s, transform .2s;
+    }
+    .bm-btn:hover { transform:scale(1.2); }
+    .bm-btn.on { color:#f59e0b; }
+    .card-title { font-size:15px; font-weight:700; line-height:1.4; }
+    .card-org { font-size:12.5px; color:var(--sub); }
+    .card-desc {
+      font-size:12.5px; color:var(--sub); line-height:1.55;
+      display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;
+    }
+    .card-tags { display:flex; flex-wrap:wrap; gap:5px; }
+    .tag {
+      font-size:11px; padding:2px 8px; border-radius:4px;
+      background:var(--bg); color:var(--sub); border:1px solid var(--border);
+    }
+    .card-foot {
+      display:flex; justify-content:space-between; align-items:center;
+      padding-top:10px; border-top:1px solid var(--border); margin-top:auto;
+    }
+    .deadline { font-size:12px; color:var(--sub); }
+    .card-src { font-size:11px; color:var(--accent); margin-top:2px; }
+    .dday {
+      font-size:12px; font-weight:800; padding:3px 10px;
+      border-radius:50px; border:1.5px solid var(--border);
+      background:var(--bg); color:var(--sub);
+    }
+    .dday.urgent { background:#fee2e2; color:#dc2626; border-color:#fca5a5; }
+    .dday.soon   { background:#fef3c7; color:#d97706; border-color:#fcd34d; }
+    .dday.expired { opacity:.5; text-decoration:line-through; }
+    [data-theme="dark"] .dday.urgent { background:#450a0a; color:#f87171; border-color:#7f1d1d; }
+    [data-theme="dark"] .dday.soon   { background:#451a03; color:#fbbf24; border-color:#78350f; }
+
+    /* ===== 카테고리 뱃지 색상 ===== */
+    .cb-ship     { background:#dbeafe; color:#1d4ed8; }
+    .cb-ai       { background:#ede9fe; color:#7c3aed; }
+    .cb-media    { background:#fee2e2; color:#dc2626; }
+    .cb-global   { background:#d1fae5; color:#059669; }
+    .cb-corp     { background:#fef3c7; color:#b45309; }
+    .cb-scholar  { background:#e0f2fe; color:#0369a1; }
+    .cb-activity { background:#fce7f3; color:#be185d; }
+    [data-theme="dark"] .cb-ship     { background:#1e3a5f; color:#93c5fd; }
+    [data-theme="dark"] .cb-ai       { background:#2e1065; color:#c4b5fd; }
+    [data-theme="dark"] .cb-media    { background:#450a0a; color:#fca5a5; }
+    [data-theme="dark"] .cb-global   { background:#064e3b; color:#6ee7b7; }
+    [data-theme="dark"] .cb-corp     { background:#451a03; color:#fcd34d; }
+    [data-theme="dark"] .cb-scholar  { background:#0c4a6e; color:#7dd3fc; }
+    [data-theme="dark"] .cb-activity { background:#500724; color:#f9a8d4; }
+
+    /* ===== 로딩 스피너 ===== */
+    .loading {
+      grid-column:1/-1; text-align:center; padding:60px 20px; color:var(--sub);
+    }
+    .spinner {
+      width:36px; height:36px; border:3.5px solid var(--border);
+      border-top-color:var(--accent); border-radius:50%;
+      animation:spin .8s linear infinite; margin:0 auto 16px;
+    }
+    @keyframes spin { to { transform:rotate(360deg); } }
+
+    /* ===== 빈 상태 ===== */
+    .empty {
+      grid-column:1/-1; text-align:center; padding:60px 20px; color:var(--sub);
+    }
+    .empty-ico { font-size:52px; margin-bottom:14px; }
+    .empty h3 { font-size:17px; color:var(--text); margin-bottom:7px; }
+
+    /* ===== 모달 ===== */
+    .overlay {
+      position:fixed; inset:0; background:rgba(0,0,0,.48); z-index:500;
+      display:flex; align-items:center; justify-content:center; padding:16px;
+      backdrop-filter:blur(5px);
+      opacity:0; visibility:hidden; transition:opacity .25s, visibility .25s;
+    }
+    .overlay.open { opacity:1; visibility:visible; }
+    .modal {
+      background:var(--surface); border-radius:var(--r); padding:26px 26px 22px;
+      width:100%; max-width:500px; max-height:90vh; overflow-y:auto;
+      box-shadow:var(--sh-lg);
+      transform:translateY(18px) scale(.98); transition:transform .25s;
+    }
+    .overlay.open .modal { transform:translateY(0) scale(1); }
+    .modal-hdr { display:flex; justify-content:space-between; align-items:center; margin-bottom:22px; }
+    .modal-title { font-size:17px; font-weight:800; }
+    .modal-close { background:none; border:none; font-size:22px; color:var(--sub); line-height:1; }
+    .modal-close:hover { color:var(--text); }
+    .fg { margin-bottom:14px; }
+    .fg label { display:block; font-size:12.5px; font-weight:700; margin-bottom:5px; }
+    .fg label span { color:#dc2626; }
+    .fi, .fs, .ft {
+      width:100%; padding:9px 12px; border:1.5px solid var(--border);
+      border-radius:var(--rs); background:var(--surface2);
+      color:var(--text); font-size:13.5px; font-family:inherit; outline:none;
+      transition:border-color .2s;
+    }
+    .fi:focus, .fs:focus, .ft:focus { border-color:var(--accent); }
+    .ft { resize:vertical; min-height:78px; }
+    .frow { display:grid; grid-template-columns:1fr 1fr; gap:11px; }
+    .btn-sub {
+      width:100%; padding:12px; background:var(--accent); color:#fff;
+      border:none; border-radius:var(--rs);
+      font-size:15px; font-weight:700; font-family:inherit;
+      margin-top:6px; transition:background .2s;
+    }
+    .btn-sub:hover { background:var(--accent-h); }
+
+    /* ===== 토스트 ===== */
+    .toast {
+      position:fixed; bottom:22px; right:22px;
+      background:#1e293b; color:#fff; padding:11px 18px;
+      border-radius:var(--rs); font-size:13.5px; z-index:999;
+      transform:translateY(70px); opacity:0;
+      transition:transform .28s, opacity .28s;
+      max-width:280px; box-shadow:0 4px 20px rgba(0,0,0,.3);
+    }
+    [data-theme="dark"] .toast { background:#f1f5f9; color:#1e293b; }
+    .toast.show { transform:translateY(0); opacity:1; }
+
+    /* ===== 반응형 ===== */
+    @media (max-width:700px) {
+      .hdr { padding:0 14px; gap:10px; }
+      .logo .logo-txt { display:none; }
+      .wrap { padding:16px 14px 50px; }
+      .grid { grid-template-columns:1fr; }
+      .feat-grid { grid-template-columns:1fr; }
+      .frow { grid-template-columns:1fr; }
+      .stats { display:none; }
+      .btn-add .add-txt { display:none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===== 헤더 ===== -->
+<header>
+  <div class="hdr">
+    <div class="logo">
+      <span class="logo-em">🚢</span>
+      <span class="logo-txt">내 대시보드</span>
+    </div>
+    <div class="sw">
+      <span class="sw-ico">🔍</span>
+      <input id="searchInput" type="text" placeholder="공모전, 기업명, 태그 검색…" oninput="handleSearch()">
+    </div>
+    <div class="hdr-r">
+      <button class="btn-ico" id="themeBtn" onclick="toggleDark()" title="다크모드">🌙</button>
+      <button class="btn-add" onclick="openModal()">
+        <span>＋</span><span class="add-txt">공고 추가</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <!-- 업데이트 상태 바 -->
+  <div class="update-bar">
+    <div class="left">
+      <div class="live-dot" id="liveDot"></div>
+      <span id="updateInfo">데이터 로딩 중…</span>
+    </div>
+    <button class="refresh-btn" onclick="loadData(true)">🔄 새로고침</button>
+  </div>
+
+  <!-- 샘플 모드 경고 (data.json 없을 때) -->
+  <div class="notice" id="sampleNotice" style="display:none">
+    <span class="notice-ico">⚠️</span>
+    <div>
+      <b>샘플 데이터 표시 중</b> — 실제 공모전 데이터를 가져오지 못했습니다.<br>
+      GitHub Actions가 설정되면 매일 링커리어·공모전코리아에서 자동 수집됩니다.
+      직접 찾은 공모전은 <b>＋ 공고 추가</b> 버튼으로 등록하세요.
+    </div>
+    <button class="notice-close" onclick="this.closest('.notice').style.display='none'">✕</button>
+  </div>
+
+  <!-- 조선/기계 특별 섹션 -->
+  <div class="featured" id="featuredSection">
+    <div class="feat-hdr">
+      <span style="font-size:22px">🚢</span>
+      <span class="feat-title">조선 · 기계 전공 추천</span>
+      <span class="feat-pill">⭐ 내 전공</span>
+    </div>
+    <div class="feat-grid" id="featuredGrid">
+      <div class="loading" style="padding:20px;color:rgba(255,255,255,.7)">
+        <div class="spinner" style="border-color:rgba(255,255,255,.3);border-top-color:#fff"></div>
+        로딩 중…
+      </div>
+    </div>
+  </div>
+
+  <!-- 통계 -->
+  <div class="stats" id="statsBar"></div>
+
+  <!-- 카테고리 탭 -->
+  <div class="tabs-scroll"><div class="tabs" id="tabs"></div></div>
+
+  <!-- 툴바 -->
+  <div class="toolbar">
+    <div class="rc" id="rc"></div>
+    <div class="toolbar-r">
+      <label class="toggle-exp">
+        <input type="checkbox" id="showExpired" onchange="renderCards()">
+        마감 공고 포함
+      </label>
+      <select class="sort-sel" id="sortSel" onchange="renderCards()">
+        <option value="deadline">📅 마감일 임박순</option>
+        <option value="newest">🆕 최근 추가순</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- 카드 그리드 -->
+  <div class="grid" id="grid">
+    <div class="loading">
+      <div class="spinner"></div>
+      공모전 데이터 불러오는 중…
+    </div>
+  </div>
+</div>
+
+<!-- ===== 공고 추가 모달 ===== -->
+<div class="overlay" id="modal">
+  <div class="modal">
+    <div class="modal-hdr">
+      <div class="modal-title">📌 공고 직접 추가</div>
+      <button class="modal-close" onclick="closeModal()">✕</button>
+    </div>
+    <form id="addForm" onsubmit="handleAdd(event)">
+      <div class="fg">
+        <label>공고 제목 <span>*</span></label>
+        <input class="fi" id="iTitle" placeholder="예: 2026 삼성전자 하계 인턴십" required>
+      </div>
+      <div class="frow">
+        <div class="fg">
+          <label>주최 기관 <span>*</span></label>
+          <input class="fi" id="iOrg" placeholder="예: 삼성전자" required>
+        </div>
+        <div class="fg">
+          <label>카테고리 <span>*</span></label>
+          <select class="fs" id="iCat">
+            <option value="ship">🚢 조선/기계</option>
+            <option value="ai">🤖 AI/IoT</option>
+            <option value="media">🎬 영상/콘텐츠</option>
+            <option value="global">✈️ 해외 인턴십</option>
+            <option value="corp">🏢 국내 대기업 인턴</option>
+            <option value="scholar">💰 장학금</option>
+            <option value="activity">🎯 대외활동</option>
+          </select>
+        </div>
+      </div>
+      <div class="frow">
+        <div class="fg">
+          <label>마감일 <span>*</span></label>
+          <input class="fi" id="iDeadline" type="date" required>
+        </div>
+        <div class="fg">
+          <label>원본 URL <span>*</span></label>
+          <input class="fi" id="iUrl" type="url" placeholder="https://…" required>
+        </div>
+      </div>
+      <div class="fg">
+        <label>공고 설명</label>
+        <textarea class="ft" id="iDesc" placeholder="간단한 설명을 입력하세요"></textarea>
+      </div>
+      <div class="fg">
+        <label>태그 (쉼표 구분)</label>
+        <input class="fi" id="iTags" placeholder="예: 대학생, 인턴, 설계">
+      </div>
+      <button type="submit" class="btn-sub">공고 추가하기</button>
+    </form>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+// ════════════════════════════════════════════════════════
+// 카테고리 정의
+// ════════════════════════════════════════════════════════
+const CATS = {
+  all:      { label:'전체보기',      icon:'📋' },
+  ship:     { label:'조선/기계',     icon:'🚢' },
+  ai:       { label:'AI/IoT',       icon:'🤖' },
+  media:    { label:'영상/콘텐츠',   icon:'🎬' },
+  global:   { label:'해외 인턴십',   icon:'✈️' },
+  corp:     { label:'대기업 인턴',   icon:'🏢' },
+  scholar:  { label:'장학금',        icon:'💰' },
+  activity: { label:'대외활동',      icon:'🎯' },
+  bookmark: { label:'즐겨찾기',      icon:'⭐' },
+};
+
+// ════════════════════════════════════════════════════════
+// 샘플 폴백 데이터 (data.json fetch 실패 시 사용)
+// ════════════════════════════════════════════════════════
+function futureDate(days) {
+  const d = new Date();
+  d.setDate(d.getDate() + days);
+  return d.toISOString().slice(0,10);
+}
+
+const SAMPLE = [
+  { id:'s1', cat:'ship',
+    title:'한화오션 신입사원 채용 (조선해양)',
+    org:'한화오션', deadline:futureDate(14),
+    url:'https://recruit-hanwhaocean.com/ko/2026newrecruits',
+    src:'한화오션 채용 홈', desc:'조선해양 전공 대학(원)생 신입채용. 설계·생산관리·R&D 직무.', tags:['신입','조선해양','설계'] },
+  { id:'s2', cat:'corp',
+    title:'삼성전자 DS부문 대학생 인턴',
+    org:'삼성전자', deadline:futureDate(1),
+    url:'https://linkareer.com/activity/307270',
+    src:'링커리어', desc:'DS부문 반도체 직무 대학생 인턴. 서류→GSAT→면접.', tags:['삼성DS','반도체','하계인턴'] },
+  { id:'s3', cat:'corp',
+    title:'현대자동차 채용전환형 하계 인턴십',
+    org:'현대자동차', deadline:futureDate(40),
+    url:'https://linkareer.com/activity/317673',
+    src:'링커리어', desc:'졸업예정자 대상. 연구개발·생산기술·사업기획 36개 직무.', tags:['현대차','채용전환','하계'] },
+  { id:'s4', cat:'global',
+    title:'KOTRA 2기 체험형 청년인턴 모집',
+    org:'KOTRA', deadline:futureDate(3),
+    url:'https://kotra.applyin.co.kr/jobs/21406',
+    src:'KOTRA 채용 공고', desc:'2026년 2기 체험형 청년인턴 75명 모집. 서울 본사 및 지방.', tags:['KOTRA','청년인턴','체험형'] },
+  { id:'s5', cat:'corp',
+    title:'SK하이닉스 인턴십',
+    org:'SK하이닉스', deadline:futureDate(26),
+    url:'https://recruit.skhynix.com/',
+    src:'SK하이닉스 채용 홈', desc:'반도체 제조/R&D 직무 인턴십. 이천/청주 근무.', tags:['반도체','인턴','R&D'] },
+  { id:'s6', cat:'corp',
+    title:'포스코 하계 스틸캠프 인턴십',
+    org:'POSCO', deadline:futureDate(62),
+    url:'https://recruit.posco.com/',
+    src:'포스코 채용 홈', desc:'포항/광양 체험형 인턴십. 생산기술·설비·공정 직무.', tags:['POSCO','스틸캠프','포항'] },
+  { id:'s7', cat:'scholar',
+    title:'한국장학재단 국가장학금 2학기',
+    org:'한국장학재단', deadline:futureDate(2),
+    url:'https://www.kosaf.go.kr/',
+    src:'한국장학재단 공식 홈', desc:'2026학년도 2학기 국가장학금. 소득분위별 차등 지급.', tags:['국가장학금','1유형','2유형'] },
+  { id:'s8', cat:'activity',
+    title:'KOTRA 대학(원)생 블로그 에디터',
+    org:'KOTRA', deadline:futureDate(22),
+    url:'https://linkareer.com/activity/319183',
+    src:'링커리어', desc:'KOTRA 해외경제정보 블로그 에디터 10명. 원고료 월 10만원.', tags:['KOTRA','에디터','블로그'] },
+  { id:'s9', cat:'activity',
+    title:'갤럭시 대학생 서포터즈 모집',
+    org:'삼성전자', deadline:futureDate(13),
+    url:'https://linkareer.com/activity/280666',
+    src:'링커리어', desc:'갤럭시 브랜드 홍보 대학생 서포터즈. SNS 콘텐츠 제작.', tags:['서포터즈','갤럭시','SNS'] },
+  { id:'s10', cat:'ship',
+    title:'한국선급(KR) 기술논문 공모전',
+    org:'한국선급', deadline:futureDate(32),
+    url:'https://www.krs.co.kr/',
+    src:'한국선급 공식 홈', desc:'선박 안전·스마트선박 기술 논문 공모. IMO 규정 연구 우대.', tags:['논문','선박안전','IMO'] },
+];
+
+// ════════════════════════════════════════════════════════
+// 상태
+// ════════════════════════════════════════════════════════
+const S = {
+  tab: 'all',
+  query: '',
+  isSample: false,
+  liveItems: [],       // data.json에서 가져온 실시간 데이터
+  custom: JSON.parse(localStorage.getItem('custom') || '[]'),
+  bookmarks: new Set(JSON.parse(localStorage.getItem('bms') || '[]')),
+  lastUpdated: null,
+};
+
+function allEntries() {
+  const base = S.liveItems.length > 0 ? S.liveItems : SAMPLE;
+  return [...base, ...S.custom];
+}
+
+// ════════════════════════════════════════════════════════
+// 데이터 로딩 (data.json fetch)
+// ════════════════════════════════════════════════════════
+async function loadData(force = false) {
+  const dot = document.getElementById('liveDot');
+  const info = document.getElementById('updateInfo');
+  info.textContent = '데이터 불러오는 중…';
+
+  try {
+    // cache-bust only on force refresh
+    const url = force ? `./data.json?t=${Date.now()}` : './data.json';
+    const res = await fetch(url);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const json = await res.json();
+
+    const items = json.items || [];
+    if (items.length === 0) throw new Error('항목 없음');
+
+    S.liveItems = items;
+    S.isSample = false;
+    S.lastUpdated = json.updated;
+
+    dot.classList.remove('offline');
+    const updated = json.updated ? json.updated.slice(0,16).replace('T', ' ') : '?';
+    info.innerHTML = `<b>${items.length}건</b> 수집됨 · 마지막 업데이트 <b>${updated}</b>`;
+    document.getElementById('sampleNotice').style.display = 'none';
+
+  } catch (e) {
+    // 폴백: 샘플 데이터 사용
+    S.liveItems = [];
+    S.isSample = true;
+    dot.classList.add('offline');
+    info.innerHTML = '실시간 데이터 없음 · <b>샘플 데이터</b> 표시 중 (GitHub Actions 설정 필요)';
+    document.getElementById('sampleNotice').style.display = 'flex';
+  }
+
+  render();
+}
+
+// ════════════════════════════════════════════════════════
+// D-day 계산
+// ════════════════════════════════════════════════════════
+function dday(dateStr) {
+  const now = new Date(); now.setHours(0,0,0,0);
+  const d = new Date(dateStr + 'T00:00:00'); d.setHours(0,0,0,0);
+  return Math.round((d - now) / 86400000);
+}
+function ddayLabel(n) {
+  if (n < 0) return '마감';
+  if (n === 0) return 'D-Day';
+  return `D-${n}`;
+}
+function ddayCls(n) {
+  if (n < 0) return 'expired';
+  if (n <= 3) return 'urgent';
+  if (n <= 7) return 'soon';
+  return '';
+}
+function fmtDate(s) {
+  const d = new Date(s + 'T00:00:00');
+  return `${d.getFullYear()}.${String(d.getMonth()+1).padStart(2,'0')}.${String(d.getDate()).padStart(2,'0')}`;
+}
+
+// ════════════════════════════════════════════════════════
+// 필터 / 정렬
+// ════════════════════════════════════════════════════════
+function filtered() {
+  let list = allEntries();
+  const q = S.query.toLowerCase();
+  const showExp = document.getElementById('showExpired')?.checked;
+
+  // 마감 공고 숨김 (기본)
+  if (!showExp) {
+    list = list.filter(e => dday(e.deadline) >= 0);
+  }
+
+  if (S.tab === 'bookmark') {
+    list = list.filter(e => S.bookmarks.has(e.id));
+  } else if (S.tab !== 'all') {
+    list = list.filter(e => e.cat === S.tab);
+  }
+
+  if (q) {
+    list = list.filter(e =>
+      e.title.toLowerCase().includes(q) ||
+      e.org.toLowerCase().includes(q) ||
+      (e.desc||'').toLowerCase().includes(q) ||
+      (e.tags||[]).some(t => t.toLowerCase().includes(q))
+    );
+  }
+
+  const sort = document.getElementById('sortSel')?.value || 'deadline';
+  if (sort === 'deadline') {
+    list.sort((a,b) => {
+      const da = dday(a.deadline), db = dday(b.deadline);
+      if (da >= 0 && db < 0) return -1;
+      if (da < 0 && db >= 0) return 1;
+      return da - db;
+    });
+  } else {
+    list = [...list].reverse();
+  }
+  return list;
+}
+
+// ════════════════════════════════════════════════════════
+// 렌더링
+// ════════════════════════════════════════════════════════
+function render() {
+  renderFeatured();
+  renderTabs();
+  renderCards();
+  renderStats();
+}
+
+function renderFeatured() {
+  const sec = document.getElementById('featuredSection');
+  sec.style.display = (S.tab === 'all' || S.tab === 'ship') ? '' : 'none';
+
+  const shipItems = allEntries()
+    .filter(e => e.cat === 'ship' && dday(e.deadline) >= 0)
+    .sort((a,b) => dday(a.deadline) - dday(b.deadline))
+    .slice(0, 6);
+
+  document.getElementById('featuredGrid').innerHTML = shipItems.length
+    ? shipItems.map(e => {
+        const n = dday(e.deadline);
+        const bm = S.bookmarks.has(e.id);
+        return `
+          <div class="fcard" onclick="openUrl('${escUrl(e.url)}')">
+            <div class="fcard-title">${esc(e.title)}</div>
+            <div class="fcard-org">🏢 ${esc(e.org)}</div>
+            ${e.src ? `<div class="src-tag">🔗 ${esc(e.src)}</div>` : ''}
+            <div class="fcard-foot" style="margin-top:8px">
+              <span class="fcard-dday ${ddayCls(n)}">${ddayLabel(n)}</span>
+              <button class="fcard-bm ${bm?'on':''}" title="즐겨찾기"
+                onclick="event.stopPropagation();toggleBm('${e.id}')">${bm?'★':'☆'}</button>
+            </div>
+          </div>`;
+      }).join('')
+    : '<div style="color:rgba(255,255,255,.6);font-size:14px">조선/기계 관련 공고가 없습니다.</div>';
+}
+
+function renderTabs() {
+  const showExp = document.getElementById('showExpired')?.checked;
+  const all = allEntries().filter(e => showExp || dday(e.deadline) >= 0);
+  const cnt = {};
+  all.forEach(e => cnt[e.cat] = (cnt[e.cat]||0)+1);
+
+  const defs = [
+    ['all',      '📋 전체보기',  all.length],
+    ['ship',     '🚢 조선/기계', cnt.ship||0],
+    ['ai',       '🤖 AI/IoT',   cnt.ai||0],
+    ['media',    '🎬 영상/콘텐츠', cnt.media||0],
+    ['global',   '✈️ 해외 인턴십', cnt.global||0],
+    ['corp',     '🏢 대기업 인턴', cnt.corp||0],
+    ['scholar',  '💰 장학금',    cnt.scholar||0],
+    ['activity', '🎯 대외활동',  cnt.activity||0],
+    ['bookmark', '⭐ 즐겨찾기',  S.bookmarks.size],
+  ];
+
+  document.getElementById('tabs').innerHTML = defs.map(([k,label,n]) =>
+    `<button class="tab ${S.tab===k?'on':''}" onclick="setTab('${k}')">
+      ${label}<span class="tab-n">${n}</span>
+    </button>`
+  ).join('');
+}
+
+function renderCards() {
+  const list = filtered();
+  const rc   = document.getElementById('rc');
+  const grid = document.getElementById('grid');
+  const showExp = document.getElementById('showExpired')?.checked;
+  const totalActive = allEntries().filter(e => dday(e.deadline) >= 0).length;
+  const expiredCount = allEntries().length - totalActive;
+
+  rc.innerHTML = `총 <b>${list.length}건</b>${!showExp && expiredCount > 0 ? ` (마감 ${expiredCount}건 숨김)` : ''}`;
+
+  if (!list.length) {
+    grid.innerHTML = `
+      <div class="empty">
+        <div class="empty-ico">🔍</div>
+        <h3>공고가 없습니다</h3>
+        <p>다른 카테고리를 선택하거나 직접 공고를 추가해보세요.</p>
+      </div>`;
+    return;
+  }
+
+  const cat = CATS;
+  grid.innerHTML = list.map(e => {
+    const n = dday(e.deadline);
+    const bm = S.bookmarks.has(e.id);
+    const ci = cat[e.cat] || {};
+    const urg = n >= 0 && n <= 3;
+    return `
+      <div class="card ${urg?'urg':''}" onclick="openUrl('${escUrl(e.url)}')">
+        <div class="card-hdr">
+          <span class="cat-badge cb-${e.cat}">${ci.icon||''} ${ci.label||''}</span>
+          <button class="bm-btn ${bm?'on':''}" title="즐겨찾기"
+            onclick="event.stopPropagation();toggleBm('${e.id}')">${bm?'★':'☆'}</button>
+        </div>
+        <div class="card-title">${esc(e.title)}</div>
+        <div class="card-org">🏢 ${esc(e.org)}</div>
+        ${e.desc ? `<div class="card-desc">${esc(e.desc)}</div>` : ''}
+        ${e.tags?.length ? `<div class="card-tags">${e.tags.map(t=>`<span class="tag">#${esc(t)}</span>`).join('')}</div>` : ''}
+        <div class="card-foot">
+          <div>
+            <div class="deadline">마감 ${fmtDate(e.deadline)}</div>
+            ${e.src ? `<div class="card-src">🔗 ${esc(e.src)}</div>` : ''}
+          </div>
+          <span class="dday ${ddayCls(n)}">${ddayLabel(n)}</span>
+        </div>
+      </div>`;
+  }).join('');
+}
+
+function renderStats() {
+  const all = allEntries();
+  const urgCnt    = all.filter(e => { const n=dday(e.deadline); return n>=0&&n<=3; }).length;
+  const activeCnt = all.filter(e => dday(e.deadline) >= 0).length;
+  document.getElementById('statsBar').innerHTML = `
+    <div class="stat">📋 전체 <b>${all.length}건</b></div>
+    <div class="stat">✅ 진행중 <b>${activeCnt}건</b></div>
+    <div class="stat">🔴 마감임박(3일) <b>${urgCnt}건</b></div>
+    <div class="stat">⭐ 즐겨찾기 <b>${S.bookmarks.size}건</b></div>`;
+}
+
+// ════════════════════════════════════════════════════════
+// 액션
+// ════════════════════════════════════════════════════════
+function setTab(k) { S.tab = k; render(); }
+function handleSearch() { S.query = document.getElementById('searchInput').value; renderCards(); }
+
+function toggleBm(id) {
+  S.bookmarks.has(id) ? S.bookmarks.delete(id) : S.bookmarks.add(id);
+  localStorage.setItem('bms', JSON.stringify([...S.bookmarks]));
+  toast(S.bookmarks.has(id) ? '즐겨찾기에 추가했습니다 ⭐' : '즐겨찾기에서 제거했습니다');
+  render();
+}
+
+function openUrl(url) {
+  if (url && url !== '#') window.open(url, '_blank', 'noopener');
+}
+
+function toggleDark() {
+  const html = document.documentElement;
+  const dark = html.getAttribute('data-theme') === 'dark';
+  html.setAttribute('data-theme', dark ? 'light' : 'dark');
+  document.getElementById('themeBtn').textContent = dark ? '🌙' : '☀️';
+  localStorage.setItem('theme', dark ? 'light' : 'dark');
+}
+
+// ===== 모달 =====
+function openModal() {
+  document.getElementById('modal').classList.add('open');
+  document.getElementById('iDeadline').value = new Date().toISOString().slice(0,10);
+}
+function closeModal() { document.getElementById('modal').classList.remove('open'); }
+document.getElementById('modal').addEventListener('click', e => {
+  if (e.target === document.getElementById('modal')) closeModal();
+});
+
+function handleAdd(e) {
+  e.preventDefault();
+  const tags = document.getElementById('iTags').value.split(',').map(t=>t.trim()).filter(Boolean);
+  const entry = {
+    id: 'c' + Date.now(),
+    cat: document.getElementById('iCat').value,
+    title: document.getElementById('iTitle').value,
+    org: document.getElementById('iOrg').value,
+    deadline: document.getElementById('iDeadline').value,
+    url: document.getElementById('iUrl').value,
+    src: '직접 추가',
+    desc: document.getElementById('iDesc').value,
+    tags,
+  };
+  S.custom.push(entry);
+  localStorage.setItem('custom', JSON.stringify(S.custom));
+  closeModal();
+  document.getElementById('addForm').reset();
+  toast('공고가 추가되었습니다! 📌');
+  render();
+}
+
+// ===== 토스트 =====
+let _tt;
+function toast(msg) {
+  const el = document.getElementById('toast');
+  el.textContent = msg; el.classList.add('show');
+  clearTimeout(_tt);
+  _tt = setTimeout(() => el.classList.remove('show'), 2600);
+}
+
+// ===== 이스케이프 =====
+function esc(s) {
+  return String(s||'')
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+function escUrl(s) { return String(s||'').replace(/'/g,'%27'); }
+
+// ════════════════════════════════════════════════════════
+// 초기화
+// ════════════════════════════════════════════════════════
+(function init() {
+  // 테마 복원
+  const t = localStorage.getItem('theme') || 'light';
+  document.documentElement.setAttribute('data-theme', t);
+  document.getElementById('themeBtn').textContent = t === 'dark' ? '☀️' : '🌙';
+
+  // data.json 로드
+  loadData();
+})();
+</script>
+</body>
+</html>
