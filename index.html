@@ -257,20 +257,48 @@
     [data-theme="dark"] .dday.soon   { background:#451a03; color:#fbbf24; border-color:#78350f; }
 
     /* ===== 카테고리 뱃지 색상 ===== */
-    .cb-ship     { background:#dbeafe; color:#1d4ed8; }
+    .cb-ship, .cb-ship_recruit, .cb-ship_contest,
+    .cb-ship_academic, .cb-ship_global, .cb-ship_scholar
+                 { background:#dbeafe; color:#1d4ed8; }
     .cb-ai       { background:#ede9fe; color:#7c3aed; }
     .cb-media    { background:#fee2e2; color:#dc2626; }
     .cb-global   { background:#d1fae5; color:#059669; }
     .cb-corp     { background:#fef3c7; color:#b45309; }
     .cb-scholar  { background:#e0f2fe; color:#0369a1; }
     .cb-activity { background:#fce7f3; color:#be185d; }
-    [data-theme="dark"] .cb-ship     { background:#1e3a5f; color:#93c5fd; }
+    [data-theme="dark"] .cb-ship,
+    [data-theme="dark"] .cb-ship_recruit,
+    [data-theme="dark"] .cb-ship_contest,
+    [data-theme="dark"] .cb-ship_academic,
+    [data-theme="dark"] .cb-ship_global,
+    [data-theme="dark"] .cb-ship_scholar { background:#1e3a5f; color:#93c5fd; }
     [data-theme="dark"] .cb-ai       { background:#2e1065; color:#c4b5fd; }
     [data-theme="dark"] .cb-media    { background:#450a0a; color:#fca5a5; }
     [data-theme="dark"] .cb-global   { background:#064e3b; color:#6ee7b7; }
     [data-theme="dark"] .cb-corp     { background:#451a03; color:#fcd34d; }
     [data-theme="dark"] .cb-scholar  { background:#0c4a6e; color:#7dd3fc; }
     [data-theme="dark"] .cb-activity { background:#500724; color:#f9a8d4; }
+
+    /* ===== 조선 서브탭 ===== */
+    .ship-sub-wrap {
+      overflow-x:auto; -webkit-overflow-scrolling:touch;
+      scrollbar-width:none; margin:-6px 0 16px;
+    }
+    .ship-sub-wrap::-webkit-scrollbar { display:none; }
+    .ship-sub-tabs { display:flex; gap:6px; width:max-content; }
+    .stab {
+      padding:5px 14px; border:1.5px solid rgba(37,99,235,.3);
+      border-radius:50px; background:transparent;
+      color:var(--accent); font-size:12.5px; font-weight:600;
+      white-space:nowrap; cursor:pointer; transition:all .18s;
+      display:flex; align-items:center; gap:5px;
+    }
+    .stab:hover { background:rgba(37,99,235,.08); }
+    .stab.on { background:rgba(37,99,235,.12); border-color:var(--accent); font-weight:700; }
+    .stab-n {
+      font-size:10px; font-weight:800; padding:1px 5px;
+      border-radius:50px; background:rgba(37,99,235,.15); color:var(--accent);
+    }
 
     /* ===== 로딩 스피너 ===== */
     .loading {
@@ -409,6 +437,11 @@
   <!-- 카테고리 탭 -->
   <div class="tabs-scroll"><div class="tabs" id="tabs"></div></div>
 
+  <!-- 조선/기계 서브탭 (ship 탭 선택 시에만 표시) -->
+  <div class="ship-sub-wrap" id="shipSubWrap" style="display:none">
+    <div class="ship-sub-tabs" id="shipSubTabs"></div>
+  </div>
+
   <!-- 툴바 -->
   <div class="toolbar">
     <div class="rc" id="rc"></div>
@@ -453,7 +486,11 @@
         <div class="fg">
           <label>카테고리 <span>*</span></label>
           <select class="fs" id="iCat">
-            <option value="ship">🚢 조선/기계</option>
+            <option value="ship_recruit">🚢 조선 채용/인턴십</option>
+            <option value="ship_contest">🏆 조선 공모전/경진</option>
+            <option value="ship_academic">📖 조선 학술/논문</option>
+            <option value="ship_global">✈️ 조선 해외 인턴십</option>
+            <option value="ship_scholar">💰 조선 장학금</option>
             <option value="ai">🤖 AI/IoT</option>
             <option value="media">🎬 영상/콘텐츠</option>
             <option value="global">✈️ 해외 인턴십</option>
@@ -493,22 +530,37 @@
 // 카테고리 정의
 // ════════════════════════════════════════════════════════
 const CATS = {
-  all:      { label:'전체보기',      icon:'📋' },
-  ship:     { label:'조선/기계',     icon:'🚢' },
-  ai:       { label:'AI/IoT',       icon:'🤖' },
-  media:    { label:'영상/콘텐츠',   icon:'🎬' },
-  global:   { label:'해외 인턴십',   icon:'✈️' },
-  corp:     { label:'대기업 인턴',   icon:'🏢' },
-  scholar:  { label:'장학금',        icon:'💰' },
-  activity: { label:'대외활동',      icon:'🎯' },
-  bookmark: { label:'즐겨찾기',      icon:'⭐' },
+  all:           { label:'전체보기',      icon:'📋' },
+  ship:          { label:'조선/기계',     icon:'🚢' },
+  ship_recruit:  { label:'채용/인턴십',   icon:'💼' },
+  ship_contest:  { label:'공모전/경진',   icon:'🏆' },
+  ship_academic: { label:'학술/논문',     icon:'📖' },
+  ship_global:   { label:'해외 인턴십',   icon:'✈️' },
+  ship_scholar:  { label:'장학금',        icon:'💰' },
+  ai:            { label:'AI/IoT',       icon:'🤖' },
+  media:         { label:'영상/콘텐츠',   icon:'🎬' },
+  global:        { label:'해외 인턴십',   icon:'✈️' },
+  corp:          { label:'대기업 인턴',   icon:'🏢' },
+  scholar:       { label:'장학금',        icon:'💰' },
+  activity:      { label:'대외활동',      icon:'🎯' },
+  bookmark:      { label:'즐겨찾기',      icon:'⭐' },
 };
+
+const SHIP_SUBS = [
+  { key: '',         label: '전체',          icon: '🚢' },
+  { key: 'recruit',  label: '채용/인턴십',    icon: '💼' },
+  { key: 'contest',  label: '공모전/경진',    icon: '🏆' },
+  { key: 'academic', label: '학술/논문',      icon: '📖' },
+  { key: 'global',   label: '해외 인턴십',    icon: '✈️' },
+  { key: 'scholar',  label: '장학금',         icon: '💰' },
+];
 
 // ════════════════════════════════════════════════════════
 // 상태
 // ════════════════════════════════════════════════════════
 const S = {
   tab: 'all',
+  shipSub: '',
   query: '',
   liveItems: [],
   custom: JSON.parse(localStorage.getItem('custom') || '[]'),
@@ -588,6 +640,11 @@ function filtered() {
 
   if (S.tab === 'bookmark') {
     list = list.filter(e => S.bookmarks.has(e.id));
+  } else if (S.tab === 'ship') {
+    list = list.filter(e => e.cat === 'ship' || e.cat.startsWith('ship_'));
+    if (S.shipSub) {
+      list = list.filter(e => e.cat === 'ship_' + S.shipSub);
+    }
   } else if (S.tab !== 'all') {
     list = list.filter(e => e.cat === S.tab);
   }
@@ -621,6 +678,7 @@ function filtered() {
 function render() {
   renderFeatured();
   renderTabs();
+  renderShipSubTabs();
   renderCards();
   renderStats();
 }
@@ -630,7 +688,7 @@ function renderFeatured() {
   sec.style.display = (S.tab === 'all' || S.tab === 'ship') ? '' : 'none';
 
   const shipItems = allEntries()
-    .filter(e => e.cat === 'ship' && dday(e.deadline) >= 0)
+    .filter(e => (e.cat === 'ship' || e.cat.startsWith('ship_')) && dday(e.deadline) >= 0)
     .sort((a,b) => dday(a.deadline) - dday(b.deadline))
     .slice(0, 6);
 
@@ -659,9 +717,10 @@ function renderTabs() {
   const cnt = {};
   all.forEach(e => cnt[e.cat] = (cnt[e.cat]||0)+1);
 
+  const shipCnt = all.filter(e => e.cat === 'ship' || e.cat.startsWith('ship_')).length;
   const defs = [
     ['all',      '📋 전체보기',  all.length],
-    ['ship',     '🚢 조선/기계', cnt.ship||0],
+    ['ship',     '🚢 조선/기계', shipCnt],
     ['ai',       '🤖 AI/IoT',   cnt.ai||0],
     ['media',    '🎬 영상/콘텐츠', cnt.media||0],
     ['global',   '✈️ 해외 인턴십', cnt.global||0],
@@ -748,8 +807,39 @@ function renderStats() {
 // ════════════════════════════════════════════════════════
 // 액션
 // ════════════════════════════════════════════════════════
-function setTab(k) { S.tab = k; render(); }
+function setTab(k) { S.tab = k; if (k !== 'ship') S.shipSub = ''; render(); }
+function setShipSub(k) { S.shipSub = k; render(); }
 function handleSearch() { S.query = document.getElementById('searchInput').value; renderCards(); }
+
+function renderShipSubTabs() {
+  const wrap = document.getElementById('shipSubWrap');
+  if (S.tab !== 'ship') { wrap.style.display = 'none'; return; }
+
+  const showExp = document.getElementById('showExpired')?.checked;
+  const all = allEntries().filter(e => showExp || dday(e.deadline) >= 0);
+  const cnt = {};
+  all.forEach(e => {
+    if (e.cat === 'ship') { cnt['recruit'] = (cnt['recruit']||0)+1; }
+    else if (e.cat.startsWith('ship_')) {
+      const sub = e.cat.slice(5);
+      cnt[sub] = (cnt[sub]||0)+1;
+    }
+  });
+  const total = Object.values(cnt).reduce((a,b) => a+b, 0);
+  if (total === 0) { wrap.style.display = 'none'; return; }
+
+  // 데이터 있는 서브탭만 표시 (+ 전체 탭은 항상)
+  const visibleSubs = SHIP_SUBS.filter(s => s.key === '' || (cnt[s.key]||0) > 0);
+  if (visibleSubs.length <= 1) { wrap.style.display = 'none'; return; }
+
+  wrap.style.display = '';
+  document.getElementById('shipSubTabs').innerHTML = visibleSubs.map(s => {
+    const n = s.key ? (cnt[s.key]||0) : total;
+    return `<button class="stab ${S.shipSub===s.key?'on':''}" onclick="setShipSub('${s.key}')">
+      ${s.icon} ${s.label}<span class="stab-n">${n}</span>
+    </button>`;
+  }).join('');
+}
 
 function toggleBm(id) {
   S.bookmarks.has(id) ? S.bookmarks.delete(id) : S.bookmarks.add(id);
