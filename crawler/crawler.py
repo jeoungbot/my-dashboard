@@ -282,17 +282,49 @@ def _classify_scholar_sub(title: str, org: str = "", hint: str = "") -> str:
     return "scholar"
 
 
+# 조선·기계·방산 관련 기술 키워드
+_SHIP_TECH: frozenset[str] = frozenset([
+    "조선", "선박", "해양", "플랜트", "lng", "ship", "marine", "offshore",
+    "기계공학", "기계설계", "기계시스템", "기계항공", "금속공학", "재료공학",
+    "용접", "한국선급", "kriso", "dsme", "선체", "선각", "추진기", "배관",
+    "해양구조물", "부유식", "fpso", "drillship", "조선해양", "조선공학",
+    "해양공학", "조선기자재", "선박기자재",
+])
+
+# 조선·기계·방산 주요 기업 및 연구소 이름 (소문자 비교용)
+_SHIP_COS: frozenset[str] = frozenset([
+    # 조선 빅3 계열
+    "한화오션", "삼성중공업", "hd현대중공업", "현대중공업", "현대미포조선",
+    "현대삼호중공업", "현대삼호",
+    # 중견 조선
+    "hj중공업", "한진중공업", "대한조선", "케이조선", "대선조선",
+    "성동조선", "stx조선",
+    # 기계·방산·에너지
+    "한화에어로스페이스", "한화에어로", "두산에너빌리티", "두산중공업",
+    "한화파워시스템", "hd현대인프라코어", "현대두산인프라코어",
+    "한화시스템", "lg이노텍조선", "현대로보틱스",
+    # 연구소
+    "선박해양플랜트연구소", "한국기계연구원", "kimm", "생산기술연구원",
+    "kitech", "rist",
+])
+
+
+def _is_ship_related(t: str) -> bool:
+    return any(k in t for k in _SHIP_TECH) or any(k in t for k in _SHIP_COS)
+
+
 def _classify(title: str, org: str = "", hint: str = "") -> str:
     t = f"{title} {org} {hint}".lower()
-    h = hint.lower()
 
-    if any(k in t for k in [
-        "조선", "선박", "해양", "플랜트", "lng", "ship", "marine", "offshore",
-        "기계공학", "기계설계", "기계시스템", "기계항공", "금속공학", "재료공학",
-        "용접", "한국선급", "kriso", "dsme",
-    ]):
-        if any(k in h for k in ["공모전", "경진", "공모전코리아"]):
+    if _is_ship_related(t):
+        if any(k in t for k in ["공모전", "경진", "아이디어", "contest", "경쟁", "챌린지"]):
             return "ship_contest"
+        if any(k in t for k in ["학술", "논문", "세미나", "학회", "심포지엄"]):
+            return "ship_academic"
+        if any(k in t for k in ["해외", "global", "abroad", "overseas", "해외인턴"]):
+            return "ship_global"
+        if any(k in t for k in ["장학", "scholarship"]):
+            return "ship_scholar"
         return "ship_recruit"
 
     if any(k in t for k in [
@@ -647,22 +679,33 @@ def scrape_kr_recruit() -> list[dict]:
 
     for tr in soup.select(".board_list tbody tr"):
         tds = tr.find_all("td")
-        if len(tds) < 4:
+        if len(tds) < 2:
             continue
-        title = tds[1].get_text(strip=True)
-        reg_str = tds[3].get_text(strip=True)
-        if not title or not reg_str:
-            continue
-
-        reg_date = _parse_ymd(reg_str)
-        if not reg_date:
+        title = tds[1].get_text(strip=True) if len(tds) > 1 else ""
+        if not title:
             continue
 
-        reg = date.fromisoformat(reg_date)
-        if (today - reg).days > 180:
+        row_text = tr.get_text(" ", strip=True)
+        # 날짜 패턴 전부 추출 (YYYY.MM.DD 또는 YYYY-MM-DD)
+        all_dates = re.findall(r"\d{4}[.\-]\d{1,2}[.\-]\d{1,2}", row_text)
+        parsed_dates = [_parse_ymd(d) for d in all_dates]
+        parsed_dates = [d for d in parsed_dates if d]
+
+        deadline: Optional[str] = None
+        if len(parsed_dates) >= 2:
+            # "시작일 ~ 종료일" 형태 — 가장 늦은 날짜를 마감일로
+            deadline = max(parsed_dates)
+        elif len(parsed_dates) == 1:
+            # 날짜 1개 = 등록일 추정 → +180일
+            reg = date.fromisoformat(parsed_dates[0])
+            if (today - reg).days > 180:
+                continue
+            deadline = (reg + timedelta(days=180)).isoformat()
+        else:
             continue
 
-        deadline = (reg + timedelta(days=180)).isoformat()
+        if not _is_active(deadline):
+            continue
 
         results.append({
             "id":          _md5("kr", title),
@@ -672,7 +715,7 @@ def scrape_kr_recruit() -> list[dict]:
             "deadline":    deadline,
             "url":         KR_RECRUIT_URL,
             "src":         "한국선급",
-            "desc":        f"등록일: {reg_date}",
+            "desc":        f"접수기간: {' ~ '.join(parsed_dates)}" if parsed_dates else "",
             "tags":        ["채용", "조선"],
             "eligibility": {"grade": "", "gpa": "", "note": ""},
         })
@@ -947,6 +990,356 @@ def scrape_contestkorea_scholar() -> list[dict]:
 
 
 # ─────────────────────────────────────────────────────────────────────────────
+# 공모전코리아 조선/기계 키워드 검색
+# ─────────────────────────────────────────────────────────────────────────────
+
+def scrape_contestkorea_ship() -> list[dict]:
+    """공모전코리아에서 조선/기계 키워드 검색 후 상세 페이지에서 마감일 추출."""
+    import urllib.parse
+    print("📡 공모전코리아 조선/기계 키워드 검색...")
+
+    candidates: list[tuple[str, str]] = []
+    seen_urls: set[str] = set()
+
+    for kw in ["조선", "해양플랜트", "선박", "현대중공업", "한화오션", "삼성중공업"]:
+        url = f"{CONTESTKOREA_BASE}/sub/search.php?Txt_word={urllib.parse.quote(kw)}"
+        soup = fetch(url, retries=2)
+        if not soup:
+            continue
+        for li in soup.select("li.imminent"):
+            title_div = li.find("div", class_="title")
+            if not title_div:
+                continue
+            link = title_div.find("a", href=True)
+            if not link:
+                continue
+            for sp in link.find_all("span", class_="category"):
+                sp.decompose()
+            title = link.get_text(strip=True).strip()
+            if not title:
+                continue
+            href = link["href"]
+            if not href.startswith("http") and not href.startswith("/"):
+                href = "/sub/" + href
+            detail_url = _clean_url(href, CONTESTKOREA_BASE)
+            if detail_url not in seen_urls:
+                seen_urls.add(detail_url)
+                candidates.append((title, detail_url))
+        time.sleep(random.uniform(1.0, 2.0))
+
+    print(f"  후보 {len(candidates)}건 → 상세 페이지 방문")
+    results: list[dict] = []
+    seen_keys: set[str] = set()
+
+    for title, detail_url in candidates[:25]:
+        key = re.sub(r"\s+", "", title.lower())
+        if key in seen_keys:
+            continue
+        seen_keys.add(key)
+        time.sleep(random.uniform(1.0, 2.0))
+        detail = fetch(detail_url, retries=1)
+        if not detail:
+            continue
+
+        org = "미상"
+        deadline = None
+
+        for tr in detail.find_all("tr"):
+            th = tr.find("th")
+            td = tr.find("td")
+            if not (th and td):
+                continue
+            th_txt = th.get_text(strip=True)
+            td_txt = td.get_text(" ", strip=True)
+            if any(k in th_txt for k in ["주최", "주관"]):
+                org = re.sub(r"[·/].*", "", td_txt).strip()[:60] or "미상"
+            elif any(k in th_txt for k in ["접수기간", "공모기간", "모집기간", "신청기간"]):
+                deadline = _ck_deadline(td_txt)
+
+        if not _is_active(deadline):
+            continue
+
+        cat = _classify(title, org, "공모전코리아")
+        if not cat.startswith("ship"):
+            cat = "ship_contest"
+
+        results.append({
+            "id":          _md5("cks_ship", title),
+            "title":       title,
+            "org":         org,
+            "cat":         cat,
+            "deadline":    deadline,
+            "url":         detail_url,
+            "src":         "공모전코리아",
+            "desc":        "",
+            "tags":        ["조선", "공모전코리아"],
+            "eligibility": _extract_eligibility(title),
+        })
+
+    print(f"  → 공모전코리아 조선/기계: {len(results)}건")
+    return results
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# 사람인 조선/기계 채용 검색
+# ─────────────────────────────────────────────────────────────────────────────
+
+_SARAMIN_BASE = "https://www.saramin.co.kr"
+
+
+def scrape_saramin_ship() -> list[dict]:
+    """사람인 검색으로 조선/기계 기업 채용공고 수집 (인턴 포함)."""
+    import urllib.parse
+    print("📡 사람인 조선/기계 채용 검색...")
+
+    results: list[dict] = []
+    seen_urls: set[str] = set()
+
+    search_terms = [
+        "조선해양 인턴", "한화오션 채용", "삼성중공업 채용",
+        "현대중공업 인턴", "선박 인턴십", "두산에너빌리티",
+    ]
+
+    for term in search_terms:
+        url = (
+            f"{_SARAMIN_BASE}/zf_user/search/recruit"
+            f"?searchType=search&searchword={urllib.parse.quote(term)}&recruitPage=1"
+        )
+        soup = fetch(url, retries=2, timeout=25)
+        if not soup:
+            continue
+
+        for item in soup.select(".item_recruit"):
+            title_tag = item.select_one(".job_tit a")
+            company_tag = item.select_one(".corp_name a")
+            date_tag = item.select_one(".job_date .date")
+
+            if not title_tag:
+                continue
+
+            title = title_tag.get_text(strip=True)
+            org = company_tag.get_text(strip=True) if company_tag else "미상"
+            date_text = date_tag.get_text(strip=True) if date_tag else ""
+            href = title_tag.get("href", "")
+            detail_url = _clean_url(href, _SARAMIN_BASE) if href else _SARAMIN_BASE
+
+            if detail_url in seen_urls:
+                continue
+            seen_urls.add(detail_url)
+
+            deadline = _parse_ymd(date_text) or _parse_ymd(re.sub(r"[^\d.]", ".", date_text))
+            if not deadline:
+                deadline = (date.today() + timedelta(days=30)).isoformat()
+
+            if not _is_active(deadline):
+                continue
+
+            cat = _classify(title, org, "사람인")
+            if not cat.startswith("ship"):
+                if not _is_ship_related(f"{title} {org}".lower()):
+                    continue
+                cat = "ship_recruit"
+
+            results.append({
+                "id":          _md5("saramin", title + org),
+                "title":       title,
+                "org":         org,
+                "cat":         cat,
+                "deadline":    deadline,
+                "url":         detail_url,
+                "src":         "사람인",
+                "desc":        "",
+                "tags":        ["채용", "인턴"],
+                "eligibility": _extract_eligibility(title),
+            })
+
+        time.sleep(random.uniform(1.5, 2.5))
+
+    print(f"  → 사람인 조선/기계: {len(results)}건")
+    return results
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# 주요 기업 채용 페이지 직접 크롤링
+# ─────────────────────────────────────────────────────────────────────────────
+
+def _parse_ship_career_page(soup: BeautifulSoup, org: str, base: str, src: str) -> list[dict]:
+    """기업 채용 페이지 범용 파서 (테이블·카드 양식 모두 시도)."""
+    results: list[dict] = []
+    seen: set[str] = set()
+
+    def _try_add(title: str, deadline_str: str, href: str) -> None:
+        key = re.sub(r"\s+", "", title.lower())
+        if key in seen or len(title) < 3:
+            return
+        deadline = _ck_deadline(deadline_str) or _parse_ymd(deadline_str)
+        if not deadline:
+            deadline = (date.today() + timedelta(days=60)).isoformat()
+        if not _is_active(deadline):
+            return
+        seen.add(key)
+        results.append({
+            "id":          _md5(src, title),
+            "title":       title[:100],
+            "org":         org,
+            "cat":         _classify(title, org, src),
+            "deadline":    deadline,
+            "url":         _clean_url(href, base),
+            "src":         src,
+            "desc":        "",
+            "tags":        ["채용", "조선"],
+            "eligibility": _extract_eligibility(title),
+        })
+
+    # 전략 1: 테이블 행
+    for tr in soup.select("table tbody tr"):
+        link = tr.find("a", href=True)
+        if not link:
+            continue
+        title = link.get_text(strip=True)
+        row_text = tr.get_text(" ", strip=True)
+        _try_add(title, row_text, link["href"])
+
+    # 전략 2: div/li 카드형
+    if not results:
+        for sel in [".list-item", ".recruit-item", ".job-item", "li.item", ".board-list li"]:
+            for el in soup.select(sel):
+                link = el.find("a", href=True)
+                if not link:
+                    continue
+                title = link.get_text(strip=True)
+                _try_add(title, el.get_text(" ", strip=True), link["href"])
+            if results:
+                break
+
+    return results[:20]
+
+
+_SHIP_CO_PAGES: list[tuple[str, str, str]] = [
+    # (기관명, 채용페이지 URL, base URL)
+    # 아래는 server-rendered 가능성이 있는 페이지만 포함
+    # SPA(React/Next.js)인 경우 0건으로 실패하므로 안전
+    ("한화오션",         "https://www.hanwhaocean.com/careers/ri/",              "https://www.hanwhaocean.com"),
+    ("한화에어로스페이스", "https://www.hanwhaaerospace.com/kor/recruit/",        "https://www.hanwhaaerospace.com"),
+    ("두산에너빌리티",   "https://www.doosanenerbility.com/en/employment/recruitment", "https://www.doosanenerbility.com"),
+]
+
+
+def scrape_ship_companies() -> list[dict]:
+    """조선·기계 주요 기업 채용 페이지 크롤링."""
+    print("📡 조선/기계 기업 채용 페이지 크롤링...")
+    results: list[dict] = []
+
+    for org, url, base in _SHIP_CO_PAGES:
+        print(f"  → {org}: {url}")
+        soup = fetch(url, retries=2, timeout=20)
+        if not soup:
+            continue
+        items = _parse_ship_career_page(soup, org, base, org)
+        if items:
+            print(f"     {len(items)}건")
+            results.extend(items)
+        else:
+            print(f"     0건 (파싱 실패 또는 공고 없음)")
+        time.sleep(random.uniform(1.0, 2.0))
+
+    print(f"  → 기업 채용 합계: {len(results)}건")
+    return results
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# 조선/기계 관련 연구소 채용 크롤링
+# ─────────────────────────────────────────────────────────────────────────────
+
+_SHIP_INSTITUTES: list[tuple[str, str, str]] = [
+    # 채용공고 페이지 직접 URL (server-rendered 확인)
+    ("KRISO(선박해양플랜트연구소)", "https://www.kriso.re.kr/board.es?mid=a10402030000&bid=0012", "https://www.kriso.re.kr"),
+    ("한국기계연구원(KIMM)",        "https://www.kimm.re.kr/sub050301",                            "https://www.kimm.re.kr"),
+    ("RIST(포항산업과학연구원)",    "https://www.rist.re.kr/contents/sub05_01.do",                 "https://www.rist.re.kr"),
+]
+
+
+def _parse_institute_board(soup: BeautifulSoup, org: str, base: str) -> list[dict]:
+    """연구소 게시판 테이블 파서 — KRISO/KIMM 구조 대응."""
+    results: list[dict] = []
+    seen: set[str] = set()
+    today = date.today()
+
+    for tr in soup.select("table tbody tr, .board_list tbody tr"):
+        cells = tr.find_all("td")
+        link = tr.find("a", href=True)
+        if not link or not cells:
+            continue
+
+        title = link.get_text(strip=True)
+        title = re.sub(r"^새글\s*", "", title).strip()  # "새글" 접두 마커 제거
+        if not title or len(title) < 4:
+            continue
+
+        # 상태 컬럼 "진행중" / "완료" 확인
+        row_text = tr.get_text(" ", strip=True)
+        if any(k in row_text for k in ["완료", "마감", "종료"]):
+            continue
+
+        # 날짜 추출
+        dates = re.findall(r"\d{4}[.\-]\d{1,2}[.\-]\d{1,2}", row_text)
+        parsed = [_parse_ymd(d) for d in dates]
+        parsed = [d for d in parsed if d]
+        deadline = max(parsed) if parsed else (today + timedelta(days=60)).isoformat()
+
+        if not _is_active(deadline):
+            continue
+
+        href = link["href"]
+        url = _clean_url(href, base)
+        key = re.sub(r"\s+", "", title.lower())
+        if key in seen:
+            continue
+        seen.add(key)
+
+        results.append({
+            "id":          _md5(org, title),
+            "title":       title[:100],
+            "org":         org,
+            "cat":         "ship_recruit",
+            "deadline":    deadline,
+            "url":         url,
+            "src":         org,
+            "desc":        "",
+            "tags":        ["채용", "연구소", "조선"],
+            "eligibility": _extract_eligibility(title),
+        })
+
+    return results[:15]
+
+
+def scrape_ship_institutes() -> list[dict]:
+    """조선·기계 관련 연구소 채용 공고 크롤링."""
+    print("📡 조선/기계 연구소 채용 크롤링...")
+    results: list[dict] = []
+
+    for org, url, base in _SHIP_INSTITUTES:
+        print(f"  → {org}: {url}")
+        soup = fetch(url, retries=2, timeout=20)
+        if not soup:
+            continue
+        items = _parse_institute_board(soup, org, base)
+        if not items:
+            items = _parse_ship_career_page(soup, org, base, org)
+            for it in items:
+                it["cat"] = "ship_recruit"
+        if items:
+            print(f"     {len(items)}건")
+            results.extend(items)
+        else:
+            print(f"     0건")
+        time.sleep(random.uniform(1.0, 2.0))
+
+    print(f"  → 연구소 채용 합계: {len(results)}건")
+    return results
+
+
+# ─────────────────────────────────────────────────────────────────────────────
 # 범용 장학금 HTML 목록 파서
 # ─────────────────────────────────────────────────────────────────────────────
 
@@ -1185,6 +1578,11 @@ def main() -> None:
         print(f"  공모전코리아 장학금 검색 오류: {e}")
 
     try:
+        all_items += scrape_contestkorea_ship()
+    except Exception as e:
+        print(f"  공모전코리아 조선 검색 오류: {e}")
+
+    try:
         all_items += scrape_kr_recruit()
     except Exception as e:
         print(f"  한국선급 전체 오류: {e}")
@@ -1194,9 +1592,20 @@ def main() -> None:
     except Exception as e:
         print(f"  씽유 오류: {e}")
 
-    # kstudy.com : 장학금 관련 없는 출판사 사이트 → 비활성화
-    # janghaggeum.com : 도메인 없음 → 비활성화
-    # jobkorea.co.kr : 장학금 전용 페이지 없음 → 비활성화
+    try:
+        all_items += scrape_saramin_ship()
+    except Exception as e:
+        print(f"  사람인 조선 검색 오류: {e}")
+
+    try:
+        all_items += scrape_ship_companies()
+    except Exception as e:
+        print(f"  기업 채용페이지 오류: {e}")
+
+    try:
+        all_items += scrape_ship_institutes()
+    except Exception as e:
+        print(f"  연구소 채용 오류: {e}")
 
     # 중복 제거 + 마감일 오름차순 정렬
     all_items = _dedupe(all_items)
