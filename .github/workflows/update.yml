@@ -2,9 +2,11 @@ name: 🔄 공모전 데이터 자동 업데이트
 
 on:
   schedule:
-    # 매일 오전 9시 KST (= UTC 00:00)
-    - cron: '0 0 * * *'
-  workflow_dispatch:  # Actions 탭 "Run workflow" 버튼으로 수동 실행 가능
+    # 매일 KST 09:00 (UTC 00:00) — 정각은 혼잡하므로 :15분 오프셋 적용
+    - cron: '15 0 * * *'
+    # KST 11:00 (UTC 02:00) 백업 — 위 스케줄이 지연되거나 실패할 경우 대비
+    - cron: '15 2 * * *'
+  workflow_dispatch:  # Actions 탭 "Run workflow" 버튼으로 수동 실행
 
 permissions:
   contents: write
@@ -12,6 +14,7 @@ permissions:
 jobs:
   crawl-and-deploy:
     runs-on: ubuntu-latest
+    timeout-minutes: 30  # 크롤러가 무한 대기하는 상황 방지
 
     steps:
       - name: 📦 코드 체크아웃
@@ -27,24 +30,9 @@ jobs:
       - name: 📥 의존성 설치
         run: pip install -r crawler/requirements.txt
 
-      - name: 🛡 봇 우회 헤더 검증 (디버그)
-        run: |
-          python -c "
-          import requests
-          hdrs = {
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
-            'Accept-Language': 'ko-KR,ko;q=0.9',
-            'sec-ch-ua': '\"Google Chrome\";v=\"125\"',
-            'Sec-Fetch-Dest': 'document',
-            'Sec-Fetch-Mode': 'navigate',
-          }
-          r = requests.get('https://linkareer.com', headers=hdrs, timeout=20)
-          print(f'링커리어 홈 HTTP {r.status_code} ({len(r.text)} bytes)')
-          "
-
       - name: 🕷 크롤러 실행
-        # 크롤링이 실패해도 기존 data.json 유지
-        continue-on-error: true
+        continue-on-error: true   # 크롤링 실패해도 기존 data.json 유지
+        timeout-minutes: 20       # 크롤러 자체 타임아웃
         run: python crawler/crawler.py
 
       - name: 📊 수집 결과 확인
@@ -59,18 +47,24 @@ jobs:
           cats = {}
           for item in d['items']:
               cats[item['cat']] = cats.get(item['cat'], 0) + 1
-          labels = {'ship':'조선/기계','ai':'AI/IoT','media':'영상','global':'해외인턴','corp':'대기업인턴','scholar':'장학금','activity':'대외활동'}
-          for k, v in cats.items():
+          labels = {
+            'ship':'조선/기계','ship_recruit':'조선채용','ship_contest':'조선공모전',
+            'ship_academic':'조선학술','ship_global':'조선해외인턴','ship_scholar':'조선장학금',
+            'ai':'AI/IoT','media':'영상/콘텐츠','global':'해외인턴','corp':'대기업인턴',
+            'scholar':'장학금','scholar_public':'국가장학금','scholar_corp':'기업장학금',
+            'scholar_merit':'성적우수장학금','scholar_region':'지역장학금','scholar_univ':'대학외부장학금',
+            'activity':'대외활동'
+          }
+          for k, v in sorted(cats.items(), key=lambda x: -x[1]):
               print(f'  {labels.get(k,k)}: {v}건')
-          # 마감 지난 항목 검사
           expired = [i for i in d['items'] if date.fromisoformat(i['deadline']) < date.today()]
           if expired:
-              print(f'⚠ 마감 지난 항목 {len(expired)}건 포함됨 (버그)')
+              print(f'⚠ 마감 지난 항목 {len(expired)}건 포함됨')
           else:
-              print('✅ 모든 항목 지원 가능 상태 확인')
+              print('✅ 전체 항목 마감일 정상')
             "
           else
-            echo "⚠ data.json 없음 (크롤링 실패)"
+            echo "⚠ data.json 없음 — 크롤링 완전 실패"
           fi
 
       - name: 💾 변경사항 커밋 & 푸시
@@ -81,6 +75,7 @@ jobs:
           if git diff --staged --quiet; then
             echo "변경 없음 — 커밋 스킵"
           else
-            git commit -m "🔄 Auto-update $(date -u '+%Y-%m-%d %H:%M UTC') — $(python -c \"import json; d=json.load(open('data.json')); print(str(d['total'])+'건')\")"
+            COUNT=$(python -c "import json; d=json.load(open('data.json')); print(d['total'])")
+            git commit -m "🔄 Auto-update $(TZ='Asia/Seoul' date '+%Y-%m-%d %H:%M KST') — ${COUNT}건"
             git push
           fi

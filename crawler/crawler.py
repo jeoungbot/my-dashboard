@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """
-공모전·인턴십 자동 크롤러 v3
-Sources  : linkareer.com, contestkorea.com
+공모전·인턴십·장학금 자동 크롤러 v5
+Sources  : linkareer.com, contestkorea.com, thinkyou.co.kr,
+           kstudy.com, janghaggeum.com, jobkorea.co.kr, krs.co.kr
 Bot 우회 : cloudscraper + 완전 Chrome 헤더 + 세션 워밍업 + 재시도
 Output   : ../data.json  (지원 가능한 공고만, 지원 마감일 기준 필터)
 """
@@ -37,6 +38,10 @@ OUT_PATH          = os.path.join(os.path.dirname(__file__), "..", "data.json")
 LINKAREER_BASE    = "https://linkareer.com"
 CONTESTKOREA_BASE = "https://www.contestkorea.com"
 KR_RECRUIT_URL    = "https://www.krs.co.kr/kor/BBS/BF_Main.aspx?MRID=305&URID=300"
+THINKYOU_BASE     = "https://www.thinkyou.co.kr"
+KSTUDY_BASE       = "https://www.kstudy.com"
+JANGHAGGEUM_BASE  = "https://www.janghaggeum.com"
+JOBKOREA_BASE     = "https://www.jobkorea.co.kr"
 
 # 실제 Chrome 125 브라우저와 동일한 헤더 (순서 포함)
 _CHROME_HEADERS = [
@@ -76,7 +81,6 @@ def _make_session() -> requests.Session:
         s = requests.Session()
         print("  ⚠  cloudscraper 없음 — 기본 requests.Session 사용")
 
-    # OrderedDict 방식으로 헤더 순서 보장
     s.headers.clear()
     for k, v in _CHROME_HEADERS:
         s.headers[k] = v
@@ -102,22 +106,20 @@ def _warm_up(base_url: str) -> None:
         r = s.get(base_url, timeout=20)
         print(f"  🌐 워밍업 {base_url} → HTTP {r.status_code}")
         time.sleep(random.uniform(1.5, 2.5))
-        # 이후 요청은 same-site로 표시
         s.headers["Sec-Fetch-Site"] = "same-origin"
         s.headers["Referer"] = base_url + "/"
     except Exception as e:
         print(f"  ⚠  워밍업 실패: {e}")
 
 
-def fetch(url: str, retries: int = 3) -> Optional[BeautifulSoup]:
+def fetch(url: str, retries: int = 3, timeout: int = 30) -> Optional[BeautifulSoup]:
     """재시도 + 지수 백오프 포함 fetch."""
     s = _session()
     for attempt in range(retries):
         wait = random.uniform(2.0, 3.5) + attempt * 2.5
         time.sleep(wait)
         try:
-            r = s.get(url, timeout=30)
-            # 봇 차단 응답
+            r = s.get(url, timeout=timeout)
             if r.status_code in (403, 429, 503):
                 print(f"    ⚠  HTTP {r.status_code} (시도 {attempt+1}/{retries})")
                 if attempt < retries - 1:
@@ -148,12 +150,10 @@ def _parse_ymd(text: str) -> Optional[str]:
         return None
     t = re.sub(r"[년월일()\[\]까지마감접수기간~\s]", " ", str(text)).strip()
 
-    # YYYY-MM-DD / YYYY.MM.DD
     m = re.search(r"(20\d{2})[.\-/](\d{1,2})[.\-/](\d{1,2})", t)
     if m:
         return f"{m.group(1)}-{int(m.group(2)):02d}-{int(m.group(3)):02d}"
 
-    # YY.MM.DD (두 자리 연도 → 2000+)
     m = re.search(r"(\d{2})[.\-/](\d{1,2})[.\-/](\d{1,2})", t)
     if m:
         y = int(m.group(1)) + 2000
@@ -168,9 +168,7 @@ def _parse_ymd(text: str) -> Optional[str]:
 def _ck_deadline(text: str) -> Optional[str]:
     """
     '26.05.16~27.01.16' 형태에서 마감일(뒤 날짜) 추출.
-    단일 날짜인 경우 그 날짜를 반환.
     """
-    # YY.MM.DD~YY.MM.DD
     m = re.search(
         r"(\d{2})[.\-](\d{2})[.\-](\d{2})\s*~\s*(\d{2})[.\-](\d{2})[.\-](\d{2})",
         text
@@ -179,7 +177,6 @@ def _ck_deadline(text: str) -> Optional[str]:
         y = int(m.group(4)) + 2000
         return f"{y}-{int(m.group(5)):02d}-{int(m.group(6)):02d}"
 
-    # YYYY.MM.DD~YYYY.MM.DD
     m = re.search(
         r"20\d{2}[.\-]\d{2}[.\-]\d{2}\s*~\s*(20\d{2})[.\-](\d{2})[.\-](\d{2})",
         text
@@ -191,16 +188,14 @@ def _ck_deadline(text: str) -> Optional[str]:
 
 
 def _is_active(deadline: Optional[str]) -> bool:
-    """지원 마감일이 오늘 이상인지 확인 (오늘 = 지원 가능)."""
+    """지원 마감일이 오늘 이상인지 확인."""
     if not deadline:
         return False
     try:
         dl = date.fromisoformat(deadline)
         today = date.today()
-        # 마감일이 오늘 포함 이후여야 함
         if dl < today:
             return False
-        # 너무 먼 미래(5년 초과)는 날짜 파싱 오류로 간주
         if (dl - today).days > 365 * 5:
             return False
         return True
@@ -208,17 +203,94 @@ def _is_active(deadline: Optional[str]) -> bool:
         return False
 
 
+def _extract_eligibility(text: str) -> dict:
+    """제목·설명에서 지원 자격(학년, 학점) 추출."""
+    t = text
+    grade = ""
+    gpa = ""
+    note = ""
+
+    # 학년 범위 패턴: "1~4학년", "전학년"
+    m = re.search(r"(\d+)[~\-](\d+)\s*학년", t)
+    if m:
+        grade = f"{m.group(1)}~{m.group(2)}학년"
+    else:
+        m = re.search(r"(\d+)\s*학년\s*이상", t)
+        if m:
+            grade = f"{m.group(1)}학년 이상"
+        else:
+            m = re.search(r"(\d+)\s*학년", t)
+            if m:
+                grade = f"{m.group(1)}학년"
+            elif "전학년" in t or "재학생" in t:
+                grade = "전학년"
+
+    # 학점 패턴
+    m = re.search(r"(학점|gpa)[^\d]*(\d+\.\d+)", t, re.IGNORECASE)
+    if m:
+        gpa = f"{m.group(2)} 이상"
+    else:
+        m = re.search(r"(\d+\.\d+)\s*(학점|gpa|이상)", t, re.IGNORECASE)
+        if m:
+            gpa = f"{m.group(1)} 이상"
+
+    return {"grade": grade, "gpa": gpa, "note": note}
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# 분류
+# ─────────────────────────────────────────────────────────────────────────────
+
+def _classify_scholar_sub(title: str, org: str = "", hint: str = "") -> str:
+    """장학금 세부 카테고리 분류."""
+    t = f"{title} {org} {hint}".lower()
+
+    # 지역 장학금
+    if any(k in t for k in [
+        "부산", "경남", "경북", "경기", "서울", "인천", "대구", "광주", "대전",
+        "울산", "세종", "강원", "충북", "충남", "전북", "전남", "제주",
+        "지역", "향토", "로컬",
+    ]):
+        return "scholar_region"
+
+    # 국가/공공 장학금
+    if any(k in t for k in [
+        "국가장학", "정부", "교육부", "한국장학재단", "kosaf", "국가",
+        "공공기관", "공단", "공사", "공기업",
+    ]):
+        return "scholar_public"
+
+    # 성적 우수 장학금
+    if any(k in t for k in [
+        "성적", "우수", "gpa", "학점", "수석", "우등", "성적우수", "학업우수",
+    ]):
+        return "scholar_merit"
+
+    # 대학교 외부 장학금
+    if any(k in t for k in [
+        "총동문회", "동문회", "동문", "alumni", "졸업생",
+    ]):
+        return "scholar_univ"
+
+    # 기업/사설 장학금
+    if any(k in t for k in [
+        "재단", "그룹", "기업", "주식회사", "삼성", "현대", "lg", "sk",
+        "롯데", "포스코", "kt", "사설", "민간", "법인",
+    ]):
+        return "scholar_corp"
+
+    return "scholar"
+
+
 def _classify(title: str, org: str = "", hint: str = "") -> str:
     t = f"{title} {org} {hint}".lower()
     h = hint.lower()
 
-    # 조선/기계: "기계" 단독 사용 시 "자기계발" 오분류 → 복합어만 허용
     if any(k in t for k in [
         "조선", "선박", "해양", "플랜트", "lng", "ship", "marine", "offshore",
         "기계공학", "기계설계", "기계시스템", "기계항공", "금속공학", "재료공학",
         "용접", "한국선급", "kriso", "dsme",
     ]):
-        # 페이지 유형에 따라 서브카테고리 결정
         if any(k in h for k in ["공모전", "경진", "공모전코리아"]):
             return "ship_contest"
         return "ship_recruit"
@@ -245,13 +317,12 @@ def _classify(title: str, org: str = "", hint: str = "") -> str:
         return "corp"
 
     if any(k in t for k in ["장학", "scholarship", "장학금", "학자금"]):
-        return "scholar"
+        return _classify_scholar_sub(title, org, hint)
 
     return "activity"
 
 
 def _clean_url(href: str, base: str = "") -> str:
-    """상대 URL → 절대 URL."""
     href = (href or "").strip()
     if href.startswith("http"):
         return href
@@ -261,13 +332,8 @@ def _clean_url(href: str, base: str = "") -> str:
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# 링커리어
+# 링커리어 (공모전·대외활동·인턴)
 # ─────────────────────────────────────────────────────────────────────────────
-#
-# 전략: __NEXT_DATA__ → props.pageProps.__APOLLO_STATE__
-#       키 "Activity:숫자" → {id, title, organizationName, recruitCloseAt(ms)}
-#
-# recruitCloseAt = 지원 마감 유닉스 타임스탬프(밀리초) → 지원 마감일 기준 필터
 
 def _apollo_items(soup: BeautifulSoup, hint: str) -> list[dict]:
     tag = soup.find("script", id="__NEXT_DATA__")
@@ -292,12 +358,10 @@ def _apollo_items(soup: BeautifulSoup, hint: str) -> list[dict]:
 
     results = []
     for key, val in apollo.items():
-        # "Activity:숫자" 형태만 (ActivityFile, ActivityImage 등 제외)
         if not re.match(r"^Activity:\d+$", key):
             continue
         if not isinstance(val, dict):
             continue
-
         item = _lk_build(val, hint)
         if item:
             results.append(item)
@@ -314,30 +378,29 @@ def _lk_build(val: dict, hint: str) -> Optional[dict]:
 
         org = (val.get("organizationName") or "미상").strip()
 
-        # recruitCloseAt = 지원 마감일(밀리초)
         close_ms = val.get("recruitCloseAt")
         if not close_ms:
             return None
 
         deadline = datetime.fromtimestamp(int(close_ms) / 1000).strftime("%Y-%m-%d")
-
-        # 지원 마감일 기준 필터 (이미 지난 공고 제외)
         if not _is_active(deadline):
             return None
 
         url = f"{LINKAREER_BASE}/activity/{aid}"
         cat = _classify(title, org, hint)
+        elig = _extract_eligibility(title)
 
         return {
-            "id":       f"lk_{aid}",
-            "title":    title,
-            "org":      org,
-            "cat":      cat,
-            "deadline": deadline,
-            "url":      url,       # 반드시 해당 공고 직접 링크
-            "src":      "링커리어",
-            "desc":     "",
-            "tags":     [],
+            "id":          f"lk_{aid}",
+            "title":       title,
+            "org":         org,
+            "cat":         cat,
+            "deadline":    deadline,
+            "url":         url,
+            "src":         "링커리어",
+            "desc":        "",
+            "tags":        [],
+            "eligibility": elig,
         }
     except Exception:
         return None
@@ -347,11 +410,10 @@ def scrape_linkareer() -> list[dict]:
     print("📡 링커리어 크롤링...")
     _warm_up(LINKAREER_BASE)
 
-    # 장학금(/list/scholarship)은 링커리어 서버 자체 504 상태 → 제외
     pages = [
-        (f"{LINKAREER_BASE}/list/contest", "공모전"),
-        (f"{LINKAREER_BASE}/list/club",    "대외활동"),
-        (f"{LINKAREER_BASE}/list/intern",  "인턴십"),
+        (f"{LINKAREER_BASE}/list/contest",  "공모전"),
+        (f"{LINKAREER_BASE}/list/club",     "대외활동"),
+        (f"{LINKAREER_BASE}/list/intern",   "인턴십"),
     ]
 
     results = []
@@ -362,37 +424,208 @@ def scrape_linkareer() -> list[dict]:
             print(f"     ✖ 수집 실패 — 다음 페이지로 진행")
             continue
 
-        # 봇 차단 여부 진단 (본문에 Access Denied 문자열 포함 시)
         page_text = soup.get_text()
         if "access denied" in page_text.lower() or "captcha" in page_text.lower():
-            print(f"     ⚠  봇 차단 응답 감지 (Access Denied/Captcha)")
-            print(f"        응답 미리보기: {page_text[:200]!r}")
+            print(f"     ⚠  봇 차단 응답 감지")
             continue
 
-        # __NEXT_DATA__ 존재 여부로 정상 응답 확인
         nd_tag = soup.find("script", id="__NEXT_DATA__")
         if not nd_tag:
-            print(f"     ⚠  __NEXT_DATA__ 없음 — 비정상 응답 (HTTP 차단 가능성)")
-            print(f"        본문 미리보기: {soup.get_text()[:200]!r}")
+            print(f"     ⚠  __NEXT_DATA__ 없음")
             continue
 
         items = _apollo_items(soup, hint)
-        print(f"     {len(items)}건 (지원 마감일 기준, 활성)")
+        print(f"     {len(items)}건 (활성)")
         results.extend(items)
 
     return results
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# 한국선급 (KR)
+# 링커리어 장학금 (별도 시도)
+# ─────────────────────────────────────────────────────────────────────────────
+
+def scrape_linkareer_scholarship() -> list[dict]:
+    """링커리어 장학금 페이지 크롤링 (페이지 1-3)."""
+    print("📡 링커리어 장학금 크롤링 (다중 페이지)...")
+
+    all_items: list[dict] = []
+    seen_ids: set[str] = set()
+
+    for page in range(1, 4):
+        url = (f"{LINKAREER_BASE}/list/scholarship"
+               if page == 1
+               else f"{LINKAREER_BASE}/list/scholarship?page={page}")
+        print(f"  → 장학금 p{page}: {url}")
+        soup = fetch(url, retries=3, timeout=60)
+
+        if not soup:
+            print(f"     ✖ 수집 실패 (p{page})")
+            break
+
+        page_text = soup.get_text()
+        if "access denied" in page_text.lower() or "captcha" in page_text.lower():
+            print(f"     ⚠  봇 차단 감지 (p{page})")
+            break
+
+        nd_tag = soup.find("script", id="__NEXT_DATA__")
+        if not nd_tag:
+            print(f"     ⚠  __NEXT_DATA__ 없음 (p{page})")
+            break
+
+        page_items = _apollo_items(soup, "장학금")
+        new_items = []
+        for item in page_items:
+            if item["id"] not in seen_ids:
+                seen_ids.add(item["id"])
+                item["cat"] = _classify_scholar_sub(item["title"], item["org"], "장학금")
+                item["eligibility"] = _extract_eligibility(item["title"])
+                new_items.append(item)
+
+        print(f"     {len(new_items)}건 (신규)")
+        if not new_items:
+            break
+        all_items.extend(new_items)
+        if page < 3:
+            time.sleep(random.uniform(2.0, 3.5))
+
+    print(f"  → 링커리어 장학금 총 {len(all_items)}건")
+    return all_items
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# 씽유 (thinkyou.co.kr) 공모전 · 장학금
 # ─────────────────────────────────────────────────────────────────────────────
 #
-# 구조: table.board_list tbody tr > td[num, title, file, 등록일, 조회]
-# 한계: 개별 공고 링크가 JS onclick("frmView(...)") → 리스트 페이지 URL 사용
-# 마감일: 등록일 + 180일 추정 (실제 마감일 비공개)
+# 구조: 메인 및 카테고리 페이지 <a onclick="location.href='URL'"> 파싱
+#       상세 페이지 <table> 내 TR(접수기간, 주최, 응모자격) 파싱
+# 장학금 키워드 포함 시 → scholar_* 분류, 그 외 → activity/media/ai 등
+
+def scrape_thinkyou() -> list[dict]:
+    """씽유(thinkyou.co.kr) 크롤링 - 공모전 및 대외활동."""
+    print("📡 씽유 크롤링...")
+    import urllib3
+    urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+    simple_hdr = dict(_CHROME_HEADERS)
+    simple_hdr["Referer"] = THINKYOU_BASE + "/"
+
+    # ── Step 1: 대외활동을 먼저, 공모전을 나중에 방문 (extAct가 contest 링크를 노출해 중복 방지)
+    # 씽유에는 /scholarship/ 페이지가 없음; 장학금은 키워드로 분류
+    target_pages = [
+        (f"{THINKYOU_BASE}/extAct/",  "대외활동"),
+        (f"{THINKYOU_BASE}/contest/", "공모전"),
+    ]
+    all_links: list[tuple[str, str, str]] = []  # (title, url, page_hint)
+    seen_urls: set[str] = set()
+
+    for page_url, label in target_pages:
+        before = len(all_links)
+        try:
+            r = requests.get(page_url, headers=simple_hdr, timeout=12, verify=False)
+            r.raise_for_status()
+            soup = BeautifulSoup(r.content, "lxml")
+        except Exception as e:
+            print(f"  ✖ 씽유 {label} 페이지 실패: {e}")
+            continue
+
+        for a in soup.find_all("a", onclick=re.compile(r"location\.href")):
+            onclick = a.get("onclick", "")
+            m = re.search(r"location\.href='([^']+)'", onclick)
+            if not m:
+                continue
+            href = m.group(1)
+            if not href.startswith("http"):
+                href = THINKYOU_BASE + href
+            # 상세 페이지 URL인지 확인
+            if not re.search(r"/(contest|extAct|scholarship)/\d+", href):
+                continue
+            # 제목: img alt 우선, 없으면 텍스트
+            img = a.find("img")
+            title = (img.get("alt", "") if img else "").strip() or a.get_text(strip=True)[:80]
+            if not title or href in seen_urls:
+                continue
+            seen_urls.add(href)
+            all_links.append((title, href, label))  # label을 hint로 저장
+
+        print(f"  → 씽유 {label}: {len(all_links) - before}개 링크")
+        time.sleep(random.uniform(1.0, 2.0))
+
+    # ── Step 2: 상세 페이지 방문하여 마감일·주최·자격 파싱 ──
+    results: list[dict] = []
+    limit = min(len(all_links), 45)   # 최대 45건
+    print(f"  상세 페이지 방문: {limit}건...")
+
+    for title, url, page_hint in all_links[:limit]:
+        time.sleep(random.uniform(0.8, 1.6))
+        try:
+            r = requests.get(url, headers=simple_hdr, timeout=10, verify=False)
+            r.raise_for_status()
+            detail = BeautifulSoup(r.content, "lxml")
+        except Exception:
+            continue
+
+        org = "미상"
+        deadline = None
+        eligibility_text = ""
+
+        for tr in detail.find_all("tr"):
+            th = tr.find("th")
+            td = tr.find("td")
+            if not (th and td):
+                continue
+            th_txt = th.get_text(strip=True)
+            td_txt = td.get_text(" ", strip=True)
+
+            if any(k in th_txt for k in ["주최", "주관", "주최·주관", "주관·주최"]):
+                org = re.sub(r"[·/].*", "", td_txt).strip()[:60] or "미상"
+            elif any(k in th_txt for k in ["접수기간", "공모기간", "모집기간", "신청기간"]):
+                deadline = _ck_deadline(td_txt)
+            elif any(k in th_txt for k in ["응모자격", "지원자격", "신청자격", "참가자격"]):
+                eligibility_text = td_txt[:200]
+
+        if not _is_active(deadline):
+            continue
+
+        # 장학금 페이지 출처이거나 제목/기관에 장학 키워드 있으면 scholar 분류
+        if page_hint == "장학금" or any(
+            k in f"{title} {org}".lower()
+            for k in ["장학", "scholarship", "학자금"]
+        ):
+            cat = _classify_scholar_sub(title, org, page_hint)
+        else:
+            cat = _classify(title, org, "씽유")
+
+        elig = _extract_eligibility(f"{title} {eligibility_text}")
+        tags = ["씽유"]
+        if eligibility_text:
+            if "대학" in eligibility_text:
+                tags.append("대학생")
+            if any(k in eligibility_text for k in ["전국민", "누구나", "제한 없음"]):
+                tags.append("누구나")
+
+        results.append({
+            "id":          _md5("ty", url),
+            "title":       title,
+            "org":         org,
+            "cat":         cat,
+            "deadline":    deadline,
+            "url":         url,
+            "src":         "씽유",
+            "desc":        eligibility_text[:100] if eligibility_text else "",
+            "tags":        tags,
+            "eligibility": elig,
+        })
+
+    print(f"  → 씽유 활성 항목: {len(results)}건")
+    return results
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# 한국선급 (KR)
+# ─────────────────────────────────────────────────────────────────────────────
 
 def scrape_kr_recruit() -> list[dict]:
-    """한국선급(KR) 채용공고 크롤링 (정적 HTML, 등록일 180일 이내)."""
+    """한국선급(KR) 채용공고 크롤링."""
     print("📡 한국선급(KR) 채용 크롤링...")
     try:
         import urllib3
@@ -426,23 +659,22 @@ def scrape_kr_recruit() -> list[dict]:
             continue
 
         reg = date.fromisoformat(reg_date)
-        # 등록일이 180일을 초과한 공고는 오래된 것으로 제외
         if (today - reg).days > 180:
             continue
 
-        # 실제 마감일 불명 → 등록일로부터 180일을 추정 마감일로 설정
         deadline = (reg + timedelta(days=180)).isoformat()
 
         results.append({
-            "id":       _md5("kr", title),
-            "title":    title,
-            "org":      "한국선급(KR)",
-            "cat":      "ship_recruit",
-            "deadline": deadline,
-            "url":      KR_RECRUIT_URL,
-            "src":      "한국선급",
-            "desc":     f"등록일: {reg_date}",
-            "tags":     ["채용", "조선"],
+            "id":          _md5("kr", title),
+            "title":       title,
+            "org":         "한국선급(KR)",
+            "cat":         "ship_recruit",
+            "deadline":    deadline,
+            "url":         KR_RECRUIT_URL,
+            "src":         "한국선급",
+            "desc":        f"등록일: {reg_date}",
+            "tags":        ["채용", "조선"],
+            "eligibility": {"grade": "", "gpa": "", "note": ""},
         })
 
     print(f"  {len(results)}건")
@@ -452,23 +684,29 @@ def scrape_kr_recruit() -> list[dict]:
 # ─────────────────────────────────────────────────────────────────────────────
 # 공모전코리아
 # ─────────────────────────────────────────────────────────────────────────────
-#
-# 구조:
-#   li.imminent  → div.title > a (제목+링크), ul.host (기관·날짜)
-#   li with div.img_area + div.txt_area → 카드형 (제목·날짜·기관)
-#
-# 주의: 메인 목록은 JS 렌더링 → 정적 크롤링으로는 위 두 타입만 수집 가능
-#
-# 마감일: "26.05.16~27.01.16" 범위의 뒤 날짜(지원 마감일) 사용
 
-_CK_BCODES: dict[str, str] = {
+# 공모전 (int_gbn=1) — 실제 사이트 카테고리에서 확인한 정확한 bcode
+_CK_CONTEST_BCODES: dict[str, str] = {
+    "030110001": "문학·문예",
+    "030210001": "네이밍·슬로건",
     "030310001": "학문·과학·IT",
     "030610001": "미술·디자인·웹툰",
-    "030210001": "네이밍·슬로건",
-    "030110001": "문학·문예",
-    "030410001": "사진·영상·영화제",
-    "030510001": "아이디어·건축·창업",
-    "030910001": "스포츠",
+    "030810001": "스포츠",
+    "030910001": "음악·콩쿠르·댄스",
+    "031210001": "사진·영상·영화제",
+    "031410001": "아이디어·건축·창업",
+    "031810001": "다양한 분야",
+}
+
+# 대외활동 (int_gbn=2) — 장학금·인턴 포함
+_CK_ACTIVITY_BCODES: dict[str, str] = {
+    "040110001": "서포터즈·기자단",
+    "040210001": "인턴·체험·탐방·봉사·동아리",
+    "040310001": "서평단·참여단",
+    "040410001": "교육·강연·멘토링",
+    "040510001": "전시·박람·행사",
+    "040610001": "다양한 대외활동",
+    "040710001": "기획·홍보·마케팅",
 }
 
 
@@ -477,17 +715,24 @@ def scrape_contestkorea() -> list[dict]:
     _warm_up(CONTESTKOREA_BASE)
     results = []
 
-    for bcode, label in _CK_BCODES.items():
+    for bcode, label in _CK_CONTEST_BCODES.items():
         url = f"{CONTESTKOREA_BASE}/sub/list.php?int_gbn=1&Txt_bcode={bcode}"
         print(f"  → {label}: {url}")
-        items = _ck_page(url, bcode)
+        items = _ck_page(url, bcode, int_gbn=1)
+        print(f"     {len(items)}건")
+        results.extend(items)
+
+    for bcode, label in _CK_ACTIVITY_BCODES.items():
+        url = f"{CONTESTKOREA_BASE}/sub/list.php?int_gbn=2&Txt_bcode={bcode}"
+        print(f"  → [대외활동] {label}: {url}")
+        items = _ck_page(url, bcode, int_gbn=2)
         print(f"     {len(items)}건")
         results.extend(items)
 
     return results
 
 
-def _ck_page(url: str, bcode: str) -> list[dict]:
+def _ck_page(url: str, bcode: str, int_gbn: int = 1) -> list[dict]:
     soup = fetch(url)
     if not soup:
         return []
@@ -504,7 +749,7 @@ def _ck_page(url: str, bcode: str) -> list[dict]:
         seen_titles.add(key)
         items.append(item)
 
-    # ── 타입 1: li.imminent ────────────────────────────────────────────────
+    # 타입 1: li.imminent
     for li in soup.select("li.imminent"):
         title_div = li.find("div", class_="title")
         if not title_div:
@@ -513,7 +758,6 @@ def _ck_page(url: str, bcode: str) -> list[dict]:
         if not link:
             continue
 
-        # category span 제거 후 제목 추출
         for sp in link.find_all("span", class_="category"):
             sp.decompose()
         txt_span = link.find("span", class_="txt")
@@ -523,10 +767,8 @@ def _ck_page(url: str, bcode: str) -> list[dict]:
             continue
 
         href = link["href"]
-        # 직접 링크를 절대 URL로 변환
-        clean_href = _ck_clean_href(href, bcode)
+        clean_href = _ck_clean_href(href, bcode, int_gbn)
 
-        # 날짜: ul.host 내 텍스트 또는 li 전체 텍스트
         host_ul  = li.find("ul", class_="host")
         deadline = _ck_deadline(host_ul.get_text(" ", strip=True) if host_ul else "")
         if not deadline:
@@ -535,7 +777,6 @@ def _ck_page(url: str, bcode: str) -> list[dict]:
         if not _is_active(deadline):
             continue
 
-        # 기관: ul.host > li.icon_2 (주관자)
         org = "미상"
         if host_ul:
             for hli in host_ul.find_all("li"):
@@ -545,19 +786,21 @@ def _ck_page(url: str, bcode: str) -> list[dict]:
                     org = re.sub(r"^(주최|주관)\s*[.]\s*", "", txt).strip() or "미상"
                     break
 
+        elig = _extract_eligibility(li.get_text(" ", strip=True))
         add({
-            "id":       _md5("ck", title),
-            "title":    title,
-            "org":      org,
-            "cat":      _classify(title, org, "공모전코리아"),
-            "deadline": deadline,
-            "url":      clean_href,
-            "src":      "공모전코리아",
-            "desc":     "",
-            "tags":     [],
+            "id":          _md5("ck", title),
+            "title":       title,
+            "org":         org,
+            "cat":         _classify(title, org, "공모전코리아"),
+            "deadline":    deadline,
+            "url":         clean_href,
+            "src":         "공모전코리아",
+            "desc":        "",
+            "tags":        [],
+            "eligibility": elig,
         })
 
-    # ── 타입 2: 카드형 (div.txt_area) ─────────────────────────────────────
+    # 타입 2: 카드형 (div.txt_area)
     for li in soup.find_all("li"):
         txt_area = li.find("div", class_="txt_area")
         if not txt_area:
@@ -581,37 +824,323 @@ def _ck_page(url: str, bcode: str) -> list[dict]:
             continue
 
         org  = (org_span.get_text(strip=True) if org_span else "미상") or "미상"
-        href = _ck_clean_href(link["href"], bcode)
+        href = _ck_clean_href(link["href"], bcode, int_gbn)
+        elig = _extract_eligibility(title)
 
         add({
-            "id":       _md5("ck", title),
-            "title":    title,
-            "org":      org,
-            "cat":      _classify(title, org, "공모전코리아"),
-            "deadline": deadline,
-            "url":      href,
-            "src":      "공모전코리아",
-            "desc":     "",
-            "tags":     [],
+            "id":          _md5("ck", title),
+            "title":       title,
+            "org":         org,
+            "cat":         _classify(title, org, "공모전코리아"),
+            "deadline":    deadline,
+            "url":         href,
+            "src":         "공모전코리아",
+            "desc":        "",
+            "tags":        [],
+            "eligibility": elig,
         })
 
     return items
 
 
-def _ck_clean_href(href: str, bcode: str) -> str:
-    """
-    긴 쿼리 파라미터 URL을 최소한의 깔끔한 URL로 정리.
-    str_no 추출 후 표준 view.php URL 반환.
-    """
+def _ck_clean_href(href: str, bcode: str, int_gbn: int = 1) -> str:
     m = re.search(r"str_no=(\w+)", href)
     if m:
         str_no = m.group(1)
         return (
             f"{CONTESTKOREA_BASE}/sub/view.php"
-            f"?int_gbn=1&Txt_bcode={bcode}&str_no={str_no}"
+            f"?int_gbn={int_gbn}&Txt_bcode={bcode}&str_no={str_no}"
         )
-    # str_no가 없으면 절대 URL 변환
     return _clean_url(href, CONTESTKOREA_BASE)
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# 공모전코리아 장학금 키워드 검색 (상세 페이지 방문으로 날짜 추출)
+# ─────────────────────────────────────────────────────────────────────────────
+
+def scrape_contestkorea_scholar() -> list[dict]:
+    """공모전코리아에서 '장학' 키워드 검색 후 상세 페이지 방문으로 날짜 추출."""
+    import urllib.parse
+    print("📡 공모전코리아 장학금 키워드 검색...")
+
+    candidates: list[tuple[str, str]] = []  # (title, url)
+    seen_urls: set[str] = set()
+
+    for kw in ["장학", "장학재단"]:
+        url = f"{CONTESTKOREA_BASE}/sub/search.php?Txt_word={urllib.parse.quote(kw)}"
+        soup = fetch(url, retries=2)
+        if not soup:
+            continue
+        for li in soup.select("li.imminent"):
+            title_div = li.find("div", class_="title")
+            if not title_div:
+                continue
+            link = title_div.find("a", href=True)
+            if not link:
+                continue
+            for sp in link.find_all("span", class_="category"):
+                sp.decompose()
+            title = link.get_text(strip=True).strip()
+            if not title:
+                continue
+            href = link["href"]
+            # 상대경로(view.php, list.php)는 /sub/ 기준으로 조합
+            if not href.startswith("http") and not href.startswith("/"):
+                href = "/sub/" + href
+            detail_url = _clean_url(href, CONTESTKOREA_BASE)
+            if detail_url not in seen_urls:
+                seen_urls.add(detail_url)
+                candidates.append((title, detail_url))
+        time.sleep(random.uniform(1.5, 2.5))
+
+    print(f"  후보 {len(candidates)}건 → 상세 페이지 방문")
+    results: list[dict] = []
+    seen_keys: set[str] = set()
+
+    for title, detail_url in candidates[:20]:
+        key = re.sub(r"\s+", "", title.lower())
+        if key in seen_keys:
+            continue
+        seen_keys.add(key)
+        time.sleep(random.uniform(1.5, 2.5))
+        detail = fetch(detail_url, retries=1)
+        if not detail:
+            continue
+
+        org = "미상"
+        deadline = None
+        elig_text = ""
+
+        for tr in detail.find_all("tr"):
+            th = tr.find("th")
+            td = tr.find("td")
+            if not (th and td):
+                continue
+            th_txt = th.get_text(strip=True)
+            td_txt = td.get_text(" ", strip=True)
+            if any(k in th_txt for k in ["주최", "주관"]):
+                org = re.sub(r"[·/].*", "", td_txt).strip()[:60] or "미상"
+            elif any(k in th_txt for k in ["접수기간", "공모기간", "신청기간"]):
+                deadline = _ck_deadline(td_txt)
+            elif any(k in th_txt for k in ["참가대상", "지원자격", "응모자격", "참가자격"]):
+                elig_text = td_txt[:200]
+
+        if not _is_active(deadline):
+            continue
+
+        cat = _classify_scholar_sub(title, org, "공모전코리아")
+        results.append({
+            "id":          _md5("cks", title),
+            "title":       title,
+            "org":         org,
+            "cat":         cat,
+            "deadline":    deadline,
+            "url":         detail_url,
+            "src":         "공모전코리아",
+            "desc":        elig_text[:100] if elig_text else "",
+            "tags":        ["장학금", "공모전코리아"],
+            "eligibility": _extract_eligibility(f"{title} {elig_text}"),
+        })
+
+    print(f"  → 공모전코리아 장학금: {len(results)}건")
+    return results
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# 범용 장학금 HTML 목록 파서
+# ─────────────────────────────────────────────────────────────────────────────
+
+def _parse_scholar_html(
+    soup: BeautifulSoup, page_url: str, base: str, src: str
+) -> list[dict]:
+    """테이블/리스트 기반 장학금 HTML 페이지 범용 파서."""
+    results: list[dict] = []
+    seen: set[str] = set()
+
+    # 전략 1: 테이블 행
+    for tr in soup.select("table tbody tr, table tr"):
+        link = tr.find("a", href=True)
+        if not link:
+            continue
+        title = link.get_text(strip=True)
+        if not title or len(title) < 4:
+            continue
+        row_text = tr.get_text(" ", strip=True)
+        deadline = _ck_deadline(row_text)
+        if not _is_active(deadline):
+            continue
+        url = _clean_url(link["href"], base)
+        key = re.sub(r"\s+", "", title.lower())
+        if key in seen:
+            continue
+        seen.add(key)
+        cells = tr.find_all(["td", "th"])
+        org = cells[-2].get_text(strip=True)[:50] if len(cells) >= 3 else "미상"
+        org = org or "미상"
+        results.append({
+            "id":          _md5(src, title),
+            "title":       title[:100],
+            "org":         org,
+            "cat":         _classify_scholar_sub(title, org, src),
+            "deadline":    deadline,
+            "url":         url,
+            "src":         src,
+            "desc":        "",
+            "tags":        [src],
+            "eligibility": _extract_eligibility(title),
+        })
+
+    # 전략 2: li/div 리스트 기반
+    if not results:
+        selectors = [
+            "li", ".item", ".list-item", ".scholarship-item",
+            ".board-list li", ".bbs-list li", "[class*='list'] li",
+        ]
+        for sel in selectors:
+            for container in soup.select(sel):
+                link = container.find("a", href=True)
+                if not link:
+                    continue
+                title = link.get_text(strip=True)
+                if not title or len(title) < 4:
+                    continue
+                container_text = container.get_text(" ", strip=True)
+                deadline = _ck_deadline(container_text)
+                if not _is_active(deadline):
+                    continue
+                url = _clean_url(link["href"], base)
+                key = re.sub(r"\s+", "", title.lower())
+                if key in seen:
+                    continue
+                seen.add(key)
+                results.append({
+                    "id":          _md5(src, title),
+                    "title":       title[:100],
+                    "org":         "미상",
+                    "cat":         _classify_scholar_sub(title, "", src),
+                    "deadline":    deadline,
+                    "url":         url,
+                    "src":         src,
+                    "desc":        "",
+                    "tags":        [src],
+                    "eligibility": _extract_eligibility(title),
+                })
+            if results:
+                break
+
+    return results[:30]
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# kstudy.com (한국장학재단 민간장학금 DB)
+# ─────────────────────────────────────────────────────────────────────────────
+
+def scrape_kstudy() -> list[dict]:
+    """kstudy.com 민간/사설 장학금 크롤링."""
+    print("📡 kstudy.com 크롤링...")
+    _warm_up(KSTUDY_BASE)
+
+    results: list[dict] = []
+    seen: set[str] = set()
+    target_pages = [
+        (f"{KSTUDY_BASE}/scholarship/list",     "장학금 목록"),
+        (f"{KSTUDY_BASE}/kor/scholarship/list", "장학금(KOR)"),
+        (f"{KSTUDY_BASE}/scholarship/private",  "민간 장학금"),
+        (f"{KSTUDY_BASE}/scholarship",          "장학금"),
+        (f"{KSTUDY_BASE}/",                     "메인"),
+    ]
+
+    for url, label in target_pages:
+        print(f"  → {label}: {url}")
+        soup = fetch(url, retries=2, timeout=20)
+        if not soup:
+            continue
+        items = _parse_scholar_html(soup, url, KSTUDY_BASE, "kstudy.com")
+        for item in items:
+            if item["id"] not in seen:
+                seen.add(item["id"])
+                results.append(item)
+        if items:
+            print(f"     {len(items)}건")
+            break  # 첫 번째 유효 페이지에서 종료
+
+    print(f"  → kstudy.com 활성 항목: {len(results)}건")
+    return results
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# 장학금닷컴 (janghaggeum.com)
+# ─────────────────────────────────────────────────────────────────────────────
+
+def scrape_janghaggeum() -> list[dict]:
+    """장학금닷컴 (janghaggeum.com) 크롤링."""
+    print("📡 장학금닷컴 크롤링...")
+    _warm_up(JANGHAGGEUM_BASE)
+
+    results: list[dict] = []
+    seen: set[str] = set()
+    target_pages = [
+        (f"{JANGHAGGEUM_BASE}/",                 "메인"),
+        (f"{JANGHAGGEUM_BASE}/scholarship",      "장학금"),
+        (f"{JANGHAGGEUM_BASE}/scholarship/list", "목록"),
+        (f"{JANGHAGGEUM_BASE}/list",             "목록2"),
+    ]
+
+    for url, label in target_pages:
+        print(f"  → {label}: {url}")
+        soup = fetch(url, retries=2, timeout=20)
+        if not soup:
+            continue
+        items = _parse_scholar_html(soup, url, JANGHAGGEUM_BASE, "장학금닷컴")
+        for item in items:
+            if item["id"] not in seen:
+                seen.add(item["id"])
+                results.append(item)
+        if items:
+            print(f"     {len(items)}건")
+
+    print(f"  → 장학금닷컴 활성 항목: {len(results)}건")
+    return results
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# 잡코리아 장학금
+# ─────────────────────────────────────────────────────────────────────────────
+
+def scrape_jobkorea_scholarship() -> list[dict]:
+    """잡코리아 장학금 크롤링."""
+    print("📡 잡코리아 장학금 크롤링...")
+    _warm_up(JOBKOREA_BASE)
+
+    results: list[dict] = []
+    seen: set[str] = set()
+    target_pages = [
+        (f"{JOBKOREA_BASE}/recruit/scholarship",          "장학금"),
+        (f"{JOBKOREA_BASE}/recruit/gi_read/scholarship",  "장학금2"),
+        (f"{JOBKOREA_BASE}/scholar",                      "장학금3"),
+        (f"{JOBKOREA_BASE}/recruit/activityList",         "대외활동"),
+    ]
+
+    for url, label in target_pages:
+        print(f"  → {label}: {url}")
+        soup = fetch(url, retries=2, timeout=20)
+        if not soup:
+            continue
+        items = _parse_scholar_html(soup, url, JOBKOREA_BASE, "잡코리아")
+        # 잡코리아는 장학 키워드 있는 항목만 수집
+        scholar_items = [
+            i for i in items
+            if any(k in i["title"].lower() for k in ["장학", "scholarship", "학자금"])
+        ]
+        for item in scholar_items:
+            if item["id"] not in seen:
+                seen.add(item["id"])
+                results.append(item)
+        if scholar_items:
+            print(f"     {len(scholar_items)}건")
+
+    print(f"  → 잡코리아 활성 항목: {len(results)}건")
+    return results
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -641,20 +1170,38 @@ def main() -> None:
         print(f"  링커리어 전체 오류: {e}")
 
     try:
+        all_items += scrape_linkareer_scholarship()
+    except Exception as e:
+        print(f"  링커리어 장학금 오류: {e}")
+
+    try:
         all_items += scrape_contestkorea()
     except Exception as e:
         print(f"  공모전코리아 전체 오류: {e}")
+
+    try:
+        all_items += scrape_contestkorea_scholar()
+    except Exception as e:
+        print(f"  공모전코리아 장학금 검색 오류: {e}")
 
     try:
         all_items += scrape_kr_recruit()
     except Exception as e:
         print(f"  한국선급 전체 오류: {e}")
 
+    try:
+        all_items += scrape_thinkyou()
+    except Exception as e:
+        print(f"  씽유 오류: {e}")
+
+    # kstudy.com : 장학금 관련 없는 출판사 사이트 → 비활성화
+    # janghaggeum.com : 도메인 없음 → 비활성화
+    # jobkorea.co.kr : 장학금 전용 페이지 없음 → 비활성화
+
     # 중복 제거 + 마감일 오름차순 정렬
     all_items = _dedupe(all_items)
     all_items.sort(key=lambda x: x.get("deadline", "9999-12-31"))
 
-    # 카테고리 통계
     cats: dict[str, int] = {}
     for item in all_items:
         cats[item["cat"]] = cats.get(item["cat"], 0) + 1
@@ -675,19 +1222,24 @@ def main() -> None:
         "ship_contest": "조선 공모전", "ship_academic": "조선 학술",
         "ship_global": "조선 해외인턴", "ship_scholar": "조선 장학금",
         "ai": "AI/IoT", "media": "영상/콘텐츠",
-        "global": "해외인턴", "corp": "대기업인턴", "scholar": "장학금",
+        "global": "해외인턴", "corp": "대기업인턴",
+        "scholar": "장학금(기타)",
+        "scholar_public": "국가/공공 장학금",
+        "scholar_corp": "기업/사설 장학금",
+        "scholar_merit": "성적우수 장학금",
+        "scholar_region": "지역 장학금",
+        "scholar_univ": "대학외부 장학금",
         "activity": "대외활동",
     }
     for k, v in cats.items():
         print(f"   {cat_labels.get(k, k)}: {v}건")
     print(f"   저장: {os.path.abspath(OUT_PATH)}")
 
-    # 샘플 출력 (URL 검증용)
     print("\n── 링크 샘플 (첫 5건) ──")
     for item in all_items[:5]:
         dl = date.fromisoformat(item["deadline"])
         dday = (dl - date.today()).days
-        print(f"  [{item['cat']:8}] D-{dday:3d} | {item['title'][:40]}")
+        print(f"  [{item['cat']:18}] D-{dday:3d} | {item['title'][:40]}")
         print(f"    URL: {item['url']}")
 
 

@@ -1,6 +1,6 @@
 {
-  "updated": "2026-07-02T16:39:28",
-  "total": 79,
+  "updated": "2026-07-03T11:11:04",
+  "total": 104,
   "items": [
     {
       "id": "lk_332581",
@@ -11,7 +11,12 @@
       "url": "https://linkareer.com/activity/332581",
       "src": "링커리어",
       "desc": "",
-      "tags": []
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
     },
     {
       "id": "lk_332619",
@@ -22,7 +27,12 @@
       "url": "https://linkareer.com/activity/332619",
       "src": "링커리어",
       "desc": "",
-      "tags": []
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
     },
     {
       "id": "lk_330119",
@@ -33,29 +43,30 @@
       "url": "https://linkareer.com/activity/330119",
       "src": "링커리어",
       "desc": "",
-      "tags": []
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
     },
     {
-      "id": "lk_332252",
-      "title": "[The First 더퍼스트] 시사경제 연합동아리 더퍼스트에서 신입회원을 모집합니다!",
-      "org": "The First",
+      "id": "db226b196cac",
+      "title": "2026년 LH 청년 주택건축대전",
+      "org": "LH 한국토지주택공사",
       "cat": "activity",
-      "deadline": "2026-07-05",
-      "url": "https://linkareer.com/activity/332252",
-      "src": "링커리어",
+      "deadline": "2026-07-03",
+      "url": "https://thinkyou.co.kr/contest/64230",
+      "src": "씽유",
       "desc": "",
-      "tags": []
-    },
-    {
-      "id": "lk_332506",
-      "title": "[EY한영] 포렌식 인턴(전환형)",
-      "org": "한영회계법인",
-      "cat": "corp",
-      "deadline": "2026-07-05",
-      "url": "https://linkareer.com/activity/332506",
-      "src": "링커리어",
-      "desc": "",
-      "tags": []
+      "tags": [
+        "씽유"
+      ],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
     },
     {
       "id": "lk_330873",
@@ -66,7 +77,12 @@
       "url": "https://linkareer.com/activity/330873",
       "src": "링커리어",
       "desc": "",
-      "tags": []
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
     },
     {
       "id": "lk_332594",
@@ -77,18 +93,12 @@
       "url": "https://linkareer.com/activity/332594",
       "src": "링커리어",
       "desc": "",
-      "tags": []
-    },
-    {
-      "id": "lk_332500",
-      "title": "[하루7H근무/중식제공/남산] 신세계인터내셔날 수입브랜드팀 면세/오퍼레이션 AMD 채용",
-      "org": "주식회사유니에스",
-      "cat": "corp",
-      "deadline": "2026-07-06",
-      "url": "https://linkareer.com/activity/332500",
-      "src": "링커리어",
-      "desc": "",
-      "tags": []
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
     },
     {
       "id": "lk_331874",
@@ -99,40 +109,44 @@
       "url": "https://linkareer.com/activity/331874",
       "src": "링커리어",
       "desc": "",
-      "tags": []
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
     },
     {
-      "id": "lk_332502",
-      "title": "BGC 예비개발자 점프업 지원사업 참가자 모집 연장",
-      "org": "(재)부산정보산업진흥원",
-      "cat": "activity",
+      "id": "lk_332847",
+      "title": "[하나증권] 글로벌투자분석실 인턴십(체험형) 모집",
+      "org": "하나증권",
+      "cat": "global",
       "deadline": "2026-07-07",
-      "url": "https://linkareer.com/activity/332502",
+      "url": "https://linkareer.com/activity/332847",
       "src": "링커리어",
       "desc": "",
-      "tags": []
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
     },
     {
-      "id": "lk_332361",
-      "title": "[10기 친목모임 신규 모집]오케이 낭만합격",
-      "org": "낭만합격",
-      "cat": "activity",
-      "deadline": "2026-07-08",
-      "url": "https://linkareer.com/activity/332361",
-      "src": "링커리어",
-      "desc": "",
-      "tags": []
-    },
-    {
-      "id": "lk_332503",
-      "title": "[매그나칩반도체] HR 체험형 인턴 채용",
-      "org": "매그나칩반도체",
+      "id": "lk_332846",
+      "title": "[유한화학] 안전보건팀 채용형 인턴 사원 모집(2026년 7월)",
+      "org": "유한화학",
       "cat": "corp",
       "deadline": "2026-07-08",
-      "url": "https://linkareer.com/activity/332503",
+      "url": "https://linkareer.com/activity/332846",
       "src": "링커리어",
       "desc": "",
-      "tags": []
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
     },
     {
       "id": "lk_332488",
@@ -143,7 +157,12 @@
       "url": "https://linkareer.com/activity/332488",
       "src": "링커리어",
       "desc": "",
-      "tags": []
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
     },
     {
       "id": "lk_330911",
@@ -154,7 +173,28 @@
       "url": "https://linkareer.com/activity/330911",
       "src": "링커리어",
       "desc": "",
-      "tags": []
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "lk_332718",
+      "title": "Doodll 1st AI Makeathon",
+      "org": "(주)컴포랩스",
+      "cat": "ai",
+      "deadline": "2026-07-10",
+      "url": "https://linkareer.com/activity/332718",
+      "src": "링커리어",
+      "desc": "",
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
     },
     {
       "id": "lk_331325",
@@ -165,7 +205,46 @@
       "url": "https://linkareer.com/activity/331325",
       "src": "링커리어",
       "desc": "",
-      "tags": []
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "ee6dda1cf610",
+      "title": "타임라이더 1주년 기념 경주월드 AI 숏폼 공모전",
+      "org": "경주월드",
+      "cat": "ai",
+      "deadline": "2026-07-10",
+      "url": "https://thinkyou.co.kr/contest/64120/",
+      "src": "씽유",
+      "desc": "",
+      "tags": [
+        "씽유"
+      ],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "lk_332575",
+      "title": "산책 동아리 우산(우리 산책할래?)에서 새로운 분들을 모집합니다!",
+      "org": "리쥬",
+      "cat": "activity",
+      "deadline": "2026-07-12",
+      "url": "https://linkareer.com/activity/332575",
+      "src": "링커리어",
+      "desc": "",
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
     },
     {
       "id": "lk_332567",
@@ -176,7 +255,12 @@
       "url": "https://linkareer.com/activity/332567",
       "src": "링커리어",
       "desc": "",
-      "tags": []
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
     },
     {
       "id": "lk_332555",
@@ -187,7 +271,12 @@
       "url": "https://linkareer.com/activity/332555",
       "src": "링커리어",
       "desc": "",
-      "tags": []
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
     },
     {
       "id": "lk_332536",
@@ -198,7 +287,12 @@
       "url": "https://linkareer.com/activity/332536",
       "src": "링커리어",
       "desc": "",
-      "tags": []
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
     },
     {
       "id": "lk_332518",
@@ -209,18 +303,12 @@
       "url": "https://linkareer.com/activity/332518",
       "src": "링커리어",
       "desc": "",
-      "tags": []
-    },
-    {
-      "id": "lk_332508",
-      "title": "[롯데홈쇼핑] 2026년 6월 체험형 인턴 채용 (SNS 콘텐츠 기획 및 제작 지원)",
-      "org": "롯데홈쇼핑",
-      "cat": "media",
-      "deadline": "2026-07-12",
-      "url": "https://linkareer.com/activity/332508",
-      "src": "링커리어",
-      "desc": "",
-      "tags": []
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
     },
     {
       "id": "lk_332661",
@@ -231,7 +319,12 @@
       "url": "https://linkareer.com/activity/332661",
       "src": "링커리어",
       "desc": "",
-      "tags": []
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
     },
     {
       "id": "lk_332582",
@@ -242,7 +335,30 @@
       "url": "https://linkareer.com/activity/332582",
       "src": "링커리어",
       "desc": "",
-      "tags": []
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "d3da43b080d5",
+      "title": "CONNECT KAC 공항 네트워크 혁신 아이디어 공모전",
+      "org": "한국공항공사",
+      "cat": "activity",
+      "deadline": "2026-07-14",
+      "url": "https://thinkyou.co.kr/contest/64083/",
+      "src": "씽유",
+      "desc": "",
+      "tags": [
+        "씽유"
+      ],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
     },
     {
       "id": "lk_332637",
@@ -253,7 +369,12 @@
       "url": "https://linkareer.com/activity/332637",
       "src": "링커리어",
       "desc": "",
-      "tags": []
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
     },
     {
       "id": "lk_332412",
@@ -264,7 +385,12 @@
       "url": "https://linkareer.com/activity/332412",
       "src": "링커리어",
       "desc": "",
-      "tags": []
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
     },
     {
       "id": "lk_332395",
@@ -275,18 +401,28 @@
       "url": "https://linkareer.com/activity/332395",
       "src": "링커리어",
       "desc": "",
-      "tags": []
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
     },
     {
-      "id": "lk_332179",
-      "title": "영어회화 동아리",
-      "org": "아이스크림",
-      "cat": "activity",
+      "id": "lk_332834",
+      "title": "[테슬라코리아] Tesla Korea 2026 대규모 공개채용 (~07/15)",
+      "org": "테슬라코리아",
+      "cat": "corp",
       "deadline": "2026-07-15",
-      "url": "https://linkareer.com/activity/332179",
+      "url": "https://linkareer.com/activity/332834",
       "src": "링커리어",
       "desc": "",
-      "tags": []
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
     },
     {
       "id": "lk_332543",
@@ -297,29 +433,12 @@
       "url": "https://linkareer.com/activity/332543",
       "src": "링커리어",
       "desc": "",
-      "tags": []
-    },
-    {
-      "id": "lk_332244",
-      "title": "\"2030대표방송\" MZBS 기자·PD·아나운서 모집",
-      "org": "MZBS",
-      "cat": "media",
-      "deadline": "2026-07-16",
-      "url": "https://linkareer.com/activity/332244",
-      "src": "링커리어",
-      "desc": "",
-      "tags": []
-    },
-    {
-      "id": "lk_332189",
-      "title": "영어회화",
-      "org": "이브닝",
-      "cat": "activity",
-      "deadline": "2026-07-16",
-      "url": "https://linkareer.com/activity/332189",
-      "src": "링커리어",
-      "desc": "",
-      "tags": []
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
     },
     {
       "id": "lk_332557",
@@ -330,7 +449,28 @@
       "url": "https://linkareer.com/activity/332557",
       "src": "링커리어",
       "desc": "",
-      "tags": []
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "lk_332697",
+      "title": "영어회화",
+      "org": "아이스크림",
+      "cat": "activity",
+      "deadline": "2026-07-17",
+      "url": "https://linkareer.com/activity/332697",
+      "src": "링커리어",
+      "desc": "",
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
     },
     {
       "id": "lk_332579",
@@ -341,51 +481,44 @@
       "url": "https://linkareer.com/activity/332579",
       "src": "링커리어",
       "desc": "",
-      "tags": []
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
     },
     {
-      "id": "lk_332365",
-      "title": "서울마블 : 서울여행 문화생활 연합 동아리 2기 모집",
-      "org": "서울마블",
+      "id": "lk_332705",
+      "title": "영어 스터디",
+      "org": "이브닝",
       "cat": "activity",
       "deadline": "2026-07-18",
-      "url": "https://linkareer.com/activity/332365",
+      "url": "https://linkareer.com/activity/332705",
       "src": "링커리어",
       "desc": "",
-      "tags": []
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
     },
     {
-      "id": "lk_332483",
-      "title": "2026 서부내륙권 로컬 특화 체험관광 콘텐츠 공모전",
-      "org": "세종시문화관광재단",
-      "cat": "media",
+      "id": "lk_332644",
+      "title": "[청년작당소] 2026 길 위의 인문학  <우리가 써내려간 밀다원 시대> 다큐 에세이 필름 제작 참여자 모집",
+      "org": "청년작당소",
+      "cat": "activity",
       "deadline": "2026-07-19",
-      "url": "https://linkareer.com/activity/332483",
+      "url": "https://linkareer.com/activity/332644",
       "src": "링커리어",
       "desc": "",
-      "tags": []
-    },
-    {
-      "id": "lk_332480",
-      "title": "2026 부천시민815통일음악회",
-      "org": "제36회 부천시민통일문화제 추진위원회",
-      "cat": "activity",
-      "deadline": "2026-07-20",
-      "url": "https://linkareer.com/activity/332480",
-      "src": "링커리어",
-      "desc": "",
-      "tags": []
-    },
-    {
-      "id": "lk_332479",
-      "title": "CICA 미술관 국제전 “Art Is #3” 공모",
-      "org": "CICA 미술관",
-      "cat": "activity",
-      "deadline": "2026-07-20",
-      "url": "https://linkareer.com/activity/332479",
-      "src": "링커리어",
-      "desc": "",
-      "tags": []
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
     },
     {
       "id": "lk_331328",
@@ -396,7 +529,12 @@
       "url": "https://linkareer.com/activity/331328",
       "src": "링커리어",
       "desc": "",
-      "tags": []
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
     },
     {
       "id": "lk_332614",
@@ -407,7 +545,28 @@
       "url": "https://linkareer.com/activity/332614",
       "src": "링커리어",
       "desc": "",
-      "tags": []
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "lk_332703",
+      "title": "[연수구시설안전관리공단] 2026년 ESG 혁신 아이디어 공모전",
+      "org": "인천광역시연수구시설안전관리공단",
+      "cat": "activity",
+      "deadline": "2026-07-24",
+      "url": "https://linkareer.com/activity/332703",
+      "src": "링커리어",
+      "desc": "",
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
     },
     {
       "id": "87c6694ef72c",
@@ -418,7 +577,67 @@
       "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&Txt_bcode=030610001&str_no=202603270033",
       "src": "공모전코리아",
       "desc": "",
-      "tags": []
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "a0d0c2894074",
+      "title": "제26회 산림 문화작품 공모전",
+      "org": "산림조합중앙회",
+      "cat": "activity",
+      "deadline": "2026-07-24",
+      "url": "https://thinkyou.co.kr/contest/63849",
+      "src": "씽유",
+      "desc": "",
+      "tags": [
+        "씽유"
+      ],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "88ad4f19ef9d",
+      "title": "2026년 대한한돈협회 ｢한돈 미래인재 장학생 선발｣",
+      "org": "대한한돈협회",
+      "cat": "scholar",
+      "deadline": "2026-07-27",
+      "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&Txt_bcode=030110001&str_no=202605200025",
+      "src": "공모전코리아",
+      "desc": "대학생",
+      "tags": [
+        "장학금",
+        "공모전코리아"
+      ],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "795714138637",
+      "title": "제29회 경상북도관광기념품공모전",
+      "org": "경상북도관광협회",
+      "cat": "activity",
+      "deadline": "2026-07-27",
+      "url": "https://thinkyou.co.kr/contest/64162",
+      "src": "씽유",
+      "desc": "",
+      "tags": [
+        "씽유"
+      ],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
     },
     {
       "id": "lk_329016",
@@ -429,7 +648,12 @@
       "url": "https://linkareer.com/activity/329016",
       "src": "링커리어",
       "desc": "",
-      "tags": []
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
     },
     {
       "id": "lk_332410",
@@ -440,7 +664,28 @@
       "url": "https://linkareer.com/activity/332410",
       "src": "링커리어",
       "desc": "",
-      "tags": []
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "lk_332695",
+      "title": "2026년 세계정신건강의날 기념 창작동화 스토리 공모전",
+      "org": "군포시정신건강복지센터",
+      "cat": "activity",
+      "deadline": "2026-07-31",
+      "url": "https://linkareer.com/activity/332695",
+      "src": "링커리어",
+      "desc": "",
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
     },
     {
       "id": "lk_332623",
@@ -451,7 +696,12 @@
       "url": "https://linkareer.com/activity/332623",
       "src": "링커리어",
       "desc": "",
-      "tags": []
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
     },
     {
       "id": "lk_332578",
@@ -462,7 +712,12 @@
       "url": "https://linkareer.com/activity/332578",
       "src": "링커리어",
       "desc": "",
-      "tags": []
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
     },
     {
       "id": "lk_332574",
@@ -473,7 +728,12 @@
       "url": "https://linkareer.com/activity/332574",
       "src": "링커리어",
       "desc": "",
-      "tags": []
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
     },
     {
       "id": "lk_332556",
@@ -484,29 +744,12 @@
       "url": "https://linkareer.com/activity/332556",
       "src": "링커리어",
       "desc": "",
-      "tags": []
-    },
-    {
-      "id": "lk_332481",
-      "title": "2026 송림문학회 기록문화 공모전 제1회",
-      "org": "도서출판 평생북",
-      "cat": "activity",
-      "deadline": "2026-07-31",
-      "url": "https://linkareer.com/activity/332481",
-      "src": "링커리어",
-      "desc": "",
-      "tags": []
-    },
-    {
-      "id": "lk_332477",
-      "title": "2026년 국립농업박물관 문화상품(굿즈) 공모전",
-      "org": "국립농업박물관",
-      "cat": "activity",
-      "deadline": "2026-07-31",
-      "url": "https://linkareer.com/activity/332477",
-      "src": "링커리어",
-      "desc": "",
-      "tags": []
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
     },
     {
       "id": "lk_330342",
@@ -517,7 +760,12 @@
       "url": "https://linkareer.com/activity/330342",
       "src": "링커리어",
       "desc": "",
-      "tags": []
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
     },
     {
       "id": "lk_326635",
@@ -528,7 +776,12 @@
       "url": "https://linkareer.com/activity/326635",
       "src": "링커리어",
       "desc": "",
-      "tags": []
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
     },
     {
       "id": "lk_318844",
@@ -539,7 +792,12 @@
       "url": "https://linkareer.com/activity/318844",
       "src": "링커리어",
       "desc": "",
-      "tags": []
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
     },
     {
       "id": "lk_329976",
@@ -550,7 +808,28 @@
       "url": "https://linkareer.com/activity/329976",
       "src": "링커리어",
       "desc": "",
-      "tags": []
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "lk_332699",
+      "title": "[캐시워크] 서비스기획 채용전환형 인턴",
+      "org": "넛지헬스케어 주식회사",
+      "cat": "corp",
+      "deadline": "2026-07-31",
+      "url": "https://linkareer.com/activity/332699",
+      "src": "링커리어",
+      "desc": "",
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
     },
     {
       "id": "3470a387649f",
@@ -561,7 +840,120 @@
       "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&Txt_bcode=030110001&str_no=202601220053",
       "src": "공모전코리아",
       "desc": "",
-      "tags": []
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "56b2b4ab3505",
+      "title": "2026년 서울시 좋은간판 공모전",
+      "org": "서울특별시",
+      "cat": "activity",
+      "deadline": "2026-07-31",
+      "url": "https://thinkyou.co.kr/contest/62868",
+      "src": "씽유",
+      "desc": "",
+      "tags": [
+        "씽유"
+      ],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "f17410711fc7",
+      "title": "2026년 제6회 과학영상콘텐츠 공모전",
+      "org": "국립대구과학관",
+      "cat": "media",
+      "deadline": "2026-07-31",
+      "url": "https://thinkyou.co.kr/contest/63518",
+      "src": "씽유",
+      "desc": "",
+      "tags": [
+        "씽유"
+      ],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "43590c24cdb6",
+      "title": "2026 국가안보 논문 · 아이디어 공모전",
+      "org": "국가정보원",
+      "cat": "activity",
+      "deadline": "2026-07-31",
+      "url": "https://thinkyou.co.kr/contest/62735",
+      "src": "씽유",
+      "desc": "",
+      "tags": [
+        "씽유"
+      ],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "77f3399b4911",
+      "title": "2026 ACC 민주인권평화 영상(+AI)콘텐츠 공모전",
+      "org": "국립아시아문화전당",
+      "cat": "ai",
+      "deadline": "2026-07-31",
+      "url": "https://thinkyou.co.kr/contest/63306",
+      "src": "씽유",
+      "desc": "",
+      "tags": [
+        "씽유"
+      ],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "2204b0d7bd82",
+      "title": "2026년 저작권 인식제고 글 공모전",
+      "org": "한국저작권위원회",
+      "cat": "activity",
+      "deadline": "2026-07-31",
+      "url": "https://thinkyou.co.kr/contest/63647",
+      "src": "씽유",
+      "desc": "",
+      "tags": [
+        "씽유"
+      ],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "751e5318ea01",
+      "title": "제12회 항공문학상",
+      "org": "한국항공협회",
+      "cat": "activity",
+      "deadline": "2026-07-31",
+      "url": "https://thinkyou.co.kr/contest/63602",
+      "src": "씽유",
+      "desc": "",
+      "tags": [
+        "씽유"
+      ],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
     },
     {
       "id": "lk_312565",
@@ -572,7 +964,12 @@
       "url": "https://linkareer.com/activity/312565",
       "src": "링커리어",
       "desc": "",
-      "tags": []
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
     },
     {
       "id": "lk_328417",
@@ -583,7 +980,12 @@
       "url": "https://linkareer.com/activity/328417",
       "src": "링커리어",
       "desc": "",
-      "tags": []
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
     },
     {
       "id": "lk_332670",
@@ -594,7 +996,12 @@
       "url": "https://linkareer.com/activity/332670",
       "src": "링커리어",
       "desc": "",
-      "tags": []
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
     },
     {
       "id": "lk_332554",
@@ -605,7 +1012,44 @@
       "url": "https://linkareer.com/activity/332554",
       "src": "링커리어",
       "desc": "",
-      "tags": []
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "lk_332722",
+      "title": "한국교육발전사 영상 공모전",
+      "org": "한국교육개발원",
+      "cat": "media",
+      "deadline": "2026-08-07",
+      "url": "https://linkareer.com/activity/332722",
+      "src": "링커리어",
+      "desc": "",
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "lk_332688",
+      "title": "[강화군] 2026년 강화ON 정책공모전",
+      "org": "강화군",
+      "cat": "activity",
+      "deadline": "2026-08-07",
+      "url": "https://linkareer.com/activity/332688",
+      "src": "링커리어",
+      "desc": "",
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
     },
     {
       "id": "lk_332436",
@@ -616,18 +1060,204 @@
       "url": "https://linkareer.com/activity/332436",
       "src": "링커리어",
       "desc": "",
-      "tags": []
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
     },
     {
-      "id": "lk_332498",
-      "title": "[국토부장관상 포함] 2026 AI 도시지역혁신 아이디어 공모전 (~8/28)",
-      "org": "2026 도시·지역혁신 산업박람회",
-      "cat": "ai",
-      "deadline": "2026-08-28",
-      "url": "https://linkareer.com/activity/332498",
+      "id": "4947d61a4847",
+      "title": "2026 장애 공감 공모전",
+      "org": "한국장애인재단",
+      "cat": "activity",
+      "deadline": "2026-08-11",
+      "url": "https://thinkyou.co.kr/contest/63753",
+      "src": "씽유",
+      "desc": "",
+      "tags": [
+        "씽유"
+      ],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "lk_332687",
+      "title": "2026년 신용보증재단중앙회 특별 업무제안 공모",
+      "org": "신용보증재단중앙회",
+      "cat": "activity",
+      "deadline": "2026-08-12",
+      "url": "https://linkareer.com/activity/332687",
       "src": "링커리어",
       "desc": "",
-      "tags": []
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "f7e2c2f1435e",
+      "title": "서울어린이대공원 AI기반 서비스 아이디어 공모전",
+      "org": "서울시설공단, 서울어린이대공원",
+      "cat": "ai",
+      "deadline": "2026-08-12",
+      "url": "https://thinkyou.co.kr/contest/64282",
+      "src": "씽유",
+      "desc": "",
+      "tags": [
+        "씽유"
+      ],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "68db896795a8",
+      "title": "제20회 서울시 빛공해 공모전",
+      "org": "서울특별시, 조명박물관",
+      "cat": "activity",
+      "deadline": "2026-08-12",
+      "url": "https://thinkyou.co.kr/contest/63656/",
+      "src": "씽유",
+      "desc": "",
+      "tags": [
+        "씽유"
+      ],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "lk_332677",
+      "title": "2026년 경주시 전국 독후감 공모전「경주를 읽다」",
+      "org": "경주시/경주시립도서관",
+      "cat": "activity",
+      "deadline": "2026-08-14",
+      "url": "https://linkareer.com/activity/332677",
+      "src": "링커리어",
+      "desc": "",
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "7fb922f72bfd",
+      "title": "백제역사유적지구 세계유산 해설 경진대회",
+      "org": "백제세계유산센터",
+      "cat": "activity",
+      "deadline": "2026-08-17",
+      "url": "https://thinkyou.co.kr/contest/62341",
+      "src": "씽유",
+      "desc": "",
+      "tags": [
+        "씽유"
+      ],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "ca96e5fd451b",
+      "title": "2026년 제23회 김해시 도시경관디자인 작품공모전",
+      "org": "김해시청",
+      "cat": "activity",
+      "deadline": "2026-08-20",
+      "url": "https://thinkyou.co.kr/contest/62402",
+      "src": "씽유",
+      "desc": "",
+      "tags": [
+        "씽유"
+      ],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "3396c4eda253",
+      "title": "2026 독립기념관 단편 영상 공모전",
+      "org": "독립기념관",
+      "cat": "media",
+      "deadline": "2026-08-20",
+      "url": "https://thinkyou.co.kr/contest/63747",
+      "src": "씽유",
+      "desc": "",
+      "tags": [
+        "씽유"
+      ],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "lk_332708",
+      "title": "[원주시] 유네스코 문학 창의도시 원주 문화공공외교 정책 '에세이 공모전'",
+      "org": "원주시",
+      "cat": "activity",
+      "deadline": "2026-08-21",
+      "url": "https://linkareer.com/activity/332708",
+      "src": "링커리어",
+      "desc": "",
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "0f1040f8b0e4",
+      "title": "제7회 NH농협은행 올원프렌즈 공모전",
+      "org": "NH농협은행",
+      "cat": "activity",
+      "deadline": "2026-08-24",
+      "url": "https://thinkyou.co.kr/contest/64591",
+      "src": "씽유",
+      "desc": "",
+      "tags": [
+        "씽유"
+      ],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "21820652d994",
+      "title": "2026 화폐사랑 콘텐츠 공모전",
+      "org": "한국은행",
+      "cat": "media",
+      "deadline": "2026-08-26",
+      "url": "https://thinkyou.co.kr/contest/64164",
+      "src": "씽유",
+      "desc": "",
+      "tags": [
+        "씽유"
+      ],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
     },
     {
       "id": "lk_332580",
@@ -638,18 +1268,28 @@
       "url": "https://linkareer.com/activity/332580",
       "src": "링커리어",
       "desc": "",
-      "tags": []
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
     },
     {
-      "id": "lk_332490",
-      "title": "2026년 안보지킴이 공모전",
-      "org": "(주)플롯엠",
+      "id": "lk_332532",
+      "title": "2026 국제스페셜올림픽뮤직앤아트페스티벌 메이트(남) 모집",
+      "org": "스페셜올림픽코리아",
       "cat": "activity",
-      "deadline": "2026-08-31",
-      "url": "https://linkareer.com/activity/332490",
+      "deadline": "2026-09-03",
+      "url": "https://linkareer.com/activity/332532",
       "src": "링커리어",
       "desc": "",
-      "tags": []
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
     },
     {
       "id": "lk_332672",
@@ -660,7 +1300,12 @@
       "url": "https://linkareer.com/activity/332672",
       "src": "링커리어",
       "desc": "",
-      "tags": []
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
     },
     {
       "id": "lk_332446",
@@ -671,18 +1316,12 @@
       "url": "https://linkareer.com/activity/332446",
       "src": "링커리어",
       "desc": "",
-      "tags": []
-    },
-    {
-      "id": "ebac0bdc446a",
-      "title": "제7회 선경문학상 공모",
-      "org": "선경산업",
-      "cat": "activity",
-      "deadline": "2026-09-20",
-      "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&Txt_bcode=030110001&str_no=202604080082",
-      "src": "공모전코리아",
-      "desc": "",
-      "tags": []
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
     },
     {
       "id": "d74db3ea4288",
@@ -693,7 +1332,44 @@
       "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&Txt_bcode=030110001&str_no=202604080081",
       "src": "공모전코리아",
       "desc": "",
-      "tags": []
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "ebac0bdc446a",
+      "title": "제7회 선경문학상 공모",
+      "org": "선경산업",
+      "cat": "activity",
+      "deadline": "2026-09-20",
+      "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&Txt_bcode=030110001&str_no=202604080082",
+      "src": "공모전코리아",
+      "desc": "",
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "lk_332660",
+      "title": "✊꽉.잡.아 - 클라이밍 크루 6기 회원 모집",
+      "org": "꽉잡아",
+      "cat": "activity",
+      "deadline": "2026-09-27",
+      "url": "https://linkareer.com/activity/332660",
+      "src": "링커리어",
+      "desc": "",
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
     },
     {
       "id": "lk_332407",
@@ -704,18 +1380,12 @@
       "url": "https://linkareer.com/activity/332407",
       "src": "링커리어",
       "desc": "",
-      "tags": []
-    },
-    {
-      "id": "lk_332150",
-      "title": "뽀짝팩토리 _DIY 취미 동아리 3기",
-      "org": "뽀짝팩토리",
-      "cat": "activity",
-      "deadline": "2026-09-28",
-      "url": "https://linkareer.com/activity/332150",
-      "src": "링커리어",
-      "desc": "",
-      "tags": []
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
     },
     {
       "id": "lk_332450",
@@ -726,7 +1396,12 @@
       "url": "https://linkareer.com/activity/332450",
       "src": "링커리어",
       "desc": "",
-      "tags": []
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
     },
     {
       "id": "lk_332434",
@@ -737,7 +1412,12 @@
       "url": "https://linkareer.com/activity/332434",
       "src": "링커리어",
       "desc": "",
-      "tags": []
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
     },
     {
       "id": "lk_332411",
@@ -748,40 +1428,12 @@
       "url": "https://linkareer.com/activity/332411",
       "src": "링커리어",
       "desc": "",
-      "tags": []
-    },
-    {
-      "id": "lk_332386",
-      "title": "[Adobe 디자인툴 스터디] 디자인툴 3대장 Photoshop, Illustrator, InDesign 스터디",
-      "org": "Adobe 디자인툴 스터디",
-      "cat": "activity",
-      "deadline": "2026-09-29",
-      "url": "https://linkareer.com/activity/332386",
-      "src": "링커리어",
-      "desc": "",
-      "tags": []
-    },
-    {
-      "id": "lk_332373",
-      "title": "수도권 대학 연합 영어회화 동아리 OUTLOUD! 스터디메이트 모집",
-      "org": "수도권 대학 연합 영어회화 동아리 OUTLOUD!",
-      "cat": "activity",
-      "deadline": "2026-09-29",
-      "url": "https://linkareer.com/activity/332373",
-      "src": "링커리어",
-      "desc": "",
-      "tags": []
-    },
-    {
-      "id": "lk_332339",
-      "title": "[퍼포먼스마케팅] \"PerfoMeter\" 마케팅동아리 신규부원 모집합니다!",
-      "org": "PerfoMeter 퍼포미터 마케팅",
-      "cat": "activity",
-      "deadline": "2026-09-29",
-      "url": "https://linkareer.com/activity/332339",
-      "src": "링커리어",
-      "desc": "",
-      "tags": []
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
     },
     {
       "id": "lk_332534",
@@ -792,7 +1444,76 @@
       "url": "https://linkareer.com/activity/332534",
       "src": "링커리어",
       "desc": "",
-      "tags": []
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "lk_332721",
+      "title": "퍼스널컬러 & 스타일링 클래스 참여자 모집",
+      "org": "SPOID",
+      "cat": "activity",
+      "deadline": "2026-09-30",
+      "url": "https://linkareer.com/activity/332721",
+      "src": "링커리어",
+      "desc": "",
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "lk_332634",
+      "title": "⚾️ [야구직관동아리] 야(구)단법석 3기 추가인원 모집",
+      "org": "야단법석",
+      "cat": "activity",
+      "deadline": "2026-09-30",
+      "url": "https://linkareer.com/activity/332634",
+      "src": "링커리어",
+      "desc": "",
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "lk_332553",
+      "title": "배드민턴 연합동아리 “배드너스(Badners)“  2026년 하반기 3기 부원 모집",
+      "org": "배드너스(badners)",
+      "cat": "activity",
+      "deadline": "2026-09-30",
+      "url": "https://linkareer.com/activity/332553",
+      "src": "링커리어",
+      "desc": "",
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "lk_332512",
+      "title": "[ 대외동아리 ] 문티탈출(문화밤티) 2기 모집",
+      "org": "문화밤티",
+      "cat": "activity",
+      "deadline": "2026-09-30",
+      "url": "https://linkareer.com/activity/332512",
+      "src": "링커리어",
+      "desc": "",
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
     },
     {
       "id": "lk_332620",
@@ -803,7 +1524,12 @@
       "url": "https://linkareer.com/activity/332620",
       "src": "링커리어",
       "desc": "",
-      "tags": []
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
     },
     {
       "id": "lk_332576",
@@ -814,7 +1540,12 @@
       "url": "https://linkareer.com/activity/332576",
       "src": "링커리어",
       "desc": "",
-      "tags": []
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
     },
     {
       "id": "lk_332542",
@@ -825,7 +1556,12 @@
       "url": "https://linkareer.com/activity/332542",
       "src": "링커리어",
       "desc": "",
-      "tags": []
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
     },
     {
       "id": "lk_332526",
@@ -836,18 +1572,82 @@
       "url": "https://linkareer.com/activity/332526",
       "src": "링커리어",
       "desc": "",
-      "tags": []
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
     },
     {
-      "id": "lk_332499",
-      "title": "[메가존클라우드] 클라우드 비용 정산 운영 인턴",
-      "org": "메가존클라우드",
+      "id": "7a9a9b66d547",
+      "title": "2026년도 지역신용보증재단 보증지원 우수사례 공모전",
+      "org": "전국 17개 지역신용보증재단",
+      "cat": "activity",
+      "deadline": "2026-09-30",
+      "url": "https://thinkyou.co.kr/contest/64568",
+      "src": "씽유",
+      "desc": "",
+      "tags": [
+        "씽유"
+      ],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "82fdd84857c9",
+      "title": "2026년 창원시 AIㆍ데이터 활용 공모전",
+      "org": "창원특례시",
       "cat": "ai",
       "deadline": "2026-09-30",
-      "url": "https://linkareer.com/activity/332499",
+      "url": "https://thinkyou.co.kr/contest/63697",
+      "src": "씽유",
+      "desc": "",
+      "tags": [
+        "씽유"
+      ],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "b543dc90b625",
+      "title": "2026 GR 홍보 공모전",
+      "org": "한국자원순환산업진흥협회",
+      "cat": "activity",
+      "deadline": "2026-09-30",
+      "url": "https://thinkyou.co.kr/contest/64564",
+      "src": "씽유",
+      "desc": "",
+      "tags": [
+        "씽유"
+      ],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "lk_332845",
+      "title": "[신사업] 퍼포먼스 마케터 인턴",
+      "org": "팀스파르타",
+      "cat": "corp",
+      "deadline": "2026-10-01",
+      "url": "https://linkareer.com/activity/332845",
       "src": "링커리어",
       "desc": "",
-      "tags": []
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
     },
     {
       "id": "b557472ead8b",
@@ -861,7 +1661,46 @@
       "tags": [
         "채용",
         "조선"
-      ]
+      ],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "74db75f3361e",
+      "title": "제3회 이달의 멸종위기 야생생물 세밀화 공모전",
+      "org": "국립생태원",
+      "cat": "activity",
+      "deadline": "2026-10-12",
+      "url": "https://thinkyou.co.kr/contest/62839",
+      "src": "씽유",
+      "desc": "",
+      "tags": [
+        "씽유"
+      ],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "99d397d721d4",
+      "title": "2026 뉴뉴스 프리랜서 기자 모집",
+      "org": "뉴뉴스신문사",
+      "cat": "activity",
+      "deadline": "2026-12-31",
+      "url": "https://www.contestkorea.com/sub/view.php?int_gbn=2&Txt_bcode=040110001&str_no=202604260001",
+      "src": "공모전코리아",
+      "desc": "",
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
     },
     {
       "id": "633d58e38446",
@@ -872,7 +1711,12 @@
       "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&Txt_bcode=030310001&str_no=202605150002",
       "src": "공모전코리아",
       "desc": "",
-      "tags": []
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
     }
   ]
 }

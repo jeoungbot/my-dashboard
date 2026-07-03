@@ -103,7 +103,7 @@
     }
     .refresh-btn:hover { border-color: var(--accent); color: var(--accent); }
 
-    /* ===== 빈 상태 배너 (data.json 없을 때) ===== */
+    /* ===== 빈 상태 배너 ===== */
     .empty-banner {
       background: var(--surface); border: 1.5px solid var(--border);
       border-radius: var(--r); padding: 52px 24px;
@@ -156,6 +156,17 @@
       display:inline-block; font-size:10px; font-weight:700;
       padding:1px 7px; border-radius:4px; margin-top:6px;
       background:rgba(255,255,255,.15); color:rgba(255,255,255,.8);
+    }
+
+    /* ===== 장학금 특별 섹션 ===== */
+    .featured-scholar {
+      background: linear-gradient(135deg,#064e3b 0%,#059669 55%,#065f46 100%);
+      border-radius: var(--r); padding: 22px 24px 20px;
+      margin-bottom: 22px; color: #fff; position: relative; overflow: hidden;
+    }
+    .featured-scholar::after {
+      content:'💰'; position:absolute; right:-4px; top:50%;
+      transform:translateY(-60%); font-size:96px; opacity:.1; pointer-events:none;
     }
 
     /* ===== 통계 ===== */
@@ -239,6 +250,20 @@
       font-size:11px; padding:2px 8px; border-radius:4px;
       background:var(--bg); color:var(--sub); border:1px solid var(--border);
     }
+
+    /* ===== 장학금 자격 뱃지 ===== */
+    .eligibility {
+      display:flex; flex-wrap:wrap; gap:5px; margin-top:2px;
+    }
+    .elig-item {
+      font-size:11px; padding:2px 8px; border-radius:50px;
+      background:#ecfdf5; color:#065f46; border:1px solid #6ee7b7;
+      font-weight:600;
+    }
+    [data-theme="dark"] .elig-item {
+      background:#064e3b; color:#6ee7b7; border-color:#065f46;
+    }
+
     .card-foot {
       display:flex; justify-content:space-between; align-items:center;
       padding-top:10px; border-top:1px solid var(--border); margin-top:auto;
@@ -264,8 +289,15 @@
     .cb-media    { background:#fee2e2; color:#dc2626; }
     .cb-global   { background:#d1fae5; color:#059669; }
     .cb-corp     { background:#fef3c7; color:#b45309; }
-    .cb-scholar  { background:#e0f2fe; color:#0369a1; }
+    /* 장학금 - 녹색 계열 구분 */
+    .cb-scholar        { background:#d1fae5; color:#065f46; }
+    .cb-scholar_public { background:#cffafe; color:#0e7490; }
+    .cb-scholar_corp   { background:#fef3c7; color:#b45309; }
+    .cb-scholar_merit  { background:#ede9fe; color:#6d28d9; }
+    .cb-scholar_region { background:#fce7f3; color:#be185d; }
+    .cb-scholar_univ   { background:#f0fdf4; color:#166534; }
     .cb-activity { background:#fce7f3; color:#be185d; }
+
     [data-theme="dark"] .cb-ship,
     [data-theme="dark"] .cb-ship_recruit,
     [data-theme="dark"] .cb-ship_contest,
@@ -276,16 +308,21 @@
     [data-theme="dark"] .cb-media    { background:#450a0a; color:#fca5a5; }
     [data-theme="dark"] .cb-global   { background:#064e3b; color:#6ee7b7; }
     [data-theme="dark"] .cb-corp     { background:#451a03; color:#fcd34d; }
-    [data-theme="dark"] .cb-scholar  { background:#0c4a6e; color:#7dd3fc; }
+    [data-theme="dark"] .cb-scholar        { background:#064e3b; color:#6ee7b7; }
+    [data-theme="dark"] .cb-scholar_public { background:#0c4a6e; color:#7dd3fc; }
+    [data-theme="dark"] .cb-scholar_corp   { background:#451a03; color:#fcd34d; }
+    [data-theme="dark"] .cb-scholar_merit  { background:#2e1065; color:#c4b5fd; }
+    [data-theme="dark"] .cb-scholar_region { background:#500724; color:#f9a8d4; }
+    [data-theme="dark"] .cb-scholar_univ   { background:#14532d; color:#86efac; }
     [data-theme="dark"] .cb-activity { background:#500724; color:#f9a8d4; }
 
-    /* ===== 조선 서브탭 ===== */
-    .ship-sub-wrap {
+    /* ===== 조선/장학금 서브탭 ===== */
+    .sub-tab-wrap {
       overflow-x:auto; -webkit-overflow-scrolling:touch;
       scrollbar-width:none; margin:-6px 0 16px;
     }
-    .ship-sub-wrap::-webkit-scrollbar { display:none; }
-    .ship-sub-tabs { display:flex; gap:6px; width:max-content; }
+    .sub-tab-wrap::-webkit-scrollbar { display:none; }
+    .sub-tabs { display:flex; gap:6px; width:max-content; }
     .stab {
       padding:5px 14px; border:1.5px solid rgba(37,99,235,.3);
       border-radius:50px; background:transparent;
@@ -299,6 +336,15 @@
       font-size:10px; font-weight:800; padding:1px 5px;
       border-radius:50px; background:rgba(37,99,235,.15); color:var(--accent);
     }
+
+    /* 장학금 서브탭 - 초록 계열 */
+    .scholar-stab {
+      border-color:rgba(5,150,105,.3);
+      color:#059669;
+    }
+    .scholar-stab:hover { background:rgba(5,150,105,.08); }
+    .scholar-stab.on { background:rgba(5,150,105,.12); border-color:#059669; }
+    .scholar-stab .stab-n { background:rgba(5,150,105,.15); color:#059669; }
 
     /* ===== 로딩 스피너 ===== */
     .loading {
@@ -393,7 +439,7 @@
     </div>
     <div class="sw">
       <span class="sw-ico">🔍</span>
-      <input id="searchInput" type="text" placeholder="공모전, 기업명, 태그 검색…" oninput="handleSearch()">
+      <input id="searchInput" type="text" placeholder="공모전, 장학금, 기업명 검색…" oninput="handleSearch()">
     </div>
     <div class="hdr-r">
       <button class="btn-ico" id="themeBtn" onclick="toggleDark()" title="다크모드">🌙</button>
@@ -415,9 +461,8 @@
     <button class="refresh-btn" onclick="loadData(true)">🔄 새로고침</button>
   </div>
 
-
   <!-- 조선/기계 특별 섹션 -->
-  <div class="featured" id="featuredSection">
+  <div class="featured" id="featuredSection" style="display:none">
     <div class="feat-hdr">
       <span style="font-size:22px">🚢</span>
       <span class="feat-title">조선 · 기계 전공 추천</span>
@@ -431,15 +476,35 @@
     </div>
   </div>
 
+  <!-- 장학금 특별 섹션 -->
+  <div class="featured featured-scholar" id="scholarSection" style="display:none">
+    <div class="feat-hdr">
+      <span style="font-size:22px">💰</span>
+      <span class="feat-title">마감 임박 장학금</span>
+      <span class="feat-pill">D-30 이내</span>
+    </div>
+    <div class="feat-grid" id="scholarGrid">
+      <div class="loading" style="padding:20px;color:rgba(255,255,255,.7)">
+        <div class="spinner" style="border-color:rgba(255,255,255,.3);border-top-color:#fff"></div>
+        로딩 중…
+      </div>
+    </div>
+  </div>
+
   <!-- 통계 -->
   <div class="stats" id="statsBar"></div>
 
   <!-- 카테고리 탭 -->
   <div class="tabs-scroll"><div class="tabs" id="tabs"></div></div>
 
-  <!-- 조선/기계 서브탭 (ship 탭 선택 시에만 표시) -->
-  <div class="ship-sub-wrap" id="shipSubWrap" style="display:none">
-    <div class="ship-sub-tabs" id="shipSubTabs"></div>
+  <!-- 조선/기계 서브탭 -->
+  <div class="sub-tab-wrap" id="shipSubWrap" style="display:none">
+    <div class="sub-tabs" id="shipSubTabs"></div>
+  </div>
+
+  <!-- 장학금 서브탭 -->
+  <div class="sub-tab-wrap" id="scholarSubWrap" style="display:none">
+    <div class="sub-tabs" id="scholarSubTabs"></div>
   </div>
 
   <!-- 툴바 -->
@@ -461,7 +526,7 @@
   <div class="grid" id="grid">
     <div class="loading">
       <div class="spinner"></div>
-      공모전 데이터 불러오는 중…
+      공모전·장학금 데이터 불러오는 중…
     </div>
   </div>
 </div>
@@ -486,17 +551,28 @@
         <div class="fg">
           <label>카테고리 <span>*</span></label>
           <select class="fs" id="iCat">
-            <option value="ship_recruit">🚢 조선 채용/인턴십</option>
-            <option value="ship_contest">🏆 조선 공모전/경진</option>
-            <option value="ship_academic">📖 조선 학술/논문</option>
-            <option value="ship_global">✈️ 조선 해외 인턴십</option>
-            <option value="ship_scholar">💰 조선 장학금</option>
-            <option value="ai">🤖 AI/IoT</option>
-            <option value="media">🎬 영상/콘텐츠</option>
-            <option value="global">✈️ 해외 인턴십</option>
-            <option value="corp">🏢 국내 대기업 인턴</option>
-            <option value="scholar">💰 장학금</option>
-            <option value="activity">🎯 대외활동</option>
+            <optgroup label="🚢 조선/기계">
+              <option value="ship_recruit">채용/인턴십</option>
+              <option value="ship_contest">공모전/경진</option>
+              <option value="ship_academic">학술/논문</option>
+              <option value="ship_global">해외 인턴십</option>
+              <option value="ship_scholar">장학금</option>
+            </optgroup>
+            <optgroup label="💰 장학금">
+              <option value="scholar_public">국가/공공 장학금</option>
+              <option value="scholar_corp">기업/사설 장학금</option>
+              <option value="scholar_merit">성적우수 장학금</option>
+              <option value="scholar_region">지역 장학금</option>
+              <option value="scholar_univ">대학교 외부 장학금</option>
+              <option value="scholar">기타 장학금</option>
+            </optgroup>
+            <optgroup label="기타">
+              <option value="ai">🤖 AI/IoT</option>
+              <option value="media">🎬 영상/콘텐츠</option>
+              <option value="global">✈️ 해외 인턴십</option>
+              <option value="corp">🏢 국내 대기업 인턴</option>
+              <option value="activity">🎯 대외활동</option>
+            </optgroup>
           </select>
         </div>
       </div>
@@ -510,13 +586,23 @@
           <input class="fi" id="iUrl" type="url" placeholder="https://…" required>
         </div>
       </div>
+      <div class="frow">
+        <div class="fg">
+          <label>지원 학년</label>
+          <input class="fi" id="iGrade" placeholder="예: 2~4학년, 전학년">
+        </div>
+        <div class="fg">
+          <label>성적 기준</label>
+          <input class="fi" id="iGpa" placeholder="예: 3.0 이상">
+        </div>
+      </div>
       <div class="fg">
         <label>공고 설명</label>
         <textarea class="ft" id="iDesc" placeholder="간단한 설명을 입력하세요"></textarea>
       </div>
       <div class="fg">
         <label>태그 (쉼표 구분)</label>
-        <input class="fi" id="iTags" placeholder="예: 대학생, 인턴, 설계">
+        <input class="fi" id="iTags" placeholder="예: 대학생, 장학금, 부산">
       </div>
       <button type="submit" class="btn-sub">공고 추가하기</button>
     </form>
@@ -530,30 +616,53 @@
 // 카테고리 정의
 // ════════════════════════════════════════════════════════
 const CATS = {
-  all:           { label:'전체보기',      icon:'📋' },
-  ship:          { label:'조선/기계',     icon:'🚢' },
-  ship_recruit:  { label:'채용/인턴십',   icon:'💼' },
-  ship_contest:  { label:'공모전/경진',   icon:'🏆' },
-  ship_academic: { label:'학술/논문',     icon:'📖' },
-  ship_global:   { label:'해외 인턴십',   icon:'✈️' },
-  ship_scholar:  { label:'장학금',        icon:'💰' },
-  ai:            { label:'AI/IoT',       icon:'🤖' },
-  media:         { label:'영상/콘텐츠',   icon:'🎬' },
-  global:        { label:'해외 인턴십',   icon:'✈️' },
-  corp:          { label:'대기업 인턴',   icon:'🏢' },
-  scholar:       { label:'장학금',        icon:'💰' },
-  activity:      { label:'대외활동',      icon:'🎯' },
-  bookmark:      { label:'즐겨찾기',      icon:'⭐' },
+  all:            { label:'전체보기',         icon:'📋' },
+  ship:           { label:'조선/기계',        icon:'🚢' },
+  ship_recruit:   { label:'채용/인턴십',      icon:'💼' },
+  ship_contest:   { label:'공모전/경진',      icon:'🏆' },
+  ship_academic:  { label:'학술/논문',        icon:'📖' },
+  ship_global:    { label:'해외 인턴십',      icon:'✈️' },
+  ship_scholar:   { label:'조선 장학금',      icon:'💰' },
+  ai:             { label:'AI/IoT',          icon:'🤖' },
+  media:          { label:'영상/콘텐츠',      icon:'🎬' },
+  global:         { label:'해외 인턴십',      icon:'✈️' },
+  corp:           { label:'대기업 인턴',      icon:'🏢' },
+  // 장학금 카테고리
+  scholar:        { label:'기타 장학금',      icon:'💰' },
+  scholar_public: { label:'국가/공공 장학금', icon:'🏛️' },
+  scholar_corp:   { label:'기업/사설 장학금', icon:'🏢' },
+  scholar_merit:  { label:'성적우수 장학금',  icon:'📊' },
+  scholar_region: { label:'지역 장학금',      icon:'📍' },
+  scholar_univ:   { label:'대학외부 장학금',  icon:'🎓' },
+  activity:       { label:'대외활동',         icon:'🎯' },
+  bookmark:       { label:'즐겨찾기',         icon:'⭐' },
 };
 
 const SHIP_SUBS = [
-  { key: '',         label: '전체',          icon: '🚢' },
-  { key: 'recruit',  label: '채용/인턴십',    icon: '💼' },
-  { key: 'contest',  label: '공모전/경진',    icon: '🏆' },
-  { key: 'academic', label: '학술/논문',      icon: '📖' },
-  { key: 'global',   label: '해외 인턴십',    icon: '✈️' },
-  { key: 'scholar',  label: '장학금',         icon: '💰' },
+  { key: '',         label: '전체',       icon: '🚢' },
+  { key: 'recruit',  label: '채용/인턴',  icon: '💼' },
+  { key: 'contest',  label: '공모전',     icon: '🏆' },
+  { key: 'academic', label: '학술/논문',  icon: '📖' },
+  { key: 'global',   label: '해외인턴',   icon: '✈️' },
+  { key: 'scholar',  label: '장학금',     icon: '💰' },
 ];
+
+const SCHOLAR_SUBS = [
+  { key: '',       label: '전체',            icon: '💰' },
+  { key: 'public', label: '국가/공공',       icon: '🏛️' },
+  { key: 'corp',   label: '기업/사설',       icon: '🏢' },
+  { key: 'merit',  label: '성적우수',        icon: '📊' },
+  { key: 'region', label: '지역(부산·경남)', icon: '📍' },
+  { key: 'univ',   label: '대학 외부',       icon: '🎓' },
+];
+
+// 장학금 카테고리 판별 헬퍼
+function isScholarCat(cat) {
+  return cat === 'scholar' || cat.startsWith('scholar_');
+}
+function isShipCat(cat) {
+  return cat === 'ship' || cat.startsWith('ship_');
+}
 
 // ════════════════════════════════════════════════════════
 // 상태
@@ -561,6 +670,7 @@ const SHIP_SUBS = [
 const S = {
   tab: 'all',
   shipSub: '',
+  scholarSub: '',
   query: '',
   liveItems: [],
   custom: JSON.parse(localStorage.getItem('custom') || '[]'),
@@ -572,7 +682,7 @@ function allEntries() {
 }
 
 // ════════════════════════════════════════════════════════
-// 데이터 로딩 (data.json fetch)
+// 데이터 로딩
 // ════════════════════════════════════════════════════════
 async function loadData(force = false) {
   const dot  = document.getElementById('liveDot');
@@ -590,12 +700,13 @@ async function loadData(force = false) {
 
     dot.classList.remove('offline');
     const updated = json.updated ? json.updated.slice(0,16).replace('T',' ') : '?';
-    info.innerHTML = `<b>${items.length}건</b> 수집됨 · 마지막 업데이트 <b>${updated}</b>`;
+    const scholarCount = items.filter(e => isScholarCat(e.cat)).length;
+    info.innerHTML = `<b>${items.length}건</b> 수집됨 (장학금 <b>${scholarCount}건</b>) · 마지막 업데이트 <b>${updated}</b>`;
 
   } catch (e) {
     S.liveItems = [];
     dot.classList.add('offline');
-    info.innerHTML = '데이터를 불러오지 못했습니다 · GitHub Actions 실행 후 새로고침 해주세요';
+    info.innerHTML = '데이터를 불러오지 못했습니다 · 크롤러 실행 후 새로고침 해주세요';
   }
 
   render();
@@ -633,7 +744,6 @@ function filtered() {
   const q = S.query.toLowerCase();
   const showExp = document.getElementById('showExpired')?.checked;
 
-  // 마감 공고 숨김 (기본)
   if (!showExp) {
     list = list.filter(e => dday(e.deadline) >= 0);
   }
@@ -641,9 +751,14 @@ function filtered() {
   if (S.tab === 'bookmark') {
     list = list.filter(e => S.bookmarks.has(e.id));
   } else if (S.tab === 'ship') {
-    list = list.filter(e => e.cat === 'ship' || e.cat.startsWith('ship_'));
+    list = list.filter(e => isShipCat(e.cat));
     if (S.shipSub) {
       list = list.filter(e => e.cat === 'ship_' + S.shipSub);
+    }
+  } else if (S.tab === 'scholar') {
+    list = list.filter(e => isScholarCat(e.cat));
+    if (S.scholarSub) {
+      list = list.filter(e => e.cat === 'scholar_' + S.scholarSub);
     }
   } else if (S.tab !== 'all') {
     list = list.filter(e => e.cat === S.tab);
@@ -677,8 +792,10 @@ function filtered() {
 // ════════════════════════════════════════════════════════
 function render() {
   renderFeatured();
+  renderScholarFeatured();
   renderTabs();
   renderShipSubTabs();
+  renderScholarSubTabs();
   renderCards();
   renderStats();
 }
@@ -688,27 +805,46 @@ function renderFeatured() {
   sec.style.display = (S.tab === 'all' || S.tab === 'ship') ? '' : 'none';
 
   const shipItems = allEntries()
-    .filter(e => (e.cat === 'ship' || e.cat.startsWith('ship_')) && dday(e.deadline) >= 0)
+    .filter(e => isShipCat(e.cat) && dday(e.deadline) >= 0)
     .sort((a,b) => dday(a.deadline) - dday(b.deadline))
     .slice(0, 6);
 
   document.getElementById('featuredGrid').innerHTML = shipItems.length
-    ? shipItems.map(e => {
-        const n = dday(e.deadline);
-        const bm = S.bookmarks.has(e.id);
-        return `
-          <div class="fcard" onclick="openUrl('${escUrl(e.url)}')">
-            <div class="fcard-title">${esc(e.title)}</div>
-            <div class="fcard-org">🏢 ${esc(e.org)}</div>
-            ${e.src ? `<div class="src-tag">🔗 ${esc(e.src)}</div>` : ''}
-            <div class="fcard-foot" style="margin-top:8px">
-              <span class="fcard-dday ${ddayCls(n)}">${ddayLabel(n)}</span>
-              <button class="fcard-bm ${bm?'on':''}" title="즐겨찾기"
-                onclick="event.stopPropagation();toggleBm('${e.id}')">${bm?'★':'☆'}</button>
-            </div>
-          </div>`;
-      }).join('')
+    ? shipItems.map(e => _featCard(e)).join('')
     : '<div style="color:rgba(255,255,255,.6);font-size:14px">조선/기계 관련 공고가 없습니다.</div>';
+}
+
+function renderScholarFeatured() {
+  const sec = document.getElementById('scholarSection');
+  sec.style.display = (S.tab === 'all' || S.tab === 'scholar') ? '' : 'none';
+
+  // D-30 이내 장학금
+  const scholarItems = allEntries()
+    .filter(e => isScholarCat(e.cat) && dday(e.deadline) >= 0 && dday(e.deadline) <= 30)
+    .sort((a,b) => dday(a.deadline) - dday(b.deadline))
+    .slice(0, 6);
+
+  document.getElementById('scholarGrid').innerHTML = scholarItems.length
+    ? scholarItems.map(e => _featCard(e)).join('')
+    : '<div style="color:rgba(255,255,255,.6);font-size:14px">D-30 이내 마감 장학금이 없습니다.</div>';
+}
+
+function _featCard(e) {
+  const n = dday(e.deadline);
+  const bm = S.bookmarks.has(e.id);
+  const ci = CATS[e.cat] || {};
+  return `
+    <div class="fcard" onclick="openUrl('${escUrl(e.url)}')">
+      <div class="fcard-title">${esc(e.title)}</div>
+      <div class="fcard-org">🏢 ${esc(e.org)}</div>
+      ${ci.label ? `<div class="src-tag">${ci.icon} ${ci.label}</div>` : ''}
+      ${e.src ? `<div class="src-tag">🔗 ${esc(e.src)}</div>` : ''}
+      <div class="fcard-foot" style="margin-top:8px">
+        <span class="fcard-dday ${ddayCls(n)}">${ddayLabel(n)}</span>
+        <button class="fcard-bm ${bm?'on':''}" title="즐겨찾기"
+          onclick="event.stopPropagation();toggleBm('${e.id}')">${bm?'★':'☆'}</button>
+      </div>
+    </div>`;
 }
 
 function renderTabs() {
@@ -717,17 +853,19 @@ function renderTabs() {
   const cnt = {};
   all.forEach(e => cnt[e.cat] = (cnt[e.cat]||0)+1);
 
-  const shipCnt = all.filter(e => e.cat === 'ship' || e.cat.startsWith('ship_')).length;
+  const shipCnt    = all.filter(e => isShipCat(e.cat)).length;
+  const scholarCnt = all.filter(e => isScholarCat(e.cat)).length;
+
   const defs = [
-    ['all',      '📋 전체보기',  all.length],
-    ['ship',     '🚢 조선/기계', shipCnt],
-    ['ai',       '🤖 AI/IoT',   cnt.ai||0],
+    ['all',      '📋 전체보기',   all.length],
+    ['ship',     '🚢 조선/기계',  shipCnt],
+    ['ai',       '🤖 AI/IoT',    cnt.ai||0],
     ['media',    '🎬 영상/콘텐츠', cnt.media||0],
-    ['global',   '✈️ 해외 인턴십', cnt.global||0],
+    ['global',   '✈️ 해외인턴',   cnt.global||0],
     ['corp',     '🏢 대기업 인턴', cnt.corp||0],
-    ['scholar',  '💰 장학금',    cnt.scholar||0],
-    ['activity', '🎯 대외활동',  cnt.activity||0],
-    ['bookmark', '⭐ 즐겨찾기',  S.bookmarks.size],
+    ['scholar',  '💰 장학금',     scholarCnt],
+    ['activity', '🎯 대외활동',   cnt.activity||0],
+    ['bookmark', '⭐ 즐겨찾기',   S.bookmarks.size],
   ];
 
   document.getElementById('tabs').innerHTML = defs.map(([k,label,n]) =>
@@ -753,9 +891,7 @@ function renderCards() {
       ? `<div class="empty-banner">
            <div class="eb-ico">📭</div>
            <h3>현재 수집된 공고가 없습니다</h3>
-           <p>GitHub Actions가 아직 실행되지 않았거나 데이터 수집에 실패했습니다.<br>
-              Actions 탭에서 워크플로를 수동 실행하거나,<br>
-              <b>＋ 공고 추가</b> 버튼으로 직접 공고를 등록할 수 있습니다.</p>
+           <p>크롤러를 실행하거나 <b>＋ 공고 추가</b> 버튼으로 직접 등록하세요.</p>
          </div>`
       : `<div class="empty-banner">
            <div class="eb-ico">🔍</div>
@@ -765,22 +901,28 @@ function renderCards() {
     return;
   }
 
-  const cat = CATS;
   grid.innerHTML = list.map(e => {
     const n = dday(e.deadline);
     const bm = S.bookmarks.has(e.id);
-    const ci = cat[e.cat] || {};
+    const ci = CATS[e.cat] || {};
     const urg = n >= 0 && n <= 3;
+    const elig = e.eligibility || {};
+    const hasElig = elig.grade || elig.gpa;
+
     return `
       <div class="card ${urg?'urg':''}" onclick="openUrl('${escUrl(e.url)}')">
         <div class="card-hdr">
-          <span class="cat-badge cb-${e.cat}">${ci.icon||''} ${ci.label||''}</span>
+          <span class="cat-badge cb-${e.cat}">${ci.icon||''} ${ci.label||e.cat}</span>
           <button class="bm-btn ${bm?'on':''}" title="즐겨찾기"
             onclick="event.stopPropagation();toggleBm('${e.id}')">${bm?'★':'☆'}</button>
         </div>
         <div class="card-title">${esc(e.title)}</div>
         <div class="card-org">🏢 ${esc(e.org)}</div>
         ${e.desc ? `<div class="card-desc">${esc(e.desc)}</div>` : ''}
+        ${hasElig ? `<div class="eligibility">
+          ${elig.grade ? `<span class="elig-item">👤 ${esc(elig.grade)}</span>` : ''}
+          ${elig.gpa   ? `<span class="elig-item">📊 학점 ${esc(elig.gpa)}</span>` : ''}
+        </div>` : ''}
         ${e.tags?.length ? `<div class="card-tags">${e.tags.map(t=>`<span class="tag">#${esc(t)}</span>`).join('')}</div>` : ''}
         <div class="card-foot">
           <div>
@@ -797,20 +939,18 @@ function renderStats() {
   const all = allEntries();
   const urgCnt    = all.filter(e => { const n=dday(e.deadline); return n>=0&&n<=3; }).length;
   const activeCnt = all.filter(e => dday(e.deadline) >= 0).length;
+  const scholarCnt = all.filter(e => isScholarCat(e.cat) && dday(e.deadline) >= 0).length;
   document.getElementById('statsBar').innerHTML = `
     <div class="stat">📋 전체 <b>${all.length}건</b></div>
     <div class="stat">✅ 진행중 <b>${activeCnt}건</b></div>
+    <div class="stat">💰 장학금 <b>${scholarCnt}건</b></div>
     <div class="stat">🔴 마감임박(3일) <b>${urgCnt}건</b></div>
     <div class="stat">⭐ 즐겨찾기 <b>${S.bookmarks.size}건</b></div>`;
 }
 
 // ════════════════════════════════════════════════════════
-// 액션
+// 서브탭 렌더링
 // ════════════════════════════════════════════════════════
-function setTab(k) { S.tab = k; if (k !== 'ship') S.shipSub = ''; render(); }
-function setShipSub(k) { S.shipSub = k; render(); }
-function handleSearch() { S.query = document.getElementById('searchInput').value; renderCards(); }
-
 function renderShipSubTabs() {
   const wrap = document.getElementById('shipSubWrap');
   if (S.tab !== 'ship') { wrap.style.display = 'none'; return; }
@@ -825,10 +965,9 @@ function renderShipSubTabs() {
       cnt[sub] = (cnt[sub]||0)+1;
     }
   });
-  const total = Object.values(cnt).reduce((a,b) => a+b, 0);
+  const total = all.filter(e => isShipCat(e.cat)).length;
   if (total === 0) { wrap.style.display = 'none'; return; }
 
-  // 데이터 있는 서브탭만 표시 (+ 전체 탭은 항상)
   const visibleSubs = SHIP_SUBS.filter(s => s.key === '' || (cnt[s.key]||0) > 0);
   if (visibleSubs.length <= 1) { wrap.style.display = 'none'; return; }
 
@@ -840,6 +979,48 @@ function renderShipSubTabs() {
     </button>`;
   }).join('');
 }
+
+function renderScholarSubTabs() {
+  const wrap = document.getElementById('scholarSubWrap');
+  if (S.tab !== 'scholar') { wrap.style.display = 'none'; return; }
+
+  const showExp = document.getElementById('showExpired')?.checked;
+  const all = allEntries().filter(e => showExp || dday(e.deadline) >= 0);
+  const cnt = {};
+  all.forEach(e => {
+    if (isScholarCat(e.cat)) {
+      const sub = e.cat === 'scholar' ? '' : e.cat.slice(8); // 'scholar_' = 8 chars
+      cnt[sub] = (cnt[sub]||0)+1;
+    }
+  });
+  const total = all.filter(e => isScholarCat(e.cat)).length;
+  if (total === 0) { wrap.style.display = 'none'; return; }
+
+  // 데이터 있는 서브탭만 표시
+  const visibleSubs = SCHOLAR_SUBS.filter(s => s.key === '' || (cnt[s.key]||0) > 0);
+  if (visibleSubs.length <= 1) { wrap.style.display = 'none'; return; }
+
+  wrap.style.display = '';
+  document.getElementById('scholarSubTabs').innerHTML = visibleSubs.map(s => {
+    const n = s.key ? (cnt[s.key]||0) : total;
+    return `<button class="stab scholar-stab ${S.scholarSub===s.key?'on':''}" onclick="setScholarSub('${s.key}')">
+      ${s.icon} ${s.label}<span class="stab-n">${n}</span>
+    </button>`;
+  }).join('');
+}
+
+// ════════════════════════════════════════════════════════
+// 액션
+// ════════════════════════════════════════════════════════
+function setTab(k) {
+  S.tab = k;
+  if (k !== 'ship') S.shipSub = '';
+  if (k !== 'scholar') S.scholarSub = '';
+  render();
+}
+function setShipSub(k)    { S.shipSub = k; render(); }
+function setScholarSub(k) { S.scholarSub = k; render(); }
+function handleSearch()   { S.query = document.getElementById('searchInput').value; renderCards(); }
 
 function toggleBm(id) {
   S.bookmarks.has(id) ? S.bookmarks.delete(id) : S.bookmarks.add(id);
@@ -872,17 +1053,20 @@ document.getElementById('modal').addEventListener('click', e => {
 
 function handleAdd(e) {
   e.preventDefault();
-  const tags = document.getElementById('iTags').value.split(',').map(t=>t.trim()).filter(Boolean);
+  const tags  = document.getElementById('iTags').value.split(',').map(t=>t.trim()).filter(Boolean);
+  const grade = document.getElementById('iGrade').value.trim();
+  const gpa   = document.getElementById('iGpa').value.trim();
   const entry = {
-    id: 'c' + Date.now(),
-    cat: document.getElementById('iCat').value,
+    id:    'c' + Date.now(),
+    cat:   document.getElementById('iCat').value,
     title: document.getElementById('iTitle').value,
-    org: document.getElementById('iOrg').value,
+    org:   document.getElementById('iOrg').value,
     deadline: document.getElementById('iDeadline').value,
-    url: document.getElementById('iUrl').value,
-    src: '직접 추가',
-    desc: document.getElementById('iDesc').value,
+    url:   document.getElementById('iUrl').value,
+    src:   '직접 추가',
+    desc:  document.getElementById('iDesc').value,
     tags,
+    eligibility: { grade, gpa, note: '' },
   };
   S.custom.push(entry);
   localStorage.setItem('custom', JSON.stringify(S.custom));
@@ -913,12 +1097,9 @@ function escUrl(s) { return String(s||'').replace(/'/g,'%27'); }
 // 초기화
 // ════════════════════════════════════════════════════════
 (function init() {
-  // 테마 복원
   const t = localStorage.getItem('theme') || 'light';
   document.documentElement.setAttribute('data-theme', t);
   document.getElementById('themeBtn').textContent = t === 'dark' ? '☀️' : '🌙';
-
-  // data.json 로드
   loadData();
 })();
 </script>
