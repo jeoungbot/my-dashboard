@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-27T12:49:51",
+  "updated": "2026-07-27T13:32:06",
   "total": 174,
   "items": [
     {
@@ -22,12 +22,12 @@
       }
     },
     {
-      "id": "795714138637",
-      "title": "제29회 경상북도관광기념품공모전",
-      "org": "경상북도관광협회",
-      "cat": "activity",
+      "id": "a2b5cf925044",
+      "title": "2026년 SW미래채움 × AI·SW중심대학 연합 경진대회",
+      "org": "경기도경제과학진흥원, 한국정보과학진흥협회",
+      "cat": "ai",
       "deadline": "2026-07-27",
-      "url": "https://thinkyou.co.kr/contest/64162",
+      "url": "https://thinkyou.co.kr/contest/65228",
       "src": "씽유",
       "desc": "",
       "tags": [
@@ -40,12 +40,12 @@
       }
     },
     {
-      "id": "a2b5cf925044",
-      "title": "2026년 SW미래채움 × AI·SW중심대학 연합 경진대회",
-      "org": "경기도경제과학진흥원, 한국정보과학진흥협회",
-      "cat": "ai",
+      "id": "795714138637",
+      "title": "제29회 경상북도관광기념품공모전",
+      "org": "경상북도관광협회",
+      "cat": "activity",
       "deadline": "2026-07-27",
-      "url": "https://thinkyou.co.kr/contest/65228",
+      "url": "https://thinkyou.co.kr/contest/64162",
       "src": "씽유",
       "desc": "",
       "tags": [
@@ -79,7 +79,7 @@
       "org": "(주)토라스",
       "cat": "ship_recruit",
       "deadline": "2026-07-29",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54312450&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=e9f753a7-0006-404e-8cb5-f9e9316454a1",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54312450&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=6c7e724c-e9c6-4d63-9e70-7170d55c14c7",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -98,7 +98,7 @@
       "org": "(주)커리어텍",
       "cat": "ship_recruit",
       "deadline": "2026-07-29",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54457176&location=ts&searchword=%EC%82%BC%EC%84%B1%EC%A4%91%EA%B3%B5%EC%97%85+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=6bfe9f86-a186-4017-b674-581270b22d10",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54457176&location=ts&searchword=%EC%82%BC%EC%84%B1%EC%A4%91%EA%B3%B5%EC%97%85+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=64c85988-3c22-42b9-9a08-9dd911579715",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -117,7 +117,7 @@
       "org": "(주)서울커뮤니케이션",
       "cat": "ship_recruit",
       "deadline": "2026-07-29",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54573137&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=5bdc34a6-9527-4069-ba22-711159988398",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54573137&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=053d0791-dbd2-4214-bc2e-a81bc0b032f1",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -291,12 +291,30 @@
       }
     },
     {
-      "id": "751e5318ea01",
-      "title": "제12회 항공문학상",
-      "org": "한국항공협회",
+      "id": "77f3399b4911",
+      "title": "2026 ACC 민주인권평화 영상(+AI)콘텐츠 공모전",
+      "org": "국립아시아문화전당",
+      "cat": "ai",
+      "deadline": "2026-07-31",
+      "url": "https://thinkyou.co.kr/contest/63306",
+      "src": "씽유",
+      "desc": "",
+      "tags": [
+        "씽유"
+      ],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "2204b0d7bd82",
+      "title": "2026년 저작권 인식제고 글 공모전",
+      "org": "한국저작권위원회",
       "cat": "activity",
       "deadline": "2026-07-31",
-      "url": "https://thinkyou.co.kr/contest/63602",
+      "url": "https://thinkyou.co.kr/contest/63647",
       "src": "씽유",
       "desc": "",
       "tags": [
@@ -327,42 +345,6 @@
       }
     },
     {
-      "id": "43590c24cdb6",
-      "title": "2026 국가안보 논문 · 아이디어 공모전",
-      "org": "국가정보원",
-      "cat": "activity",
-      "deadline": "2026-07-31",
-      "url": "https://thinkyou.co.kr/contest/62735",
-      "src": "씽유",
-      "desc": "",
-      "tags": [
-        "씽유"
-      ],
-      "eligibility": {
-        "grade": "",
-        "gpa": "",
-        "note": ""
-      }
-    },
-    {
-      "id": "77f3399b4911",
-      "title": "2026 ACC 민주인권평화 영상(+AI)콘텐츠 공모전",
-      "org": "국립아시아문화전당",
-      "cat": "ai",
-      "deadline": "2026-07-31",
-      "url": "https://thinkyou.co.kr/contest/63306",
-      "src": "씽유",
-      "desc": "",
-      "tags": [
-        "씽유"
-      ],
-      "eligibility": {
-        "grade": "",
-        "gpa": "",
-        "note": ""
-      }
-    },
-    {
       "id": "56b2b4ab3505",
       "title": "2026년 서울시 좋은간판 공모전",
       "org": "서울특별시",
@@ -381,12 +363,30 @@
       }
     },
     {
-      "id": "2204b0d7bd82",
-      "title": "2026년 저작권 인식제고 글 공모전",
-      "org": "한국저작권위원회",
+      "id": "43590c24cdb6",
+      "title": "2026 국가안보 논문 · 아이디어 공모전",
+      "org": "국가정보원",
       "cat": "activity",
       "deadline": "2026-07-31",
-      "url": "https://thinkyou.co.kr/contest/63647",
+      "url": "https://thinkyou.co.kr/contest/62735",
+      "src": "씽유",
+      "desc": "",
+      "tags": [
+        "씽유"
+      ],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "751e5318ea01",
+      "title": "제12회 항공문학상",
+      "org": "한국항공협회",
+      "cat": "activity",
+      "deadline": "2026-07-31",
+      "url": "https://thinkyou.co.kr/contest/63602",
       "src": "씽유",
       "desc": "",
       "tags": [
@@ -436,7 +436,7 @@
       "org": "(주)한화에스테이트서비스",
       "cat": "ship_recruit",
       "deadline": "2026-08-02",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54358615&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=e9f753a7-0006-404e-8cb5-f9e9316454a1",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54358615&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=6c7e724c-e9c6-4d63-9e70-7170d55c14c7",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -455,7 +455,7 @@
       "org": "(주)키스템프그룹",
       "cat": "ship_recruit",
       "deadline": "2026-08-02",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54410463&location=ts&searchword=%EC%82%BC%EC%84%B1%EC%A4%91%EA%B3%B5%EC%97%85+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=6bfe9f86-a186-4017-b674-581270b22d10",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54410463&location=ts&searchword=%EC%82%BC%EC%84%B1%EC%A4%91%EA%B3%B5%EC%97%85+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=64c85988-3c22-42b9-9a08-9dd911579715",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -522,7 +522,7 @@
       "org": "(주)무진기업",
       "cat": "ship_recruit",
       "deadline": "2026-08-05",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54097826&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=e9f753a7-0006-404e-8cb5-f9e9316454a1",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54097826&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=6c7e724c-e9c6-4d63-9e70-7170d55c14c7",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -541,7 +541,7 @@
       "org": "(주)사람인에이치에스",
       "cat": "ship_recruit",
       "deadline": "2026-08-05",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54520586&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=5bdc34a6-9527-4069-ba22-711159988398",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54520586&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=053d0791-dbd2-4214-bc2e-a81bc0b032f1",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -738,30 +738,12 @@
       "org": "(주)밸류에이치알",
       "cat": "ship_recruit",
       "deadline": "2026-08-10",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54572572&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=e9f753a7-0006-404e-8cb5-f9e9316454a1",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54572572&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=6c7e724c-e9c6-4d63-9e70-7170d55c14c7",
       "src": "사람인",
       "desc": "",
       "tags": [
         "채용",
         "인턴"
-      ],
-      "eligibility": {
-        "grade": "",
-        "gpa": "",
-        "note": ""
-      }
-    },
-    {
-      "id": "68db896795a8",
-      "title": "제20회 서울시 빛공해 공모전",
-      "org": "서울특별시, 조명박물관",
-      "cat": "activity",
-      "deadline": "2026-08-12",
-      "url": "https://thinkyou.co.kr/contest/63656/",
-      "src": "씽유",
-      "desc": "",
-      "tags": [
-        "씽유"
       ],
       "eligibility": {
         "grade": "",
@@ -776,6 +758,24 @@
       "cat": "ai",
       "deadline": "2026-08-12",
       "url": "https://thinkyou.co.kr/contest/64282",
+      "src": "씽유",
+      "desc": "",
+      "tags": [
+        "씽유"
+      ],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "68db896795a8",
+      "title": "제20회 서울시 빛공해 공모전",
+      "org": "서울특별시, 조명박물관",
+      "cat": "activity",
+      "deadline": "2026-08-12",
+      "url": "https://thinkyou.co.kr/contest/63656/",
       "src": "씽유",
       "desc": "",
       "tags": [
@@ -1010,7 +1010,7 @@
       "org": "(주)키스템프그룹",
       "cat": "ship_recruit",
       "deadline": "2026-08-17",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54531368&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=5bdc34a6-9527-4069-ba22-711159988398",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54531368&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=053d0791-dbd2-4214-bc2e-a81bc0b032f1",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -1029,7 +1029,7 @@
       "org": "(주)메이크인",
       "cat": "ship_recruit",
       "deadline": "2026-08-19",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54501120&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=e9f753a7-0006-404e-8cb5-f9e9316454a1",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54501120&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=6c7e724c-e9c6-4d63-9e70-7170d55c14c7",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -1174,7 +1174,7 @@
       "org": "(주)진한기업",
       "cat": "ship_recruit",
       "deadline": "2026-08-24",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54564290&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=e9f753a7-0006-404e-8cb5-f9e9316454a1",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54564290&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=6c7e724c-e9c6-4d63-9e70-7170d55c14c7",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -1227,7 +1227,7 @@
       "org": "(주)커리어넷",
       "cat": "ship_recruit",
       "deadline": "2026-08-26",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54532355&location=ts&searchword=%EC%A1%B0%EC%84%A0%ED%95%B4%EC%96%91+%EC%9D%B8%ED%84%B4&searchType=search&paid_fl=n&search_uuid=9a3b8791-7a3f-4d6a-a01f-63e48719593f",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54532355&location=ts&searchword=%EC%A1%B0%EC%84%A0%ED%95%B4%EC%96%91+%EC%9D%B8%ED%84%B4&searchType=search&paid_fl=n&search_uuid=f634b1f4-df90-43de-ad89-be14de114482",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -1246,7 +1246,7 @@
       "org": "한국설계기술주식회사",
       "cat": "ship_recruit",
       "deadline": "2026-08-26",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54571437&location=ts&searchword=%EC%A1%B0%EC%84%A0%ED%95%B4%EC%96%91+%EC%9D%B8%ED%84%B4&searchType=search&paid_fl=n&search_uuid=9a3b8791-7a3f-4d6a-a01f-63e48719593f",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54571437&location=ts&searchword=%EC%A1%B0%EC%84%A0%ED%95%B4%EC%96%91+%EC%9D%B8%ED%84%B4&searchType=search&paid_fl=n&search_uuid=f634b1f4-df90-43de-ad89-be14de114482",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -1265,7 +1265,7 @@
       "org": "동은정공(주)",
       "cat": "ship_recruit",
       "deadline": "2026-08-26",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54514601&location=ts&searchword=%EC%A1%B0%EC%84%A0%ED%95%B4%EC%96%91+%EC%9D%B8%ED%84%B4&searchType=search&paid_fl=n&search_uuid=9a3b8791-7a3f-4d6a-a01f-63e48719593f",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54514601&location=ts&searchword=%EC%A1%B0%EC%84%A0%ED%95%B4%EC%96%91+%EC%9D%B8%ED%84%B4&searchType=search&paid_fl=n&search_uuid=f634b1f4-df90-43de-ad89-be14de114482",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -1284,7 +1284,7 @@
       "org": "(주)밸류에이치알",
       "cat": "ship_recruit",
       "deadline": "2026-08-26",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54546163&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=e9f753a7-0006-404e-8cb5-f9e9316454a1",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54546163&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=6c7e724c-e9c6-4d63-9e70-7170d55c14c7",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -1303,7 +1303,7 @@
       "org": "(주)한성엠에스",
       "cat": "ship_recruit",
       "deadline": "2026-08-26",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54510704&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=e9f753a7-0006-404e-8cb5-f9e9316454a1",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54510704&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=6c7e724c-e9c6-4d63-9e70-7170d55c14c7",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -1322,7 +1322,7 @@
       "org": "(주)메이크인",
       "cat": "ship_recruit",
       "deadline": "2026-08-26",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54532711&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=e9f753a7-0006-404e-8cb5-f9e9316454a1",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54532711&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=6c7e724c-e9c6-4d63-9e70-7170d55c14c7",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -1341,7 +1341,7 @@
       "org": "(주)밸류에이치알",
       "cat": "ship_recruit",
       "deadline": "2026-08-26",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54505520&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=e9f753a7-0006-404e-8cb5-f9e9316454a1",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54505520&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=6c7e724c-e9c6-4d63-9e70-7170d55c14c7",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -1360,7 +1360,7 @@
       "org": "(주)한성엠에스",
       "cat": "ship_recruit",
       "deadline": "2026-08-26",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54472308&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=e9f753a7-0006-404e-8cb5-f9e9316454a1",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54472308&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=6c7e724c-e9c6-4d63-9e70-7170d55c14c7",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -1379,7 +1379,7 @@
       "org": "(주)한성엠에스",
       "cat": "ship_recruit",
       "deadline": "2026-08-26",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54532151&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=e9f753a7-0006-404e-8cb5-f9e9316454a1",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54532151&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=6c7e724c-e9c6-4d63-9e70-7170d55c14c7",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -1398,7 +1398,7 @@
       "org": "한화오션엔지니어링(주)",
       "cat": "ship_recruit",
       "deadline": "2026-08-26",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54389694&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=e9f753a7-0006-404e-8cb5-f9e9316454a1",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54389694&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=6c7e724c-e9c6-4d63-9e70-7170d55c14c7",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -1417,7 +1417,7 @@
       "org": "(주)밸류에이치알",
       "cat": "ship_recruit",
       "deadline": "2026-08-26",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54546020&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=e9f753a7-0006-404e-8cb5-f9e9316454a1",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54546020&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=6c7e724c-e9c6-4d63-9e70-7170d55c14c7",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -1436,7 +1436,7 @@
       "org": "(주)한성엠에스",
       "cat": "ship_recruit",
       "deadline": "2026-08-26",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54473313&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=e9f753a7-0006-404e-8cb5-f9e9316454a1",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54473313&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=6c7e724c-e9c6-4d63-9e70-7170d55c14c7",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -1455,7 +1455,7 @@
       "org": "(주)한성엠에스",
       "cat": "ship_recruit",
       "deadline": "2026-08-26",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54500922&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=e9f753a7-0006-404e-8cb5-f9e9316454a1",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54500922&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=6c7e724c-e9c6-4d63-9e70-7170d55c14c7",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -1474,7 +1474,7 @@
       "org": "(주)밸류에이치알",
       "cat": "ship_recruit",
       "deadline": "2026-08-26",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54533359&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=e9f753a7-0006-404e-8cb5-f9e9316454a1",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54533359&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=6c7e724c-e9c6-4d63-9e70-7170d55c14c7",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -1493,7 +1493,7 @@
       "org": "한화오션에코텍(주)",
       "cat": "ship_recruit",
       "deadline": "2026-08-26",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54403780&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=e9f753a7-0006-404e-8cb5-f9e9316454a1",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54403780&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=6c7e724c-e9c6-4d63-9e70-7170d55c14c7",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -1512,26 +1512,7 @@
       "org": "(주)진한기업",
       "cat": "ship_recruit",
       "deadline": "2026-08-26",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54321519&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=e9f753a7-0006-404e-8cb5-f9e9316454a1",
-      "src": "사람인",
-      "desc": "",
-      "tags": [
-        "채용",
-        "인턴"
-      ],
-      "eligibility": {
-        "grade": "",
-        "gpa": "",
-        "note": ""
-      }
-    },
-    {
-      "id": "a220374c43a5",
-      "title": "동연스틸 녹산공장 조선기자재  영업직 신입 직원 모집",
-      "org": "동연스틸(주)",
-      "cat": "ship_recruit",
-      "deadline": "2026-08-26",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54443930&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=e9f753a7-0006-404e-8cb5-f9e9316454a1",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54321519&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=6c7e724c-e9c6-4d63-9e70-7170d55c14c7",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -1550,7 +1531,26 @@
       "org": "한화오션(주)",
       "cat": "ship_recruit",
       "deadline": "2026-08-26",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54571851&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=e9f753a7-0006-404e-8cb5-f9e9316454a1",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54571851&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=6c7e724c-e9c6-4d63-9e70-7170d55c14c7",
+      "src": "사람인",
+      "desc": "",
+      "tags": [
+        "채용",
+        "인턴"
+      ],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "a220374c43a5",
+      "title": "동연스틸 녹산공장 조선기자재  영업직 신입 직원 모집",
+      "org": "동연스틸(주)",
+      "cat": "ship_recruit",
+      "deadline": "2026-08-26",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54443930&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=6c7e724c-e9c6-4d63-9e70-7170d55c14c7",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -1569,7 +1569,7 @@
       "org": "(주)메이크인",
       "cat": "ship_recruit",
       "deadline": "2026-08-26",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54471992&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=e9f753a7-0006-404e-8cb5-f9e9316454a1",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54471992&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=6c7e724c-e9c6-4d63-9e70-7170d55c14c7",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -1588,7 +1588,7 @@
       "org": "(주)메이크인",
       "cat": "ship_recruit",
       "deadline": "2026-08-26",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54470150&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=e9f753a7-0006-404e-8cb5-f9e9316454a1",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54470150&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=6c7e724c-e9c6-4d63-9e70-7170d55c14c7",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -1607,7 +1607,7 @@
       "org": "(주)케이원",
       "cat": "ship_recruit",
       "deadline": "2026-08-26",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54214158&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=e9f753a7-0006-404e-8cb5-f9e9316454a1",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54214158&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=6c7e724c-e9c6-4d63-9e70-7170d55c14c7",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -1626,7 +1626,7 @@
       "org": "(주)커리어텍",
       "cat": "ship_recruit",
       "deadline": "2026-08-26",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54559302&location=ts&searchword=%EC%82%BC%EC%84%B1%EC%A4%91%EA%B3%B5%EC%97%85+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=6bfe9f86-a186-4017-b674-581270b22d10",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54559302&location=ts&searchword=%EC%82%BC%EC%84%B1%EC%A4%91%EA%B3%B5%EC%97%85+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=64c85988-3c22-42b9-9a08-9dd911579715",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -1645,7 +1645,7 @@
       "org": "(주)커리어텍",
       "cat": "ship_recruit",
       "deadline": "2026-08-26",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54559115&location=ts&searchword=%EC%82%BC%EC%84%B1%EC%A4%91%EA%B3%B5%EC%97%85+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=6bfe9f86-a186-4017-b674-581270b22d10",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54559115&location=ts&searchword=%EC%82%BC%EC%84%B1%EC%A4%91%EA%B3%B5%EC%97%85+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=64c85988-3c22-42b9-9a08-9dd911579715",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -1664,7 +1664,7 @@
       "org": "(주)키스템프그룹",
       "cat": "ship_recruit",
       "deadline": "2026-08-26",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54575965&location=ts&searchword=%EC%82%BC%EC%84%B1%EC%A4%91%EA%B3%B5%EC%97%85+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=6bfe9f86-a186-4017-b674-581270b22d10",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54575965&location=ts&searchword=%EC%82%BC%EC%84%B1%EC%A4%91%EA%B3%B5%EC%97%85+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=64c85988-3c22-42b9-9a08-9dd911579715",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -1683,7 +1683,7 @@
       "org": "(주)제이엠지텍",
       "cat": "ship_recruit",
       "deadline": "2026-08-26",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54350971&location=ts&searchword=%EC%82%BC%EC%84%B1%EC%A4%91%EA%B3%B5%EC%97%85+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=6bfe9f86-a186-4017-b674-581270b22d10",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54350971&location=ts&searchword=%EC%82%BC%EC%84%B1%EC%A4%91%EA%B3%B5%EC%97%85+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=64c85988-3c22-42b9-9a08-9dd911579715",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -1702,7 +1702,7 @@
       "org": "(주)제이엠지텍",
       "cat": "ship_recruit",
       "deadline": "2026-08-26",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54389146&location=ts&searchword=%EC%82%BC%EC%84%B1%EC%A4%91%EA%B3%B5%EC%97%85+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=6bfe9f86-a186-4017-b674-581270b22d10",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54389146&location=ts&searchword=%EC%82%BC%EC%84%B1%EC%A4%91%EA%B3%B5%EC%97%85+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=64c85988-3c22-42b9-9a08-9dd911579715",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -1721,7 +1721,7 @@
       "org": "(주)게스",
       "cat": "ship_recruit",
       "deadline": "2026-08-26",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54574044&location=ts&searchword=%EC%82%BC%EC%84%B1%EC%A4%91%EA%B3%B5%EC%97%85+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=6bfe9f86-a186-4017-b674-581270b22d10",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54574044&location=ts&searchword=%EC%82%BC%EC%84%B1%EC%A4%91%EA%B3%B5%EC%97%85+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=64c85988-3c22-42b9-9a08-9dd911579715",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -1740,7 +1740,7 @@
       "org": "(주)키스템프그룹",
       "cat": "ship_recruit",
       "deadline": "2026-08-26",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54535521&location=ts&searchword=%ED%98%84%EB%8C%80%EC%A4%91%EA%B3%B5%EC%97%85+%EC%9D%B8%ED%84%B4&searchType=search&paid_fl=n&search_uuid=faced646-32d4-4803-b8e1-5c566907a643",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54535521&location=ts&searchword=%ED%98%84%EB%8C%80%EC%A4%91%EA%B3%B5%EC%97%85+%EC%9D%B8%ED%84%B4&searchType=search&paid_fl=n&search_uuid=21b62d9b-a7fa-404a-8b61-408149915d86",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -1759,7 +1759,7 @@
       "org": "(주) 국제선박투자운용",
       "cat": "ship_recruit",
       "deadline": "2026-08-26",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54332446&location=ts&searchword=%EC%84%A0%EB%B0%95+%EC%9D%B8%ED%84%B4%EC%8B%AD&searchType=search&paid_fl=n&search_uuid=266934ef-01e7-40e8-9e47-affef840c74f",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54332446&location=ts&searchword=%EC%84%A0%EB%B0%95+%EC%9D%B8%ED%84%B4%EC%8B%AD&searchType=search&paid_fl=n&search_uuid=bc14382c-9baf-4c16-ae4b-380da8113b0e",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -1778,7 +1778,7 @@
       "org": "JB마린(주)",
       "cat": "ship_recruit",
       "deadline": "2026-08-26",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54573908&location=ts&searchword=%EC%84%A0%EB%B0%95+%EC%9D%B8%ED%84%B4%EC%8B%AD&searchType=search&paid_fl=n&search_uuid=266934ef-01e7-40e8-9e47-affef840c74f",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54573908&location=ts&searchword=%EC%84%A0%EB%B0%95+%EC%9D%B8%ED%84%B4%EC%8B%AD&searchType=search&paid_fl=n&search_uuid=bc14382c-9baf-4c16-ae4b-380da8113b0e",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -1797,7 +1797,7 @@
       "org": "엠엔에스아이(주)",
       "cat": "ship_recruit",
       "deadline": "2026-08-26",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54120124&location=ts&searchword=%EC%84%A0%EB%B0%95+%EC%9D%B8%ED%84%B4%EC%8B%AD&searchType=search&paid_fl=n&search_uuid=266934ef-01e7-40e8-9e47-affef840c74f",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54120124&location=ts&searchword=%EC%84%A0%EB%B0%95+%EC%9D%B8%ED%84%B4%EC%8B%AD&searchType=search&paid_fl=n&search_uuid=bc14382c-9baf-4c16-ae4b-380da8113b0e",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -1816,7 +1816,7 @@
       "org": "두산에너빌리티(주)",
       "cat": "ship_recruit",
       "deadline": "2026-08-26",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54277201&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=5bdc34a6-9527-4069-ba22-711159988398",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54277201&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=053d0791-dbd2-4214-bc2e-a81bc0b032f1",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -1835,7 +1835,7 @@
       "org": "두산에너빌리티(주)",
       "cat": "ship_recruit",
       "deadline": "2026-08-26",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54459056&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=5bdc34a6-9527-4069-ba22-711159988398",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54459056&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=053d0791-dbd2-4214-bc2e-a81bc0b032f1",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -1854,7 +1854,7 @@
       "org": "두산에너빌리티(주)",
       "cat": "ship_recruit",
       "deadline": "2026-08-26",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54104661&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=5bdc34a6-9527-4069-ba22-711159988398",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54104661&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=053d0791-dbd2-4214-bc2e-a81bc0b032f1",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -1873,7 +1873,7 @@
       "org": "두산에너빌리티(주)",
       "cat": "ship_recruit",
       "deadline": "2026-08-26",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54359735&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=5bdc34a6-9527-4069-ba22-711159988398",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54359735&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=053d0791-dbd2-4214-bc2e-a81bc0b032f1",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -1892,7 +1892,7 @@
       "org": "두산에너빌리티(주)",
       "cat": "ship_recruit",
       "deadline": "2026-08-26",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54508094&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=5bdc34a6-9527-4069-ba22-711159988398",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54508094&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=053d0791-dbd2-4214-bc2e-a81bc0b032f1",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -1911,7 +1911,7 @@
       "org": "두산에너빌리티(주)",
       "cat": "ship_recruit",
       "deadline": "2026-08-26",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54141567&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=5bdc34a6-9527-4069-ba22-711159988398",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54141567&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=053d0791-dbd2-4214-bc2e-a81bc0b032f1",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -1930,7 +1930,7 @@
       "org": "(주)헬로서치",
       "cat": "ship_recruit",
       "deadline": "2026-08-26",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54545096&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=5bdc34a6-9527-4069-ba22-711159988398",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54545096&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=053d0791-dbd2-4214-bc2e-a81bc0b032f1",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -1949,7 +1949,7 @@
       "org": "아이비커리어(주)",
       "cat": "ship_recruit",
       "deadline": "2026-08-26",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54573170&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=5bdc34a6-9527-4069-ba22-711159988398",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54573170&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=053d0791-dbd2-4214-bc2e-a81bc0b032f1",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -1968,7 +1968,7 @@
       "org": "(주)키스템프그룹",
       "cat": "ship_recruit",
       "deadline": "2026-08-26",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54564386&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=5bdc34a6-9527-4069-ba22-711159988398",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54564386&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=053d0791-dbd2-4214-bc2e-a81bc0b032f1",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -1987,7 +1987,7 @@
       "org": "(주)유봉",
       "cat": "ship_recruit",
       "deadline": "2026-08-26",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54462699&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=5bdc34a6-9527-4069-ba22-711159988398",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54462699&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=053d0791-dbd2-4214-bc2e-a81bc0b032f1",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -2006,7 +2006,7 @@
       "org": "(주)사람인에이치에스",
       "cat": "ship_recruit",
       "deadline": "2026-08-26",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54574063&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=5bdc34a6-9527-4069-ba22-711159988398",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54574063&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=053d0791-dbd2-4214-bc2e-a81bc0b032f1",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -2025,7 +2025,7 @@
       "org": "아이비커리어(주)",
       "cat": "ship_recruit",
       "deadline": "2026-08-26",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54484124&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=5bdc34a6-9527-4069-ba22-711159988398",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54484124&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=053d0791-dbd2-4214-bc2e-a81bc0b032f1",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -2044,7 +2044,7 @@
       "org": "(주)사람인에이치에스",
       "cat": "ship_recruit",
       "deadline": "2026-08-26",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54442768&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=5bdc34a6-9527-4069-ba22-711159988398",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54442768&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=053d0791-dbd2-4214-bc2e-a81bc0b032f1",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -2063,7 +2063,7 @@
       "org": "(주)헬로서치",
       "cat": "ship_recruit",
       "deadline": "2026-08-26",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54347040&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=5bdc34a6-9527-4069-ba22-711159988398",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54347040&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=053d0791-dbd2-4214-bc2e-a81bc0b032f1",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -2082,7 +2082,7 @@
       "org": "(주)사람인에이치에스",
       "cat": "ship_recruit",
       "deadline": "2026-08-26",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54442806&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=5bdc34a6-9527-4069-ba22-711159988398",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54442806&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=053d0791-dbd2-4214-bc2e-a81bc0b032f1",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -2101,7 +2101,7 @@
       "org": "(주)사람인에이치에스",
       "cat": "ship_recruit",
       "deadline": "2026-08-26",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54431978&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=5bdc34a6-9527-4069-ba22-711159988398",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54431978&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=053d0791-dbd2-4214-bc2e-a81bc0b032f1",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -2120,7 +2120,7 @@
       "org": "디케이피플(주)",
       "cat": "ship_recruit",
       "deadline": "2026-08-26",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54446896&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=5bdc34a6-9527-4069-ba22-711159988398",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54446896&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=053d0791-dbd2-4214-bc2e-a81bc0b032f1",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -2139,7 +2139,7 @@
       "org": "아이비커리어(주)",
       "cat": "ship_recruit",
       "deadline": "2026-08-26",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54346862&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=5bdc34a6-9527-4069-ba22-711159988398",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54346862&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=053d0791-dbd2-4214-bc2e-a81bc0b032f1",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -2158,7 +2158,7 @@
       "org": "(주)사람인에이치에스",
       "cat": "ship_recruit",
       "deadline": "2026-08-26",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54442755&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=5bdc34a6-9527-4069-ba22-711159988398",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54442755&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=053d0791-dbd2-4214-bc2e-a81bc0b032f1",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -2177,7 +2177,7 @@
       "org": "두산큐벡스(주)",
       "cat": "ship_recruit",
       "deadline": "2026-08-26",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54331266&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=5bdc34a6-9527-4069-ba22-711159988398",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54331266&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=053d0791-dbd2-4214-bc2e-a81bc0b032f1",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -2196,7 +2196,7 @@
       "org": "(주)헬로서치",
       "cat": "ship_recruit",
       "deadline": "2026-08-26",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54348431&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=5bdc34a6-9527-4069-ba22-711159988398",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54348431&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=053d0791-dbd2-4214-bc2e-a81bc0b032f1",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -2215,7 +2215,7 @@
       "org": "(주)서울커뮤니케이션",
       "cat": "ship_recruit",
       "deadline": "2026-08-26",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54503569&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=5bdc34a6-9527-4069-ba22-711159988398",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54503569&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=053d0791-dbd2-4214-bc2e-a81bc0b032f1",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -2234,7 +2234,7 @@
       "org": "(주)헬로서치",
       "cat": "ship_recruit",
       "deadline": "2026-08-26",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54390890&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=5bdc34a6-9527-4069-ba22-711159988398",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54390890&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=053d0791-dbd2-4214-bc2e-a81bc0b032f1",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -2492,30 +2492,12 @@
       }
     },
     {
-      "id": "b543dc90b625",
-      "title": "2026 GR 홍보 공모전",
-      "org": "한국자원순환산업진흥협회",
-      "cat": "activity",
+      "id": "55f31d717513",
+      "title": "제19회 잡지 미디어 콘텐츠 공모전",
+      "org": "한국잡지협회",
+      "cat": "media",
       "deadline": "2026-09-30",
-      "url": "https://thinkyou.co.kr/contest/64564",
-      "src": "씽유",
-      "desc": "",
-      "tags": [
-        "씽유"
-      ],
-      "eligibility": {
-        "grade": "",
-        "gpa": "",
-        "note": ""
-      }
-    },
-    {
-      "id": "82fdd84857c9",
-      "title": "2026년 창원시 AIㆍ데이터 활용 공모전",
-      "org": "창원특례시",
-      "cat": "ai",
-      "deadline": "2026-09-30",
-      "url": "https://thinkyou.co.kr/contest/63697",
+      "url": "https://thinkyou.co.kr/contest/63852",
       "src": "씽유",
       "desc": "",
       "tags": [
@@ -2546,12 +2528,30 @@
       }
     },
     {
-      "id": "55f31d717513",
-      "title": "제19회 잡지 미디어 콘텐츠 공모전",
-      "org": "한국잡지협회",
-      "cat": "media",
+      "id": "82fdd84857c9",
+      "title": "2026년 창원시 AIㆍ데이터 활용 공모전",
+      "org": "창원특례시",
+      "cat": "ai",
       "deadline": "2026-09-30",
-      "url": "https://thinkyou.co.kr/contest/63852",
+      "url": "https://thinkyou.co.kr/contest/63697",
+      "src": "씽유",
+      "desc": "",
+      "tags": [
+        "씽유"
+      ],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "b543dc90b625",
+      "title": "2026 GR 홍보 공모전",
+      "org": "한국자원순환산업진흥협회",
+      "cat": "activity",
+      "deadline": "2026-09-30",
+      "url": "https://thinkyou.co.kr/contest/64564",
       "src": "씽유",
       "desc": "",
       "tags": [
