@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-06T06:50:01",
-  "total": 168,
+  "updated": "2026-11-06T09:23:59",
+  "total": 180,
   "items": [
     {
       "id": "lk_362577",
@@ -74,7 +74,7 @@
       "org": "주식회사 인프라",
       "cat": "ship_recruit",
       "deadline": "2026-11-09",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55002982&location=ts&searchword=%EC%A1%B0%EC%84%A0%ED%95%B4%EC%96%91+%EC%9D%B8%ED%84%B4&searchType=search&paid_fl=n&search_uuid=f31b0ee8-bb12-4cf1-996b-d856fe24cda7",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55002982&location=ts&searchword=%EC%A1%B0%EC%84%A0%ED%95%B4%EC%96%91+%EC%9D%B8%ED%84%B4&searchType=search&paid_fl=n&search_uuid=7d731151-00b1-499a-9532-a7cf66c74c8a",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -88,12 +88,12 @@
       }
     },
     {
-      "id": "f64a4da76e81",
-      "title": "[275만/두산에너빌리티] 설계 보조 사무원 채용",
-      "org": "(주)서울커뮤니케이션",
+      "id": "965f922f4ea1",
+      "title": "삼성중공업 內 (주)제이엠지텍 도장/보온 검사원 모집",
+      "org": "(주)제이엠지텍",
       "cat": "ship_recruit",
       "deadline": "2026-11-09",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55478586&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=48493319-764e-4781-881f-a348648e8835",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54998951&location=ts&searchword=%EC%82%BC%EC%84%B1%EC%A4%91%EA%B3%B5%EC%97%85+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=4806fa5c-e253-49f9-b9e3-210b8a2bd631",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -107,15 +107,94 @@
       }
     },
     {
-      "id": "lk_362631",
-      "title": "[성격유형.에니어그램]웹툰작가 이종범 무료강연",
-      "org": "명지대 테크노아트대학원 에니어그램상담심리전공",
-      "cat": "activity",
-      "deadline": "2026-11-10",
-      "url": "https://linkareer.com/activity/362631",
-      "src": "링커리어",
+      "id": "e8bbd0a73dc3",
+      "title": "[공무직-승선직-어선실습선] 2026년 제3차 정규직 직원 채용",
+      "org": "한국해양수산연수원",
+      "cat": "ship_recruit",
+      "deadline": "2026-11-09",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55401829&location=ts&searchword=%EC%84%A0%EB%B0%95+%EC%9D%B8%ED%84%B4%EC%8B%AD&searchType=search&paid_fl=n&search_uuid=420244a4-3fe5-4d26-b0b6-9159e4259260",
+      "src": "사람인",
       "desc": "",
-      "tags": [],
+      "tags": [
+        "채용",
+        "인턴"
+      ],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "453e11b7e6ea",
+      "title": "[선박직] 2026년 제3차 정규직 직원 채용",
+      "org": "한국해양수산연수원",
+      "cat": "ship_recruit",
+      "deadline": "2026-11-09",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55400734&location=ts&searchword=%EC%84%A0%EB%B0%95+%EC%9D%B8%ED%84%B4%EC%8B%AD&searchType=search&paid_fl=n&search_uuid=420244a4-3fe5-4d26-b0b6-9159e4259260",
+      "src": "사람인",
+      "desc": "",
+      "tags": [
+        "채용",
+        "인턴"
+      ],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "8e6fb27701e0",
+      "title": "[공무직-승선직-상선실습선] 2026년 제3차 정규직 직원 채용",
+      "org": "한국해양수산연수원",
+      "cat": "ship_recruit",
+      "deadline": "2026-11-09",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55401966&location=ts&searchword=%EC%84%A0%EB%B0%95+%EC%9D%B8%ED%84%B4%EC%8B%AD&searchType=search&paid_fl=n&search_uuid=420244a4-3fe5-4d26-b0b6-9159e4259260",
+      "src": "사람인",
+      "desc": "",
+      "tags": [
+        "채용",
+        "인턴"
+      ],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "595938b86f3c",
+      "title": "[교원직-전임강사이상 교원] 2026년 제3차 정규직 직원 채용",
+      "org": "한국해양수산연수원",
+      "cat": "ship_recruit",
+      "deadline": "2026-11-09",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55400178&location=ts&searchword=%EC%84%A0%EB%B0%95+%EC%9D%B8%ED%84%B4%EC%8B%AD&searchType=search&paid_fl=n&search_uuid=420244a4-3fe5-4d26-b0b6-9159e4259260",
+      "src": "사람인",
+      "desc": "",
+      "tags": [
+        "채용",
+        "인턴"
+      ],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "c675a1f17247",
+      "title": "[교원직-교관직] 2026년 제3차 정규직 직원 채용",
+      "org": "한국해양수산연수원",
+      "cat": "ship_recruit",
+      "deadline": "2026-11-09",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55400489&location=ts&searchword=%EC%84%A0%EB%B0%95+%EC%9D%B8%ED%84%B4%EC%8B%AD&searchType=search&paid_fl=n&search_uuid=420244a4-3fe5-4d26-b0b6-9159e4259260",
+      "src": "사람인",
+      "desc": "",
+      "tags": [
+        "채용",
+        "인턴"
+      ],
       "eligibility": {
         "grade": "",
         "gpa": "",
@@ -141,22 +220,6 @@
       }
     },
     {
-      "id": "lk_362490",
-      "title": "[하루7H근무/중식제공/본사] 신세계인터내셔날 이커머스 뷰티팀 AMD 채용",
-      "org": "주식회사유니에스",
-      "cat": "corp",
-      "deadline": "2026-11-11",
-      "url": "https://linkareer.com/activity/362490",
-      "src": "링커리어",
-      "desc": "",
-      "tags": [],
-      "eligibility": {
-        "grade": "",
-        "gpa": "",
-        "note": ""
-      }
-    },
-    {
       "id": "lk_360488",
       "title": "[한국관광공사] 2027년 체험형 청년인턴 및 기간제 근로자 채용 공고(1분기)",
       "org": "한국관광공사",
@@ -173,15 +236,37 @@
       }
     },
     {
-      "id": "lk_362527",
-      "title": "나의 한능검 도전 극복기",
-      "org": "나의 한능검 도전 극복기",
-      "cat": "activity",
-      "deadline": "2026-11-12",
-      "url": "https://linkareer.com/activity/362527",
-      "src": "링커리어",
+      "id": "13efae8cc30f",
+      "title": "삼성중공업 內 (주)제이엠지텍 LNG 화물창 검사원 모집",
+      "org": "(주)제이엠지텍",
+      "cat": "ship_recruit",
+      "deadline": "2026-11-11",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55253718&location=ts&searchword=%EC%82%BC%EC%84%B1%EC%A4%91%EA%B3%B5%EC%97%85+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=4806fa5c-e253-49f9-b9e3-210b8a2bd631",
+      "src": "사람인",
       "desc": "",
-      "tags": [],
+      "tags": [
+        "채용",
+        "인턴"
+      ],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "f47139591812",
+      "title": "해온산업(주) 조선 생산직 기자재 포장 재단 및 보조 채용 공고",
+      "org": "해온산업(주)",
+      "cat": "ship_recruit",
+      "deadline": "2026-11-11",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55259847&location=ts&searchword=%EC%82%BC%EC%84%B1%EC%A4%91%EA%B3%B5%EC%97%85+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=4806fa5c-e253-49f9-b9e3-210b8a2bd631",
+      "src": "사람인",
+      "desc": "",
+      "tags": [
+        "채용",
+        "인턴"
+      ],
       "eligibility": {
         "grade": "",
         "gpa": "",
@@ -271,6 +356,22 @@
       }
     },
     {
+      "id": "lk_362651",
+      "title": "Whatcha Doing? [영어회화 & 문화 직관 동아리] 신입부원 모집",
+      "org": "왓챠두잉",
+      "cat": "activity",
+      "deadline": "2026-11-14",
+      "url": "https://linkareer.com/activity/362651",
+      "src": "링커리어",
+      "desc": "",
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
       "id": "lk_362617",
       "title": "2026 진안고원 치유골목 AI 쇼츠영상 콘테스트",
       "org": "진안군",
@@ -287,28 +388,12 @@
       }
     },
     {
-      "id": "lk_362647",
-      "title": "마케팅 공모﻿전/실무 분석 연합 동아리 '마인드(M-IND)'  신입 부원 추가 모집",
-      "org": "마인드",
-      "cat": "activity",
+      "id": "lk_362659",
+      "title": "콘텐츠 제작 & 공모전 크루 \"PLOT\" 크루원 모집",
+      "org": "PLOT",
+      "cat": "media",
       "deadline": "2026-11-15",
-      "url": "https://linkareer.com/activity/362647",
-      "src": "링커리어",
-      "desc": "",
-      "tags": [],
-      "eligibility": {
-        "grade": "",
-        "gpa": "",
-        "note": ""
-      }
-    },
-    {
-      "id": "lk_362533",
-      "title": "<가가가가GAGAGAGA 개그동아리> 4기 추가 모집",
-      "org": "가가가가GAGAGAGA 개그동아리",
-      "cat": "activity",
-      "deadline": "2026-11-15",
-      "url": "https://linkareer.com/activity/362533",
+      "url": "https://linkareer.com/activity/362659",
       "src": "링커리어",
       "desc": "",
       "tags": [],
@@ -420,12 +505,107 @@
       }
     },
     {
-      "id": "b905906320a4",
-      "title": "[헤펠레코리아 부산] 조선관련 하드웨어 영업담당자 (신입가능)",
-      "org": "헤펠레코리아㈜",
+      "id": "cd8fc1c6a2c9",
+      "title": "[경영지원] 정보보호 경력사원 채용",
+      "org": "한화오션(주)",
       "cat": "ship_recruit",
       "deadline": "2026-11-15",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55055921&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=2b2ef7d4-d697-4683-8ea7-fe5d68dd8b6b",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55233392&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=4d18cdd7-7c13-40ec-b53c-99cf3e7ddbac",
+      "src": "사람인",
+      "desc": "",
+      "tags": [
+        "채용",
+        "인턴"
+      ],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "ac64564aa64f",
+      "title": "[경영지원] 총무구매지원(계약직) 채용",
+      "org": "한화오션(주)",
+      "cat": "ship_recruit",
+      "deadline": "2026-11-15",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55233519&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=4d18cdd7-7c13-40ec-b53c-99cf3e7ddbac",
+      "src": "사람인",
+      "desc": "",
+      "tags": [
+        "채용",
+        "인턴"
+      ],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "a2cc71c4c3db",
+      "title": "[HR실] 인사행정 지원 사무직 채용",
+      "org": "한화오션(주)",
+      "cat": "ship_recruit",
+      "deadline": "2026-11-15",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55233333&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=4d18cdd7-7c13-40ec-b53c-99cf3e7ddbac",
+      "src": "사람인",
+      "desc": "",
+      "tags": [
+        "채용",
+        "인턴"
+      ],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "890239edd5d9",
+      "title": "[경영지원] 외국인 근로자 정착 지원(계약직) 채용",
+      "org": "한화오션(주)",
+      "cat": "ship_recruit",
+      "deadline": "2026-11-15",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55233597&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=4d18cdd7-7c13-40ec-b53c-99cf3e7ddbac",
+      "src": "사람인",
+      "desc": "",
+      "tags": [
+        "채용",
+        "인턴"
+      ],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "ff56a5d638ec",
+      "title": "[제조총괄] 안전팀 경력사원(계약직) 채용",
+      "org": "한화오션(주)",
+      "cat": "ship_recruit",
+      "deadline": "2026-11-15",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55233690&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=4d18cdd7-7c13-40ec-b53c-99cf3e7ddbac",
+      "src": "사람인",
+      "desc": "",
+      "tags": [
+        "채용",
+        "인턴"
+      ],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "d8eb87e58183",
+      "title": "[경영지원] 노사관리/운영 경력사원 채용",
+      "org": "한화오션(주)",
+      "cat": "ship_recruit",
+      "deadline": "2026-11-15",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55233300&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=4d18cdd7-7c13-40ec-b53c-99cf3e7ddbac",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -444,7 +624,45 @@
       "org": "한화오션(주)",
       "cat": "ship_recruit",
       "deadline": "2026-11-15",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55489793&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=2b2ef7d4-d697-4683-8ea7-fe5d68dd8b6b",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55489793&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=4d18cdd7-7c13-40ec-b53c-99cf3e7ddbac",
+      "src": "사람인",
+      "desc": "",
+      "tags": [
+        "채용",
+        "인턴"
+      ],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "dedec01e4c5b",
+      "title": "[HR실] 인사노무 관리(공인노무사) 경력사원 채용",
+      "org": "한화오션(주)",
+      "cat": "ship_recruit",
+      "deadline": "2026-11-15",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55233456&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=4d18cdd7-7c13-40ec-b53c-99cf3e7ddbac",
+      "src": "사람인",
+      "desc": "",
+      "tags": [
+        "채용",
+        "인턴"
+      ],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "294a6ddb9166",
+      "title": "[경영지원] 전략기획 경력사원 채용",
+      "org": "한화오션(주)",
+      "cat": "ship_recruit",
+      "deadline": "2026-11-15",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55233775&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=4d18cdd7-7c13-40ec-b53c-99cf3e7ddbac",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -463,7 +681,7 @@
       "org": "한화오션(주)",
       "cat": "ship_recruit",
       "deadline": "2026-11-15",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55489829&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=2b2ef7d4-d697-4683-8ea7-fe5d68dd8b6b",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55489829&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=4d18cdd7-7c13-40ec-b53c-99cf3e7ddbac",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -477,12 +695,12 @@
       }
     },
     {
-      "id": "a075df132148",
-      "title": "생산기술/관리 및 시운전 직무 경력직 채용(원자력 생산기술)",
-      "org": "두산에너빌리티(주)",
+      "id": "fba3d9fa31ce",
+      "title": "[제품전략기술원] 플랜트설계(공정개발) 경력 (안전 설계)",
+      "org": "한화오션(주)",
       "cat": "ship_recruit",
       "deadline": "2026-11-15",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55209299&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=48493319-764e-4781-881f-a348648e8835",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54764197&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=4d18cdd7-7c13-40ec-b53c-99cf3e7ddbac",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -496,12 +714,31 @@
       }
     },
     {
-      "id": "d9479a7d7864",
-      "title": "두산에너빌리티(주) 오피스 리모델링·신축 공사-설비",
-      "org": "두산에너빌리티(주)",
+      "id": "97187ab9301d",
+      "title": "[제품전략기술원] 플랜트설계(공정개발) 경력 (프로세스 설계)",
+      "org": "한화오션(주)",
       "cat": "ship_recruit",
       "deadline": "2026-11-15",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55425452&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=48493319-764e-4781-881f-a348648e8835",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54764306&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=4d18cdd7-7c13-40ec-b53c-99cf3e7ddbac",
+      "src": "사람인",
+      "desc": "",
+      "tags": [
+        "채용",
+        "인턴"
+      ],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "ec68c8f136fd",
+      "title": "[제품전략기술원] 플랜트설계(공정개발) 경력 (배관 설계)",
+      "org": "한화오션(주)",
+      "cat": "ship_recruit",
+      "deadline": "2026-11-15",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54764505&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=4d18cdd7-7c13-40ec-b53c-99cf3e7ddbac",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -520,311 +757,7 @@
       "org": "두산에너빌리티(주)",
       "cat": "ship_recruit",
       "deadline": "2026-11-15",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55425517&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=48493319-764e-4781-881f-a348648e8835",
-      "src": "사람인",
-      "desc": "",
-      "tags": [
-        "채용",
-        "인턴"
-      ],
-      "eligibility": {
-        "grade": "",
-        "gpa": "",
-        "note": ""
-      }
-    },
-    {
-      "id": "85315d1c6b21",
-      "title": "생산기술/관리 및 시운전 직무 경력직 채용(외주관리)",
-      "org": "두산에너빌리티(주)",
-      "cat": "ship_recruit",
-      "deadline": "2026-11-15",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55209249&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=48493319-764e-4781-881f-a348648e8835",
-      "src": "사람인",
-      "desc": "",
-      "tags": [
-        "채용",
-        "인턴"
-      ],
-      "eligibility": {
-        "grade": "",
-        "gpa": "",
-        "note": ""
-      }
-    },
-    {
-      "id": "aa2fc7473ffa",
-      "title": "두산에너빌리티(주) 오피스 리모델링 및 건물 신축 공사-전기",
-      "org": "두산에너빌리티(주)",
-      "cat": "ship_recruit",
-      "deadline": "2026-11-15",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55425426&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=48493319-764e-4781-881f-a348648e8835",
-      "src": "사람인",
-      "desc": "",
-      "tags": [
-        "채용",
-        "인턴"
-      ],
-      "eligibility": {
-        "grade": "",
-        "gpa": "",
-        "note": ""
-      }
-    },
-    {
-      "id": "4be0bc248731",
-      "title": "설계 직무 경력직 채용(기본설계 및 건전성 평가)",
-      "org": "두산에너빌리티(주)",
-      "cat": "ship_recruit",
-      "deadline": "2026-11-15",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55206792&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=48493319-764e-4781-881f-a348648e8835",
-      "src": "사람인",
-      "desc": "",
-      "tags": [
-        "채용",
-        "인턴"
-      ],
-      "eligibility": {
-        "grade": "",
-        "gpa": "",
-        "note": ""
-      }
-    },
-    {
-      "id": "79ce554c568f",
-      "title": "생산기술/관리 및 시운전 직무 경력직 채용(GT고온부품생산관리)",
-      "org": "두산에너빌리티(주)",
-      "cat": "ship_recruit",
-      "deadline": "2026-11-15",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55209396&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=48493319-764e-4781-881f-a348648e8835",
-      "src": "사람인",
-      "desc": "",
-      "tags": [
-        "채용",
-        "인턴"
-      ],
-      "eligibility": {
-        "grade": "",
-        "gpa": "",
-        "note": ""
-      }
-    },
-    {
-      "id": "8c165563e408",
-      "title": "설계 직무 경력직 채용(Pump 구매기술/공정관리)",
-      "org": "두산에너빌리티(주)",
-      "cat": "ship_recruit",
-      "deadline": "2026-11-15",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55220650&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=48493319-764e-4781-881f-a348648e8835",
-      "src": "사람인",
-      "desc": "",
-      "tags": [
-        "채용",
-        "인턴"
-      ],
-      "eligibility": {
-        "grade": "",
-        "gpa": "",
-        "note": ""
-      }
-    },
-    {
-      "id": "6959c4a8f8b4",
-      "title": "생산기술/관리 및 시운전 직무 경력직 채용(방산사업부생산관리)",
-      "org": "두산에너빌리티(주)",
-      "cat": "ship_recruit",
-      "deadline": "2026-11-15",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55209350&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=48493319-764e-4781-881f-a348648e8835",
-      "src": "사람인",
-      "desc": "",
-      "tags": [
-        "채용",
-        "인턴"
-      ],
-      "eligibility": {
-        "grade": "",
-        "gpa": "",
-        "note": ""
-      }
-    },
-    {
-      "id": "db1a68d2e78d",
-      "title": "설계 직무 경력직 채용(사이버보안)",
-      "org": "두산에너빌리티(주)",
-      "cat": "ship_recruit",
-      "deadline": "2026-11-15",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55220516&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=48493319-764e-4781-881f-a348648e8835",
-      "src": "사람인",
-      "desc": "",
-      "tags": [
-        "채용",
-        "인턴"
-      ],
-      "eligibility": {
-        "grade": "",
-        "gpa": "",
-        "note": ""
-      }
-    },
-    {
-      "id": "ebbb14aeacb0",
-      "title": "설계 직무 경력직 채용(GT본체 구조설계 및 구조해석)",
-      "org": "두산에너빌리티(주)",
-      "cat": "ship_recruit",
-      "deadline": "2026-11-15",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55220956&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=48493319-764e-4781-881f-a348648e8835",
-      "src": "사람인",
-      "desc": "",
-      "tags": [
-        "채용",
-        "인턴"
-      ],
-      "eligibility": {
-        "grade": "",
-        "gpa": "",
-        "note": ""
-      }
-    },
-    {
-      "id": "18366a10e799",
-      "title": "생산기술/관리 및 시운전 직무 경력직 채용(스팀터빈/발전기)",
-      "org": "두산에너빌리티(주)",
-      "cat": "ship_recruit",
-      "deadline": "2026-11-15",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55209431&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=48493319-764e-4781-881f-a348648e8835",
-      "src": "사람인",
-      "desc": "",
-      "tags": [
-        "채용",
-        "인턴"
-      ],
-      "eligibility": {
-        "grade": "",
-        "gpa": "",
-        "note": ""
-      }
-    },
-    {
-      "id": "d98060763782",
-      "title": "생산기술/관리 및 시운전 직무 경력직 채용(가스터빈 생산관리)",
-      "org": "두산에너빌리티(주)",
-      "cat": "ship_recruit",
-      "deadline": "2026-11-15",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55209499&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=48493319-764e-4781-881f-a348648e8835",
-      "src": "사람인",
-      "desc": "",
-      "tags": [
-        "채용",
-        "인턴"
-      ],
-      "eligibility": {
-        "grade": "",
-        "gpa": "",
-        "note": ""
-      }
-    },
-    {
-      "id": "86d12bc0d539",
-      "title": "생산기술/관리 및 시운전 직무 경력직 채용(TM 생산기술)",
-      "org": "두산에너빌리티(주)",
-      "cat": "ship_recruit",
-      "deadline": "2026-11-15",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55209559&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=48493319-764e-4781-881f-a348648e8835",
-      "src": "사람인",
-      "desc": "",
-      "tags": [
-        "채용",
-        "인턴"
-      ],
-      "eligibility": {
-        "grade": "",
-        "gpa": "",
-        "note": ""
-      }
-    },
-    {
-      "id": "311c7ce0ca9d",
-      "title": "설계 직무 경력직 채용(System Integration /성능 Cycle)",
-      "org": "두산에너빌리티(주)",
-      "cat": "ship_recruit",
-      "deadline": "2026-11-15",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55221106&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=48493319-764e-4781-881f-a348648e8835",
-      "src": "사람인",
-      "desc": "",
-      "tags": [
-        "채용",
-        "인턴"
-      ],
-      "eligibility": {
-        "grade": "",
-        "gpa": "",
-        "note": ""
-      }
-    },
-    {
-      "id": "17a5aa870d1c",
-      "title": "비파괴검사 계약직 채용",
-      "org": "두산에너빌리티(주)",
-      "cat": "ship_recruit",
-      "deadline": "2026-11-15",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55349412&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=48493319-764e-4781-881f-a348648e8835",
-      "src": "사람인",
-      "desc": "",
-      "tags": [
-        "채용",
-        "인턴"
-      ],
-      "eligibility": {
-        "grade": "",
-        "gpa": "",
-        "note": ""
-      }
-    },
-    {
-      "id": "e6913544cfa3",
-      "title": "설계 직무 경력직 채용(GT 제어시스템 제어계통설계)",
-      "org": "두산에너빌리티(주)",
-      "cat": "ship_recruit",
-      "deadline": "2026-11-15",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55221648&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=48493319-764e-4781-881f-a348648e8835",
-      "src": "사람인",
-      "desc": "",
-      "tags": [
-        "채용",
-        "인턴"
-      ],
-      "eligibility": {
-        "grade": "",
-        "gpa": "",
-        "note": ""
-      }
-    },
-    {
-      "id": "0ced32e65ae4",
-      "title": "생산기술/관리 및 시운전 직무 경력직 채용(전기/제어)",
-      "org": "두산에너빌리티(주)",
-      "cat": "ship_recruit",
-      "deadline": "2026-11-15",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55209619&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=48493319-764e-4781-881f-a348648e8835",
-      "src": "사람인",
-      "desc": "",
-      "tags": [
-        "채용",
-        "인턴"
-      ],
-      "eligibility": {
-        "grade": "",
-        "gpa": "",
-        "note": ""
-      }
-    },
-    {
-      "id": "af3af43f16b3",
-      "title": "설계 직무 경력직 채용(Test Engineering)",
-      "org": "두산에너빌리티(주)",
-      "cat": "ship_recruit",
-      "deadline": "2026-11-15",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55220795&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=48493319-764e-4781-881f-a348648e8835",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55425517&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=dbed515d-6d29-4f41-a5d5-03ea06208797",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -843,7 +776,83 @@
       "org": "두산에너빌리티(주)",
       "cat": "ship_recruit",
       "deadline": "2026-11-15",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55425485&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=48493319-764e-4781-881f-a348648e8835",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55425485&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=dbed515d-6d29-4f41-a5d5-03ea06208797",
+      "src": "사람인",
+      "desc": "",
+      "tags": [
+        "채용",
+        "인턴"
+      ],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "aa2fc7473ffa",
+      "title": "두산에너빌리티(주) 오피스 리모델링 및 건물 신축 공사-전기",
+      "org": "두산에너빌리티(주)",
+      "cat": "ship_recruit",
+      "deadline": "2026-11-15",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55425426&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=dbed515d-6d29-4f41-a5d5-03ea06208797",
+      "src": "사람인",
+      "desc": "",
+      "tags": [
+        "채용",
+        "인턴"
+      ],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "d9479a7d7864",
+      "title": "두산에너빌리티(주) 오피스 리모델링·신축 공사-설비",
+      "org": "두산에너빌리티(주)",
+      "cat": "ship_recruit",
+      "deadline": "2026-11-15",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55425452&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=dbed515d-6d29-4f41-a5d5-03ea06208797",
+      "src": "사람인",
+      "desc": "",
+      "tags": [
+        "채용",
+        "인턴"
+      ],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "4be0bc248731",
+      "title": "설계 직무 경력직 채용(기본설계 및 건전성 평가)",
+      "org": "두산에너빌리티(주)",
+      "cat": "ship_recruit",
+      "deadline": "2026-11-15",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55206792&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=dbed515d-6d29-4f41-a5d5-03ea06208797",
+      "src": "사람인",
+      "desc": "",
+      "tags": [
+        "채용",
+        "인턴"
+      ],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "17a5aa870d1c",
+      "title": "비파괴검사 계약직 채용",
+      "org": "두산에너빌리티(주)",
+      "cat": "ship_recruit",
+      "deadline": "2026-11-15",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55349412&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=dbed515d-6d29-4f41-a5d5-03ea06208797",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -862,7 +871,45 @@
       "org": "두산에너빌리티(주)",
       "cat": "ship_recruit",
       "deadline": "2026-11-15",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55221335&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=48493319-764e-4781-881f-a348648e8835",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55221335&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=dbed515d-6d29-4f41-a5d5-03ea06208797",
+      "src": "사람인",
+      "desc": "",
+      "tags": [
+        "채용",
+        "인턴"
+      ],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "85315d1c6b21",
+      "title": "생산기술/관리 및 시운전 직무 경력직 채용(외주관리)",
+      "org": "두산에너빌리티(주)",
+      "cat": "ship_recruit",
+      "deadline": "2026-11-15",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55209249&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=dbed515d-6d29-4f41-a5d5-03ea06208797",
+      "src": "사람인",
+      "desc": "",
+      "tags": [
+        "채용",
+        "인턴"
+      ],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "a075df132148",
+      "title": "생산기술/관리 및 시운전 직무 경력직 채용(원자력 생산기술)",
+      "org": "두산에너빌리티(주)",
+      "cat": "ship_recruit",
+      "deadline": "2026-11-15",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55209299&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=dbed515d-6d29-4f41-a5d5-03ea06208797",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -881,7 +928,235 @@
       "org": "두산에너빌리티(주)",
       "cat": "ship_recruit",
       "deadline": "2026-11-15",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55221264&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=48493319-764e-4781-881f-a348648e8835",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55221264&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=dbed515d-6d29-4f41-a5d5-03ea06208797",
+      "src": "사람인",
+      "desc": "",
+      "tags": [
+        "채용",
+        "인턴"
+      ],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "af3af43f16b3",
+      "title": "설계 직무 경력직 채용(Test Engineering)",
+      "org": "두산에너빌리티(주)",
+      "cat": "ship_recruit",
+      "deadline": "2026-11-15",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55220795&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=dbed515d-6d29-4f41-a5d5-03ea06208797",
+      "src": "사람인",
+      "desc": "",
+      "tags": [
+        "채용",
+        "인턴"
+      ],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "ebbb14aeacb0",
+      "title": "설계 직무 경력직 채용(GT본체 구조설계 및 구조해석)",
+      "org": "두산에너빌리티(주)",
+      "cat": "ship_recruit",
+      "deadline": "2026-11-15",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55220956&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=dbed515d-6d29-4f41-a5d5-03ea06208797",
+      "src": "사람인",
+      "desc": "",
+      "tags": [
+        "채용",
+        "인턴"
+      ],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "311c7ce0ca9d",
+      "title": "설계 직무 경력직 채용(System Integration /성능 Cycle)",
+      "org": "두산에너빌리티(주)",
+      "cat": "ship_recruit",
+      "deadline": "2026-11-15",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55221106&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=dbed515d-6d29-4f41-a5d5-03ea06208797",
+      "src": "사람인",
+      "desc": "",
+      "tags": [
+        "채용",
+        "인턴"
+      ],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "18366a10e799",
+      "title": "생산기술/관리 및 시운전 직무 경력직 채용(스팀터빈/발전기)",
+      "org": "두산에너빌리티(주)",
+      "cat": "ship_recruit",
+      "deadline": "2026-11-15",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55209431&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=dbed515d-6d29-4f41-a5d5-03ea06208797",
+      "src": "사람인",
+      "desc": "",
+      "tags": [
+        "채용",
+        "인턴"
+      ],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "0ced32e65ae4",
+      "title": "생산기술/관리 및 시운전 직무 경력직 채용(전기/제어)",
+      "org": "두산에너빌리티(주)",
+      "cat": "ship_recruit",
+      "deadline": "2026-11-15",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55209619&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=dbed515d-6d29-4f41-a5d5-03ea06208797",
+      "src": "사람인",
+      "desc": "",
+      "tags": [
+        "채용",
+        "인턴"
+      ],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "db1a68d2e78d",
+      "title": "설계 직무 경력직 채용(사이버보안)",
+      "org": "두산에너빌리티(주)",
+      "cat": "ship_recruit",
+      "deadline": "2026-11-15",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55220516&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=dbed515d-6d29-4f41-a5d5-03ea06208797",
+      "src": "사람인",
+      "desc": "",
+      "tags": [
+        "채용",
+        "인턴"
+      ],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "e6913544cfa3",
+      "title": "설계 직무 경력직 채용(GT 제어시스템 제어계통설계)",
+      "org": "두산에너빌리티(주)",
+      "cat": "ship_recruit",
+      "deadline": "2026-11-15",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55221648&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=dbed515d-6d29-4f41-a5d5-03ea06208797",
+      "src": "사람인",
+      "desc": "",
+      "tags": [
+        "채용",
+        "인턴"
+      ],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "86d12bc0d539",
+      "title": "생산기술/관리 및 시운전 직무 경력직 채용(TM 생산기술)",
+      "org": "두산에너빌리티(주)",
+      "cat": "ship_recruit",
+      "deadline": "2026-11-15",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55209559&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=dbed515d-6d29-4f41-a5d5-03ea06208797",
+      "src": "사람인",
+      "desc": "",
+      "tags": [
+        "채용",
+        "인턴"
+      ],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "d98060763782",
+      "title": "생산기술/관리 및 시운전 직무 경력직 채용(가스터빈 생산관리)",
+      "org": "두산에너빌리티(주)",
+      "cat": "ship_recruit",
+      "deadline": "2026-11-15",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55209499&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=dbed515d-6d29-4f41-a5d5-03ea06208797",
+      "src": "사람인",
+      "desc": "",
+      "tags": [
+        "채용",
+        "인턴"
+      ],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "6959c4a8f8b4",
+      "title": "생산기술/관리 및 시운전 직무 경력직 채용(방산사업부생산관리)",
+      "org": "두산에너빌리티(주)",
+      "cat": "ship_recruit",
+      "deadline": "2026-11-15",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55209350&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=dbed515d-6d29-4f41-a5d5-03ea06208797",
+      "src": "사람인",
+      "desc": "",
+      "tags": [
+        "채용",
+        "인턴"
+      ],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "79ce554c568f",
+      "title": "생산기술/관리 및 시운전 직무 경력직 채용(GT고온부품생산관리)",
+      "org": "두산에너빌리티(주)",
+      "cat": "ship_recruit",
+      "deadline": "2026-11-15",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55209396&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=dbed515d-6d29-4f41-a5d5-03ea06208797",
+      "src": "사람인",
+      "desc": "",
+      "tags": [
+        "채용",
+        "인턴"
+      ],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "8c165563e408",
+      "title": "설계 직무 경력직 채용(Pump 구매기술/공정관리)",
+      "org": "두산에너빌리티(주)",
+      "cat": "ship_recruit",
+      "deadline": "2026-11-15",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55220650&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=dbed515d-6d29-4f41-a5d5-03ea06208797",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -1060,6 +1335,82 @@
       }
     },
     {
+      "id": "71b1ad68f4f2",
+      "title": "[외국계선박회사] Service & Reman Sales Manager",
+      "org": "윈지디코리아(유)",
+      "cat": "ship_recruit",
+      "deadline": "2026-11-18",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55484916&location=ts&searchword=%EC%84%A0%EB%B0%95+%EC%9D%B8%ED%84%B4%EC%8B%AD&searchType=search&paid_fl=n&search_uuid=420244a4-3fe5-4d26-b0b6-9159e4259260",
+      "src": "사람인",
+      "desc": "",
+      "tags": [
+        "채용",
+        "인턴"
+      ],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "bfd8956c4384",
+      "title": "선박·산업용 센서의 R&D 인재를 모집합니다. (Firmware 개발)",
+      "org": "일성계측(주)",
+      "cat": "ship_recruit",
+      "deadline": "2026-11-18",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55327193&location=ts&searchword=%EC%84%A0%EB%B0%95+%EC%9D%B8%ED%84%B4%EC%8B%AD&searchType=search&paid_fl=n&search_uuid=420244a4-3fe5-4d26-b0b6-9159e4259260",
+      "src": "사람인",
+      "desc": "",
+      "tags": [
+        "채용",
+        "인턴"
+      ],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "f594f5a5162a",
+      "title": "선박·산업용 센서의 R&D 인재를 모집합니다. (기계·구조설계)",
+      "org": "일성계측(주)",
+      "cat": "ship_recruit",
+      "deadline": "2026-11-18",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55327217&location=ts&searchword=%EC%84%A0%EB%B0%95+%EC%9D%B8%ED%84%B4%EC%8B%AD&searchType=search&paid_fl=n&search_uuid=420244a4-3fe5-4d26-b0b6-9159e4259260",
+      "src": "사람인",
+      "desc": "",
+      "tags": [
+        "채용",
+        "인턴"
+      ],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "1cfe3c659556",
+      "title": "선박·산업용 센서의 R&D 인재를 모집합니다. (PCB 회로 설계)",
+      "org": "일성계측(주)",
+      "cat": "ship_recruit",
+      "deadline": "2026-11-18",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55327205&location=ts&searchword=%EC%84%A0%EB%B0%95+%EC%9D%B8%ED%84%B4%EC%8B%AD&searchType=search&paid_fl=n&search_uuid=420244a4-3fe5-4d26-b0b6-9159e4259260",
+      "src": "사람인",
+      "desc": "",
+      "tags": [
+        "채용",
+        "인턴"
+      ],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
       "id": "455212e479e4",
       "title": "2026년도 제3회 신입직원 공개채용",
       "org": "한국기계연구원(KIMM)",
@@ -1160,6 +1511,22 @@
       }
     },
     {
+      "id": "lk_362721",
+      "title": "[일본어는 핑계고 6기] 신입부원 모집!!",
+      "org": "일본어는핑계고",
+      "cat": "activity",
+      "deadline": "2026-11-20",
+      "url": "https://linkareer.com/activity/362721",
+      "src": "링커리어",
+      "desc": "",
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
       "id": "lk_362576",
       "title": "2026 청년의 시간(성남 청년 참여 예산제) 참가팀 모집",
       "org": "성남시청소년청년재단",
@@ -1176,28 +1543,12 @@
       }
     },
     {
-      "id": "lk_362542",
-      "title": "3개월 완성 토스·오픽 IH/AL 영어회화 마스터 스터디",
-      "org": "토스·오픽 IH/AL 영어회화 마스터 스터디",
-      "cat": "activity",
-      "deadline": "2026-11-22",
-      "url": "https://linkareer.com/activity/362542",
-      "src": "링커리어",
-      "desc": "",
-      "tags": [],
-      "eligibility": {
-        "grade": "",
-        "gpa": "",
-        "note": ""
-      }
-    },
-    {
       "id": "af9da84cf59d",
       "title": "육상, 해양전계장 설계 채용 공고",
       "org": "주식회사 인프라",
       "cat": "ship_recruit",
       "deadline": "2026-11-22",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55113229&location=ts&searchword=%EC%A1%B0%EC%84%A0%ED%95%B4%EC%96%91+%EC%9D%B8%ED%84%B4&searchType=search&paid_fl=n&search_uuid=f31b0ee8-bb12-4cf1-996b-d856fe24cda7",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55113229&location=ts&searchword=%EC%A1%B0%EC%84%A0%ED%95%B4%EC%96%91+%EC%9D%B8%ED%84%B4&searchType=search&paid_fl=n&search_uuid=7d731151-00b1-499a-9532-a7cf66c74c8a",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -1216,26 +1567,7 @@
       "org": "한화오션엔지니어링(주)",
       "cat": "ship_recruit",
       "deadline": "2026-11-22",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55115291&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=2b2ef7d4-d697-4683-8ea7-fe5d68dd8b6b",
-      "src": "사람인",
-      "desc": "",
-      "tags": [
-        "채용",
-        "인턴"
-      ],
-      "eligibility": {
-        "grade": "",
-        "gpa": "",
-        "note": ""
-      }
-    },
-    {
-      "id": "44ad9746a321",
-      "title": "[거제/신입가능] 한화오션 구매팀 채용",
-      "org": "(주)메이크인",
-      "cat": "ship_recruit",
-      "deadline": "2026-11-23",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55497216&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=2b2ef7d4-d697-4683-8ea7-fe5d68dd8b6b",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55115291&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=4d18cdd7-7c13-40ec-b53c-99cf3e7ddbac",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -1320,29 +1652,13 @@
       "org": "이오에스맨파워코리아 유한회사",
       "cat": "ship_recruit",
       "deadline": "2026-11-25",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55389038&location=ts&searchword=%EC%82%BC%EC%84%B1%EC%A4%91%EA%B3%B5%EC%97%85+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=0be6f4ff-0292-4268-a794-107b65689589",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55389038&location=ts&searchword=%EC%82%BC%EC%84%B1%EC%A4%91%EA%B3%B5%EC%97%85+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=4806fa5c-e253-49f9-b9e3-210b8a2bd631",
       "src": "사람인",
       "desc": "",
       "tags": [
         "채용",
         "인턴"
       ],
-      "eligibility": {
-        "grade": "",
-        "gpa": "",
-        "note": ""
-      }
-    },
-    {
-      "id": "lk_362532",
-      "title": "대학 연합 음악감상동아리 ‘SoundDive’ 1기 모집",
-      "org": "SoundDive",
-      "cat": "activity",
-      "deadline": "2026-11-26",
-      "url": "https://linkareer.com/activity/362532",
-      "src": "링커리어",
-      "desc": "",
-      "tags": [],
       "eligibility": {
         "grade": "",
         "gpa": "",
@@ -1366,12 +1682,12 @@
       }
     },
     {
-      "id": "lk_362568",
-      "title": "2026년 경산시 숏폼영상공모전",
-      "org": "경산시",
-      "cat": "media",
-      "deadline": "2026-11-27",
-      "url": "https://linkareer.com/activity/362568",
+      "id": "lk_362679",
+      "title": "내향인 주목, 디저트로 힐링하는 카페투어&베이킹 동아리 [쿠키런]",
+      "org": "쿠키런 베이킹연합동아리",
+      "cat": "activity",
+      "deadline": "2026-11-28",
+      "url": "https://linkareer.com/activity/362679",
       "src": "링커리어",
       "desc": "",
       "tags": [],
@@ -1414,34 +1730,15 @@
       }
     },
     {
-      "id": "lk_362590",
-      "title": "볼링 모임 모집 | 일단 굴러는 갑니다",
-      "org": ".",
-      "cat": "activity",
+      "id": "lk_362783",
+      "title": "[신입/입사축하금] 퍼포먼스 콘텐츠 기획자",
+      "org": "주식회사 아이리스브라이트",
+      "cat": "media",
       "deadline": "2026-11-29",
-      "url": "https://linkareer.com/activity/362590",
+      "url": "https://linkareer.com/activity/362783",
       "src": "링커리어",
       "desc": "",
       "tags": [],
-      "eligibility": {
-        "grade": "",
-        "gpa": "",
-        "note": ""
-      }
-    },
-    {
-      "id": "6c324efbdb6a",
-      "title": "[한화오션/을지로/연3400수준] 자금운영팀 / 법인카드 관리 채용",
-      "org": "(주)한성엠에스",
-      "cat": "ship_recruit",
-      "deadline": "2026-11-29",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55434855&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=2b2ef7d4-d697-4683-8ea7-fe5d68dd8b6b",
-      "src": "사람인",
-      "desc": "",
-      "tags": [
-        "채용",
-        "인턴"
-      ],
       "eligibility": {
         "grade": "",
         "gpa": "",
@@ -1454,7 +1751,7 @@
       "org": "(주)세한이엔씨",
       "cat": "ship_recruit",
       "deadline": "2026-11-29",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55439253&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=2b2ef7d4-d697-4683-8ea7-fe5d68dd8b6b",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55439253&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=4d18cdd7-7c13-40ec-b53c-99cf3e7ddbac",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -1468,12 +1765,12 @@
       }
     },
     {
-      "id": "eb44a37d1b83",
-      "title": "[거제/연3661만수준/기숙사ㅇ] 삼성중공업 사무직 다수채용",
-      "org": "(주)키스템프그룹",
+      "id": "b9bfce0562dc",
+      "title": "(주)스칸텍 조선 생산 Q/A 신입/경력 채용 공고",
+      "org": "(주)스칸텍",
       "cat": "ship_recruit",
       "deadline": "2026-11-29",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55501630&location=ts&searchword=%EC%82%BC%EC%84%B1%EC%A4%91%EA%B3%B5%EC%97%85+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=0be6f4ff-0292-4268-a794-107b65689589",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55159285&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=4d18cdd7-7c13-40ec-b53c-99cf3e7ddbac",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -1492,7 +1789,7 @@
       "org": "(주)제이엠지텍",
       "cat": "ship_recruit",
       "deadline": "2026-11-29",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55439830&location=ts&searchword=%EC%82%BC%EC%84%B1%EC%A4%91%EA%B3%B5%EC%97%85+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=0be6f4ff-0292-4268-a794-107b65689589",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55439830&location=ts&searchword=%EC%82%BC%EC%84%B1%EC%A4%91%EA%B3%B5%EC%97%85+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=4806fa5c-e253-49f9-b9e3-210b8a2bd631",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -1511,7 +1808,7 @@
       "org": "한결이엔지",
       "cat": "ship_recruit",
       "deadline": "2026-11-29",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55438453&location=ts&searchword=%ED%98%84%EB%8C%80%EC%A4%91%EA%B3%B5%EC%97%85+%EC%9D%B8%ED%84%B4&searchType=search&paid_fl=n&search_uuid=3b8a2551-f434-46f7-9564-2992f8a46f36",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55438453&location=ts&searchword=%ED%98%84%EB%8C%80%EC%A4%91%EA%B3%B5%EC%97%85+%EC%9D%B8%ED%84%B4&searchType=search&paid_fl=n&search_uuid=0a3d8895-d3d0-4082-912d-4c5433656b49",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -1557,18 +1854,15 @@
       }
     },
     {
-      "id": "ac85bd1006c6",
-      "title": "인치케이프쉽핑코리아 해운대리점 선박운항팀 Operation 채용",
-      "org": "인치케이프쉽핑코리아(주)",
-      "cat": "ship_recruit",
+      "id": "lk_362683",
+      "title": "대학생 연합 등산 동아리 ‘서울메아리’ 3기",
+      "org": "메아리 서울등산연합동아리",
+      "cat": "activity",
       "deadline": "2026-11-30",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55175586&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=2b2ef7d4-d697-4683-8ea7-fe5d68dd8b6b",
-      "src": "사람인",
+      "url": "https://linkareer.com/activity/362683",
+      "src": "링커리어",
       "desc": "",
-      "tags": [
-        "채용",
-        "인턴"
-      ],
+      "tags": [],
       "eligibility": {
         "grade": "",
         "gpa": "",
@@ -1576,12 +1870,28 @@
       }
     },
     {
-      "id": "415bd4d9e511",
-      "title": "[양산/연~8,000만]유명기업 조선/선박 영업 경력직 채용",
-      "org": "(주)키스템프그룹",
+      "id": "lk_362682",
+      "title": "I scream! 영어회화 동아리 3기 모집",
+      "org": "아이스크림 영어연합동아리",
+      "cat": "activity",
+      "deadline": "2026-11-30",
+      "url": "https://linkareer.com/activity/362682",
+      "src": "링커리어",
+      "desc": "",
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "7f0c1afcba28",
+      "title": "(주)성원기업목포공장 조선설계 경력직 모집(HD현대삼호중공업)",
+      "org": "(주)성원기업목포공장",
       "cat": "ship_recruit",
       "deadline": "2026-11-30",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55456913&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=2b2ef7d4-d697-4683-8ea7-fe5d68dd8b6b",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55172563&location=ts&searchword=%ED%98%84%EB%8C%80%EC%A4%91%EA%B3%B5%EC%97%85+%EC%9D%B8%ED%84%B4&searchType=search&paid_fl=n&search_uuid=0a3d8895-d3d0-4082-912d-4c5433656b49",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -1627,12 +1937,44 @@
       }
     },
     {
+      "id": "lk_362656",
+      "title": "꽉잡아 클라이밍 연합동아리 7기 모집",
+      "org": "꽉잡아 클라이밍 연합동아리",
+      "cat": "activity",
+      "deadline": "2026-12-05",
+      "url": "https://linkareer.com/activity/362656",
+      "src": "링커리어",
+      "desc": "",
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "lk_362669",
+      "title": "2026 피부건설 Skin Cons 글로벌 패키지 디자인 공모전",
+      "org": "주식회사 유엠코스메틱",
+      "cat": "global",
+      "deadline": "2026-12-06",
+      "url": "https://linkareer.com/activity/362669",
+      "src": "링커리어",
+      "desc": "",
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
       "id": "70a665804252",
       "title": "(주)조타코 조선해양·경영지원 분야 6개월 전환형 인턴 모집",
       "org": "(주)조타코",
       "cat": "ship_recruit",
       "deadline": "2026-12-06",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55403498&location=ts&searchword=%EC%A1%B0%EC%84%A0%ED%95%B4%EC%96%91+%EC%9D%B8%ED%84%B4&searchType=search&paid_fl=n&search_uuid=f31b0ee8-bb12-4cf1-996b-d856fe24cda7",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55403498&location=ts&searchword=%EC%A1%B0%EC%84%A0%ED%95%B4%EC%96%91+%EC%9D%B8%ED%84%B4&searchType=search&paid_fl=n&search_uuid=7d731151-00b1-499a-9532-a7cf66c74c8a",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -1651,7 +1993,7 @@
       "org": "한국설계기술주식회사",
       "cat": "ship_recruit",
       "deadline": "2026-12-06",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55483768&location=ts&searchword=%EC%A1%B0%EC%84%A0%ED%95%B4%EC%96%91+%EC%9D%B8%ED%84%B4&searchType=search&paid_fl=n&search_uuid=f31b0ee8-bb12-4cf1-996b-d856fe24cda7",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55483768&location=ts&searchword=%EC%A1%B0%EC%84%A0%ED%95%B4%EC%96%91+%EC%9D%B8%ED%84%B4&searchType=search&paid_fl=n&search_uuid=7d731151-00b1-499a-9532-a7cf66c74c8a",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -1670,292 +2012,7 @@
       "org": "한국설계기술주식회사",
       "cat": "ship_recruit",
       "deadline": "2026-12-06",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55504398&location=ts&searchword=%EC%A1%B0%EC%84%A0%ED%95%B4%EC%96%91+%EC%9D%B8%ED%84%B4&searchType=search&paid_fl=n&search_uuid=f31b0ee8-bb12-4cf1-996b-d856fe24cda7",
-      "src": "사람인",
-      "desc": "",
-      "tags": [
-        "채용",
-        "인턴"
-      ],
-      "eligibility": {
-        "grade": "",
-        "gpa": "",
-        "note": ""
-      }
-    },
-    {
-      "id": "390bb7e0f026",
-      "title": "[한화오션/거제/연3400수준] 상선SCM / 구매지원 사무 채용",
-      "org": "(주)한성엠에스",
-      "cat": "ship_recruit",
-      "deadline": "2026-12-06",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55484237&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=2b2ef7d4-d697-4683-8ea7-fe5d68dd8b6b",
-      "src": "사람인",
-      "desc": "",
-      "tags": [
-        "채용",
-        "인턴"
-      ],
-      "eligibility": {
-        "grade": "",
-        "gpa": "",
-        "note": ""
-      }
-    },
-    {
-      "id": "b79d8042317a",
-      "title": "한화오션(주) 사무지원 채용 [거제/통근버스/업무난이도下]",
-      "org": "(주)밸류에이치알",
-      "cat": "ship_recruit",
-      "deadline": "2026-12-06",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55256725&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=2b2ef7d4-d697-4683-8ea7-fe5d68dd8b6b",
-      "src": "사람인",
-      "desc": "",
-      "tags": [
-        "채용",
-        "인턴"
-      ],
-      "eligibility": {
-        "grade": "",
-        "gpa": "",
-        "note": ""
-      }
-    },
-    {
-      "id": "197090212539",
-      "title": "한화오션 구매지원 채용 [거제/통근버스/신입가능]",
-      "org": "(주)밸류에이치알",
-      "cat": "ship_recruit",
-      "deadline": "2026-12-06",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55485245&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=2b2ef7d4-d697-4683-8ea7-fe5d68dd8b6b",
-      "src": "사람인",
-      "desc": "",
-      "tags": [
-        "채용",
-        "인턴"
-      ],
-      "eligibility": {
-        "grade": "",
-        "gpa": "",
-        "note": ""
-      }
-    },
-    {
-      "id": "1679bb830948",
-      "title": "한화오션내 아라테크 하이드로 테스트 배관공 신입·경력 채용",
-      "org": "아라테크",
-      "cat": "ship_recruit",
-      "deadline": "2026-12-06",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55299146&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=2b2ef7d4-d697-4683-8ea7-fe5d68dd8b6b",
-      "src": "사람인",
-      "desc": "",
-      "tags": [
-        "채용",
-        "인턴"
-      ],
-      "eligibility": {
-        "grade": "",
-        "gpa": "",
-        "note": ""
-      }
-    },
-    {
-      "id": "bd1ade96ad39",
-      "title": "(주)한화오션 사무직 채용 [중구/연3,240만/복지有]",
-      "org": "(주)밸류에이치알",
-      "cat": "ship_recruit",
-      "deadline": "2026-12-06",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55363041&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=2b2ef7d4-d697-4683-8ea7-fe5d68dd8b6b",
-      "src": "사람인",
-      "desc": "",
-      "tags": [
-        "채용",
-        "인턴"
-      ],
-      "eligibility": {
-        "grade": "",
-        "gpa": "",
-        "note": ""
-      }
-    },
-    {
-      "id": "9260d54c9193",
-      "title": "[한화오션(주)/거제/연3400수준] 선행도장/사무행정 채용",
-      "org": "(주)한성엠에스",
-      "cat": "ship_recruit",
-      "deadline": "2026-12-06",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55233420&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=2b2ef7d4-d697-4683-8ea7-fe5d68dd8b6b",
-      "src": "사람인",
-      "desc": "",
-      "tags": [
-        "채용",
-        "인턴"
-      ],
-      "eligibility": {
-        "grade": "",
-        "gpa": "",
-        "note": ""
-      }
-    },
-    {
-      "id": "56002ccc481c",
-      "title": "[한화오션/을지로/연3400수준] 경영기획실 / 업무지원 채용",
-      "org": "(주)한성엠에스",
-      "cat": "ship_recruit",
-      "deadline": "2026-12-06",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55272743&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=2b2ef7d4-d697-4683-8ea7-fe5d68dd8b6b",
-      "src": "사람인",
-      "desc": "",
-      "tags": [
-        "채용",
-        "인턴"
-      ],
-      "eligibility": {
-        "grade": "",
-        "gpa": "",
-        "note": ""
-      }
-    },
-    {
-      "id": "8cfd86024786",
-      "title": "[한화오션(주)/거제도/연3400수준] 자재품질팀/DC 사무직 채용",
-      "org": "(주)한성엠에스",
-      "cat": "ship_recruit",
-      "deadline": "2026-12-06",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55233428&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=2b2ef7d4-d697-4683-8ea7-fe5d68dd8b6b",
-      "src": "사람인",
-      "desc": "",
-      "tags": [
-        "채용",
-        "인턴"
-      ],
-      "eligibility": {
-        "grade": "",
-        "gpa": "",
-        "note": ""
-      }
-    },
-    {
-      "id": "1d7f30950049",
-      "title": "[거제/연3,240만/복지多] (주)한화오션 사무직 상시 채용",
-      "org": "(주)밸류에이치알",
-      "cat": "ship_recruit",
-      "deadline": "2026-12-06",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55341705&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=2b2ef7d4-d697-4683-8ea7-fe5d68dd8b6b",
-      "src": "사람인",
-      "desc": "",
-      "tags": [
-        "채용",
-        "인턴"
-      ],
-      "eligibility": {
-        "grade": "",
-        "gpa": "",
-        "note": ""
-      }
-    },
-    {
-      "id": "aeea232e22f7",
-      "title": "[한화오션/을지로/연3400수준] 공정개발/DC 사무직 채용 복지 有",
-      "org": "(주)한성엠에스",
-      "cat": "ship_recruit",
-      "deadline": "2026-12-06",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55235081&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=2b2ef7d4-d697-4683-8ea7-fe5d68dd8b6b",
-      "src": "사람인",
-      "desc": "",
-      "tags": [
-        "채용",
-        "인턴"
-      ],
-      "eligibility": {
-        "grade": "",
-        "gpa": "",
-        "note": ""
-      }
-    },
-    {
-      "id": "ad81901b9a39",
-      "title": "[한화오션(주)/거제도/연3400수준] 상선EM팀/DC사무직 채용",
-      "org": "(주)한성엠에스",
-      "cat": "ship_recruit",
-      "deadline": "2026-12-06",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55505797&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=2b2ef7d4-d697-4683-8ea7-fe5d68dd8b6b",
-      "src": "사람인",
-      "desc": "",
-      "tags": [
-        "채용",
-        "인턴"
-      ],
-      "eligibility": {
-        "grade": "",
-        "gpa": "",
-        "note": ""
-      }
-    },
-    {
-      "id": "211edcc25fe4",
-      "title": "한화오션엔지니어링 2026년 경력사원 상시채용",
-      "org": "한화오션엔지니어링(주)",
-      "cat": "ship_recruit",
-      "deadline": "2026-12-06",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54962770&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=2b2ef7d4-d697-4683-8ea7-fe5d68dd8b6b",
-      "src": "사람인",
-      "desc": "",
-      "tags": [
-        "채용",
-        "인턴"
-      ],
-      "eligibility": {
-        "grade": "",
-        "gpa": "",
-        "note": ""
-      }
-    },
-    {
-      "id": "e767960a0b45",
-      "title": "[한화오션(주)/상선HSE실행팀/연3400수준] 사무행정 채용",
-      "org": "(주)한성엠에스",
-      "cat": "ship_recruit",
-      "deadline": "2026-12-06",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55233409&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=2b2ef7d4-d697-4683-8ea7-fe5d68dd8b6b",
-      "src": "사람인",
-      "desc": "",
-      "tags": [
-        "채용",
-        "인턴"
-      ],
-      "eligibility": {
-        "grade": "",
-        "gpa": "",
-        "note": ""
-      }
-    },
-    {
-      "id": "10b8b519197d",
-      "title": "한화오션 법인카드 관리 사원 채용 [중구/-3240만/신입가능]",
-      "org": "(주)밸류에이치알",
-      "cat": "ship_recruit",
-      "deadline": "2026-12-06",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55429621&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=2b2ef7d4-d697-4683-8ea7-fe5d68dd8b6b",
-      "src": "사람인",
-      "desc": "",
-      "tags": [
-        "채용",
-        "인턴"
-      ],
-      "eligibility": {
-        "grade": "",
-        "gpa": "",
-        "note": ""
-      }
-    },
-    {
-      "id": "81d7c783ffb8",
-      "title": "[한화오션(주)/배관재구매팀/연3400수준] 납기관리 채용",
-      "org": "(주)한성엠에스",
-      "cat": "ship_recruit",
-      "deadline": "2026-12-06",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55361091&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=2b2ef7d4-d697-4683-8ea7-fe5d68dd8b6b",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55504398&location=ts&searchword=%EC%A1%B0%EC%84%A0%ED%95%B4%EC%96%91+%EC%9D%B8%ED%84%B4&searchType=search&paid_fl=n&search_uuid=7d731151-00b1-499a-9532-a7cf66c74c8a",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -1974,7 +2031,7 @@
       "org": "(주)한화에스테이트서비스",
       "cat": "ship_recruit",
       "deadline": "2026-12-06",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55086255&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=2b2ef7d4-d697-4683-8ea7-fe5d68dd8b6b",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55086255&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=4d18cdd7-7c13-40ec-b53c-99cf3e7ddbac",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -1988,12 +2045,12 @@
       }
     },
     {
-      "id": "43589f3ae969",
-      "title": "[한화오션/을지로/연3400수준] PC팀 Document Control 채용",
-      "org": "(주)한성엠에스",
+      "id": "211edcc25fe4",
+      "title": "한화오션엔지니어링 2026년 경력사원 상시채용",
+      "org": "한화오션엔지니어링(주)",
       "cat": "ship_recruit",
       "deadline": "2026-12-06",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55368300&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=2b2ef7d4-d697-4683-8ea7-fe5d68dd8b6b",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54962770&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=4d18cdd7-7c13-40ec-b53c-99cf3e7ddbac",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -2012,7 +2069,7 @@
       "org": "한화오션(주)",
       "cat": "ship_recruit",
       "deadline": "2026-12-06",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55412696&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=2b2ef7d4-d697-4683-8ea7-fe5d68dd8b6b",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55412696&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=4d18cdd7-7c13-40ec-b53c-99cf3e7ddbac",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -2026,12 +2083,12 @@
       }
     },
     {
-      "id": "efb8bb8c83de",
-      "title": "조선기자재 기술영업 담당자 채용",
-      "org": "한선싱가폴한국연락사무소",
+      "id": "1679bb830948",
+      "title": "한화오션내 아라테크 하이드로 테스트 배관공 신입·경력 채용",
+      "org": "아라테크",
       "cat": "ship_recruit",
       "deadline": "2026-12-06",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55415916&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=2b2ef7d4-d697-4683-8ea7-fe5d68dd8b6b",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55299146&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=4d18cdd7-7c13-40ec-b53c-99cf3e7ddbac",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -2045,12 +2102,12 @@
       }
     },
     {
-      "id": "d9cd3887c75a",
-      "title": "(주)세보테크놀로지 조선소·육상플랜트 영업 경력 채용 공고",
-      "org": "(주)세보테크놀로지",
+      "id": "881295bae442",
+      "title": "한화오션 특수선시공 현장직 (세후350이상)",
+      "org": "(주)화승코퍼레이션",
       "cat": "ship_recruit",
       "deadline": "2026-12-06",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55500663&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=2b2ef7d4-d697-4683-8ea7-fe5d68dd8b6b",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55221350&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=4d18cdd7-7c13-40ec-b53c-99cf3e7ddbac",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -2064,12 +2121,12 @@
       }
     },
     {
-      "id": "d5ec99dd1a38",
-      "title": "엘림종합건설(주) 거제도 한화오션 현장 안전관리자 모집",
-      "org": "엘림종합건설(주)",
+      "id": "b5b8d8cbd1f4",
+      "title": "(주)웰리브 한화오션 야드 내 교통안전요원 모집",
+      "org": "(주)웰리브",
       "cat": "ship_recruit",
       "deadline": "2026-12-06",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55226940&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=2b2ef7d4-d697-4683-8ea7-fe5d68dd8b6b",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55389524&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=4d18cdd7-7c13-40ec-b53c-99cf3e7ddbac",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -2083,69 +2140,12 @@
       }
     },
     {
-      "id": "cc1681552afb",
-      "title": "한화오션 특수선/상선 품질검사원 모집(거제)",
-      "org": "비즈피어(주)",
+      "id": "db4a33b69cb2",
+      "title": "[방산/조선] 펌프 및 해양 기자재 설계 엔지니어 채용(경력무관)",
+      "org": "(주)한국종합기계",
       "cat": "ship_recruit",
       "deadline": "2026-12-06",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55361113&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=2b2ef7d4-d697-4683-8ea7-fe5d68dd8b6b",
-      "src": "사람인",
-      "desc": "",
-      "tags": [
-        "채용",
-        "인턴"
-      ],
-      "eligibility": {
-        "grade": "",
-        "gpa": "",
-        "note": ""
-      }
-    },
-    {
-      "id": "9725a585e250",
-      "title": "[삼성중공업/ 거제본사] 사무보조 채용",
-      "org": "(주)커리어텍",
-      "cat": "ship_recruit",
-      "deadline": "2026-12-06",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55505952&location=ts&searchword=%EC%82%BC%EC%84%B1%EC%A4%91%EA%B3%B5%EC%97%85+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=0be6f4ff-0292-4268-a794-107b65689589",
-      "src": "사람인",
-      "desc": "",
-      "tags": [
-        "채용",
-        "인턴"
-      ],
-      "eligibility": {
-        "grade": "",
-        "gpa": "",
-        "note": ""
-      }
-    },
-    {
-      "id": "e40aac2578d9",
-      "title": "삼성중공업(내) 하늘기업 구내식당 단체급식 조리원 채용 공고",
-      "org": "하늘기업",
-      "cat": "ship_recruit",
-      "deadline": "2026-12-06",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55271812&location=ts&searchword=%EC%82%BC%EC%84%B1%EC%A4%91%EA%B3%B5%EC%97%85+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=0be6f4ff-0292-4268-a794-107b65689589",
-      "src": "사람인",
-      "desc": "",
-      "tags": [
-        "채용",
-        "인턴"
-      ],
-      "eligibility": {
-        "grade": "",
-        "gpa": "",
-        "note": ""
-      }
-    },
-    {
-      "id": "93d35976da25",
-      "title": "신입/경력사원 모집: 상선/해양 품질검사원(주)제이엠지텍",
-      "org": "(주)제이엠지텍",
-      "cat": "ship_recruit",
-      "deadline": "2026-12-06",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55234259&location=ts&searchword=%EC%82%BC%EC%84%B1%EC%A4%91%EA%B3%B5%EC%97%85+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=0be6f4ff-0292-4268-a794-107b65689589",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55133043&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=4d18cdd7-7c13-40ec-b53c-99cf3e7ddbac",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -2164,7 +2164,7 @@
       "org": "볼필터코리아(주)",
       "cat": "ship_recruit",
       "deadline": "2026-12-06",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55158131&location=ts&searchword=%EC%82%BC%EC%84%B1%EC%A4%91%EA%B3%B5%EC%97%85+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=0be6f4ff-0292-4268-a794-107b65689589",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55158131&location=ts&searchword=%ED%95%9C%ED%99%94%EC%98%A4%EC%85%98+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=4d18cdd7-7c13-40ec-b53c-99cf3e7ddbac",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -2178,12 +2178,221 @@
       }
     },
     {
-      "id": "70efc53292a5",
-      "title": "주차사업부 신입사원 모집 [기계설계 및 구조물 설계]",
-      "org": "삼중테크(주)",
+      "id": "f185de3c2deb",
+      "title": "[삼성중공업 현장] 비파괴검사원 모집",
+      "org": "서울검사(주)",
       "cat": "ship_recruit",
       "deadline": "2026-12-06",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55299372&location=ts&searchword=%EC%82%BC%EC%84%B1%EC%A4%91%EA%B3%B5%EC%97%85+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=0be6f4ff-0292-4268-a794-107b65689589",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55275398&location=ts&searchword=%EC%82%BC%EC%84%B1%EC%A4%91%EA%B3%B5%EC%97%85+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=4806fa5c-e253-49f9-b9e3-210b8a2bd631",
+      "src": "사람인",
+      "desc": "",
+      "tags": [
+        "채용",
+        "인턴"
+      ],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "d4aacefff52c",
+      "title": "[조선소 채용] SMS KOREA Leak test 테크니션 채용",
+      "org": "에스엠에스코리아(주)",
+      "cat": "ship_recruit",
+      "deadline": "2026-12-06",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55283376&location=ts&searchword=%EC%82%BC%EC%84%B1%EC%A4%91%EA%B3%B5%EC%97%85+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=4806fa5c-e253-49f9-b9e3-210b8a2bd631",
+      "src": "사람인",
+      "desc": "",
+      "tags": [
+        "채용",
+        "인턴"
+      ],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "9bc0723e8346",
+      "title": "삼성중공업 內 (주)제이엠지텍 배관검사원 모집",
+      "org": "(주)제이엠지텍",
+      "cat": "ship_recruit",
+      "deadline": "2026-12-06",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55211542&location=ts&searchword=%EC%82%BC%EC%84%B1%EC%A4%91%EA%B3%B5%EC%97%85+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=4806fa5c-e253-49f9-b9e3-210b8a2bd631",
+      "src": "사람인",
+      "desc": "",
+      "tags": [
+        "채용",
+        "인턴"
+      ],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "93d35976da25",
+      "title": "신입/경력사원 모집: 상선/해양 품질검사원(주)제이엠지텍",
+      "org": "(주)제이엠지텍",
+      "cat": "ship_recruit",
+      "deadline": "2026-12-06",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55234259&location=ts&searchword=%EC%82%BC%EC%84%B1%EC%A4%91%EA%B3%B5%EC%97%85+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=4806fa5c-e253-49f9-b9e3-210b8a2bd631",
+      "src": "사람인",
+      "desc": "",
+      "tags": [
+        "채용",
+        "인턴"
+      ],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "bf319c8985eb",
+      "title": "LNG선 화물창 내부 보온재 설치(IP)",
+      "org": "(주)비제이에이테크",
+      "cat": "ship_recruit",
+      "deadline": "2026-12-06",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55503119&location=ts&searchword=%EC%82%BC%EC%84%B1%EC%A4%91%EA%B3%B5%EC%97%85+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=4806fa5c-e253-49f9-b9e3-210b8a2bd631",
+      "src": "사람인",
+      "desc": "",
+      "tags": [
+        "채용",
+        "인턴"
+      ],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "489dc8c824ba",
+      "title": "(주)삼영검사엔지니어링 [LNG목포,거제] 비파괴검사원 채용",
+      "org": "(주)삼영검사엔지니어링",
+      "cat": "ship_recruit",
+      "deadline": "2026-12-06",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55124467&location=ts&searchword=%EC%82%BC%EC%84%B1%EC%A4%91%EA%B3%B5%EC%97%85+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=4806fa5c-e253-49f9-b9e3-210b8a2bd631",
+      "src": "사람인",
+      "desc": "",
+      "tags": [
+        "채용",
+        "인턴"
+      ],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "e84feb2ec00e",
+      "title": "[삼성중공업 협력사] (주)에스지엘티 현물관리, 물류지원",
+      "org": "주식회사 에스지엘티",
+      "cat": "ship_recruit",
+      "deadline": "2026-12-06",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55466396&location=ts&searchword=%EC%82%BC%EC%84%B1%EC%A4%91%EA%B3%B5%EC%97%85+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=4806fa5c-e253-49f9-b9e3-210b8a2bd631",
+      "src": "사람인",
+      "desc": "",
+      "tags": [
+        "채용",
+        "인턴"
+      ],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "1858c4506539",
+      "title": "[거제/성과급/연 3,661만] 삼성중공업 팀비서 채용",
+      "org": "(주)커리어텍",
+      "cat": "ship_recruit",
+      "deadline": "2026-12-06",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55166084&location=ts&searchword=%EC%82%BC%EC%84%B1%EC%A4%91%EA%B3%B5%EC%97%85+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=4806fa5c-e253-49f9-b9e3-210b8a2bd631",
+      "src": "사람인",
+      "desc": "",
+      "tags": [
+        "채용",
+        "인턴"
+      ],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "a1bb29222bda",
+      "title": "청명엔지니어링 거제 조선 배관 설계 삼성중공업 협력업체",
+      "org": "(주)청명엔지니어링",
+      "cat": "ship_recruit",
+      "deadline": "2026-12-06",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55336946&location=ts&searchword=%EC%82%BC%EC%84%B1%EC%A4%91%EA%B3%B5%EC%97%85+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=4806fa5c-e253-49f9-b9e3-210b8a2bd631",
+      "src": "사람인",
+      "desc": "",
+      "tags": [
+        "채용",
+        "인턴"
+      ],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "7112edc8486a",
+      "title": "조선/해양 전장 생산(배치)설계 경력/신입",
+      "org": "(주)미르",
+      "cat": "ship_recruit",
+      "deadline": "2026-12-06",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55223445&location=ts&searchword=%ED%98%84%EB%8C%80%EC%A4%91%EA%B3%B5%EC%97%85+%EC%9D%B8%ED%84%B4&searchType=search&paid_fl=n&search_uuid=0a3d8895-d3d0-4082-912d-4c5433656b49",
+      "src": "사람인",
+      "desc": "",
+      "tags": [
+        "채용",
+        "인턴"
+      ],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "baebc0d43bcf",
+      "title": "선박 운항팀 직원 모집",
+      "org": "(주)가나마린",
+      "cat": "ship_recruit",
+      "deadline": "2026-12-06",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55401257&location=ts&searchword=%EC%84%A0%EB%B0%95+%EC%9D%B8%ED%84%B4%EC%8B%AD&searchType=search&paid_fl=n&search_uuid=420244a4-3fe5-4d26-b0b6-9159e4259260",
+      "src": "사람인",
+      "desc": "",
+      "tags": [
+        "채용",
+        "인턴"
+      ],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "fa1f29d7e3c9",
+      "title": "가나마린 선박 운항팀 직원 채용",
+      "org": "(주)가나마린",
+      "cat": "ship_recruit",
+      "deadline": "2026-12-06",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55493523&location=ts&searchword=%EC%84%A0%EB%B0%95+%EC%9D%B8%ED%84%B4%EC%8B%AD&searchType=search&paid_fl=n&search_uuid=420244a4-3fe5-4d26-b0b6-9159e4259260",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -2202,7 +2411,7 @@
       "org": "배이산업(주)",
       "cat": "ship_recruit",
       "deadline": "2026-12-06",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55467123&location=ts&searchword=%EC%84%A0%EB%B0%95+%EC%9D%B8%ED%84%B4%EC%8B%AD&searchType=search&paid_fl=n&search_uuid=1bf9e8a8-a1df-4566-af78-179f284d6bf1",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55467123&location=ts&searchword=%EC%84%A0%EB%B0%95+%EC%9D%B8%ED%84%B4%EC%8B%AD&searchType=search&paid_fl=n&search_uuid=420244a4-3fe5-4d26-b0b6-9159e4259260",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -2216,50 +2425,12 @@
       }
     },
     {
-      "id": "6bd4569b4268",
-      "title": "(주)유니링크코리아 조선기자재 창고관리 납품 사원 채용 공고",
-      "org": "유니링크",
-      "cat": "ship_recruit",
+      "id": "84abbd9d0903",
+      "title": "선박수리 해외영업부  채용(신입, 경력)",
+      "org": "(주)오리엔트조선소",
+      "cat": "ship_global",
       "deadline": "2026-12-06",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55396720&location=ts&searchword=%EC%84%A0%EB%B0%95+%EC%9D%B8%ED%84%B4%EC%8B%AD&searchType=search&paid_fl=n&search_uuid=1bf9e8a8-a1df-4566-af78-179f284d6bf1",
-      "src": "사람인",
-      "desc": "",
-      "tags": [
-        "채용",
-        "인턴"
-      ],
-      "eligibility": {
-        "grade": "",
-        "gpa": "",
-        "note": ""
-      }
-    },
-    {
-      "id": "8c651a96a7ed",
-      "title": "조선 선박 기자재관련 회계, 경영관리, 무역서류 관리",
-      "org": "(주)광문오션케어",
-      "cat": "ship_recruit",
-      "deadline": "2026-12-06",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55472175&location=ts&searchword=%EC%84%A0%EB%B0%95+%EC%9D%B8%ED%84%B4%EC%8B%AD&searchType=search&paid_fl=n&search_uuid=1bf9e8a8-a1df-4566-af78-179f284d6bf1",
-      "src": "사람인",
-      "desc": "",
-      "tags": [
-        "채용",
-        "인턴"
-      ],
-      "eligibility": {
-        "grade": "",
-        "gpa": "",
-        "note": ""
-      }
-    },
-    {
-      "id": "c61e7c2700f6",
-      "title": "[잠실/극동전선] Shipboard팀 Sales Back Office (1년 계약)",
-      "org": "링세오코리아(주)",
-      "cat": "ship_recruit",
-      "deadline": "2026-12-06",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55301396&location=ts&searchword=%EC%84%A0%EB%B0%95+%EC%9D%B8%ED%84%B4%EC%8B%AD&searchType=search&paid_fl=n&search_uuid=1bf9e8a8-a1df-4566-af78-179f284d6bf1",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55440171&location=ts&searchword=%EC%84%A0%EB%B0%95+%EC%9D%B8%ED%84%B4%EC%8B%AD&searchType=search&paid_fl=n&search_uuid=420244a4-3fe5-4d26-b0b6-9159e4259260",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -2278,7 +2449,45 @@
       "org": "엠엔에스아이(주)",
       "cat": "ship_recruit",
       "deadline": "2026-12-06",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55434888&location=ts&searchword=%EC%84%A0%EB%B0%95+%EC%9D%B8%ED%84%B4%EC%8B%AD&searchType=search&paid_fl=n&search_uuid=1bf9e8a8-a1df-4566-af78-179f284d6bf1",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55434888&location=ts&searchword=%EC%84%A0%EB%B0%95+%EC%9D%B8%ED%84%B4%EC%8B%AD&searchType=search&paid_fl=n&search_uuid=420244a4-3fe5-4d26-b0b6-9159e4259260",
+      "src": "사람인",
+      "desc": "",
+      "tags": [
+        "채용",
+        "인턴"
+      ],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "c61e7c2700f6",
+      "title": "[잠실/극동전선] Shipboard팀 Sales Back Office (1년 계약)",
+      "org": "링세오코리아(주)",
+      "cat": "ship_recruit",
+      "deadline": "2026-12-06",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55301396&location=ts&searchword=%EC%84%A0%EB%B0%95+%EC%9D%B8%ED%84%B4%EC%8B%AD&searchType=search&paid_fl=n&search_uuid=420244a4-3fe5-4d26-b0b6-9159e4259260",
+      "src": "사람인",
+      "desc": "",
+      "tags": [
+        "채용",
+        "인턴"
+      ],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "6bd4569b4268",
+      "title": "(주)유니링크코리아 조선기자재 창고관리 납품 사원 채용 공고",
+      "org": "유니링크",
+      "cat": "ship_recruit",
+      "deadline": "2026-12-06",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55396720&location=ts&searchword=%EC%84%A0%EB%B0%95+%EC%9D%B8%ED%84%B4%EC%8B%AD&searchType=search&paid_fl=n&search_uuid=420244a4-3fe5-4d26-b0b6-9159e4259260",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -2297,7 +2506,7 @@
       "org": "대림엔지니어링",
       "cat": "ship_recruit",
       "deadline": "2026-12-06",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55222830&location=ts&searchword=%EC%84%A0%EB%B0%95+%EC%9D%B8%ED%84%B4%EC%8B%AD&searchType=search&paid_fl=n&search_uuid=1bf9e8a8-a1df-4566-af78-179f284d6bf1",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55222830&location=ts&searchword=%EC%84%A0%EB%B0%95+%EC%9D%B8%ED%84%B4%EC%8B%AD&searchType=search&paid_fl=n&search_uuid=420244a4-3fe5-4d26-b0b6-9159e4259260",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -2316,7 +2525,7 @@
       "org": "두산에너빌리티(주)",
       "cat": "ship_recruit",
       "deadline": "2026-12-06",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55329691&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=48493319-764e-4781-881f-a348648e8835",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55329691&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=dbed515d-6d29-4f41-a5d5-03ea06208797",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -2335,7 +2544,7 @@
       "org": "두산에너빌리티(주)",
       "cat": "ship_recruit",
       "deadline": "2026-12-06",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55412286&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=48493319-764e-4781-881f-a348648e8835",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55412286&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=dbed515d-6d29-4f41-a5d5-03ea06208797",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -2354,26 +2563,7 @@
       "org": "두산에너빌리티(주)",
       "cat": "ship_recruit",
       "deadline": "2026-12-06",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55364849&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=48493319-764e-4781-881f-a348648e8835",
-      "src": "사람인",
-      "desc": "",
-      "tags": [
-        "채용",
-        "인턴"
-      ],
-      "eligibility": {
-        "grade": "",
-        "gpa": "",
-        "note": ""
-      }
-    },
-    {
-      "id": "72764bd07587",
-      "title": "두산에너빌리티원자력발전소 기계분야 정비원 PJT계약직 채용",
-      "org": "두산에너빌리티(주)",
-      "cat": "ship_recruit",
-      "deadline": "2026-12-06",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55329698&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=48493319-764e-4781-881f-a348648e8835",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55364849&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=dbed515d-6d29-4f41-a5d5-03ea06208797",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -2392,7 +2582,7 @@
       "org": "두산에너빌리티(주)",
       "cat": "ship_recruit",
       "deadline": "2026-12-06",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55329703&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=48493319-764e-4781-881f-a348648e8835",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55329703&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=dbed515d-6d29-4f41-a5d5-03ea06208797",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -2406,50 +2596,12 @@
       }
     },
     {
-      "id": "918085924afa",
-      "title": "두산에너빌리티창원 / 사무보조 모집 (11/6 서류마감)",
-      "org": "(주)헬로서치",
+      "id": "72764bd07587",
+      "title": "두산에너빌리티원자력발전소 기계분야 정비원 PJT계약직 채용",
+      "org": "두산에너빌리티(주)",
       "cat": "ship_recruit",
       "deadline": "2026-12-06",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55473053&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=48493319-764e-4781-881f-a348648e8835",
-      "src": "사람인",
-      "desc": "",
-      "tags": [
-        "채용",
-        "인턴"
-      ],
-      "eligibility": {
-        "grade": "",
-        "gpa": "",
-        "note": ""
-      }
-    },
-    {
-      "id": "fa12ccbf198b",
-      "title": "(두산중공업 협력사) 풍력 품질관리 경력채용",
-      "org": "(주)유봉",
-      "cat": "ship_recruit",
-      "deadline": "2026-12-06",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55417918&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=48493319-764e-4781-881f-a348648e8835",
-      "src": "사람인",
-      "desc": "",
-      "tags": [
-        "채용",
-        "인턴"
-      ],
-      "eligibility": {
-        "grade": "",
-        "gpa": "",
-        "note": ""
-      }
-    },
-    {
-      "id": "4c13aa6b6dc6",
-      "title": "[대기업/분/워라밸우수]두산에너빌리티Top Team 비서 채용",
-      "org": "(주)어울림에이치알에스",
-      "cat": "ship_recruit",
-      "deadline": "2026-12-06",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55453019&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=48493319-764e-4781-881f-a348648e8835",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55329698&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=dbed515d-6d29-4f41-a5d5-03ea06208797",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -2468,7 +2620,7 @@
       "org": "(주)선인프라",
       "cat": "ship_recruit",
       "deadline": "2026-12-06",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55393853&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=48493319-764e-4781-881f-a348648e8835",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55393853&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=dbed515d-6d29-4f41-a5d5-03ea06208797",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -2482,12 +2634,50 @@
       }
     },
     {
-      "id": "085c86b00504",
-      "title": "[두산에너빌리티/분당] 설계보조 채용 (신입가능)",
-      "org": "(주)헬로서치",
+      "id": "fa12ccbf198b",
+      "title": "(두산중공업 협력사) 풍력 품질관리 경력채용",
+      "org": "(주)유봉",
       "cat": "ship_recruit",
       "deadline": "2026-12-06",
-      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55325029&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=48493319-764e-4781-881f-a348648e8835",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55417918&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=dbed515d-6d29-4f41-a5d5-03ea06208797",
+      "src": "사람인",
+      "desc": "",
+      "tags": [
+        "채용",
+        "인턴"
+      ],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "bf68274ababb",
+      "title": "26년도 정규직 신입사원 채용(사업관리 및 현장관리) / 4명",
+      "org": "(주)한중플랜트",
+      "cat": "ship_recruit",
+      "deadline": "2026-12-06",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55193356&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=dbed515d-6d29-4f41-a5d5-03ea06208797",
+      "src": "사람인",
+      "desc": "",
+      "tags": [
+        "채용",
+        "인턴"
+      ],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "5b24ebdd5782",
+      "title": "[2026년] 플랜트 엔지니어링 건축설계 경력직 모집(3차)",
+      "org": "(주)보성종합건축사사무소",
+      "cat": "ship_recruit",
+      "deadline": "2026-12-06",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55093744&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=dbed515d-6d29-4f41-a5d5-03ea06208797",
       "src": "사람인",
       "desc": "",
       "tags": [
@@ -2519,15 +2709,18 @@
       }
     },
     {
-      "id": "lk_362551",
-      "title": "[PROOF Lab] 겨울방학 6주 팀 프로젝트 멤버 모집 (웹 서비스 배포·데모데이)",
-      "org": "PROOF Lab",
-      "cat": "activity",
-      "deadline": "2026-12-19",
-      "url": "https://linkareer.com/activity/362551",
-      "src": "링커리어",
+      "id": "5a074bc7b0af",
+      "title": "[대협] 삼성중공업 현장관리 경력직 모집 공고",
+      "org": "(주)대협테크",
+      "cat": "ship_recruit",
+      "deadline": "2026-12-20",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55349733&location=ts&searchword=%EC%82%BC%EC%84%B1%EC%A4%91%EA%B3%B5%EC%97%85+%EC%B1%84%EC%9A%A9&searchType=search&paid_fl=n&search_uuid=4806fa5c-e253-49f9-b9e3-210b8a2bd631",
+      "src": "사람인",
       "desc": "",
-      "tags": [],
+      "tags": [
+        "채용",
+        "인턴"
+      ],
       "eligibility": {
         "grade": "",
         "gpa": "",
@@ -2535,31 +2728,18 @@
       }
     },
     {
-      "id": "lk_362549",
-      "title": "자격증 전문 스터디 《스펙업(SPECUP)》 2기 모집",
-      "org": "스펙업",
-      "cat": "activity",
-      "deadline": "2026-12-19",
-      "url": "https://linkareer.com/activity/362549",
-      "src": "링커리어",
-      "desc": "",
-      "tags": [],
-      "eligibility": {
-        "grade": "",
-        "gpa": "",
-        "note": ""
-      }
-    },
-    {
-      "id": "lk_362544",
-      "title": "▶콘텐츠 마케팅 <ConMA> 동아리원 모집◀",
-      "org": "콘텐츠 마케팅 동아리 <ConMA>",
-      "cat": "media",
+      "id": "baadb8162fe7",
+      "title": "[2026년 하반기] 플랜트 건축설계 엔지니어링 경력직 모집",
+      "org": "(주)영일엔지니어링",
+      "cat": "ship_recruit",
       "deadline": "2026-12-27",
-      "url": "https://linkareer.com/activity/362544",
-      "src": "링커리어",
+      "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55418234&location=ts&searchword=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0&searchType=search&paid_fl=n&search_uuid=dbed515d-6d29-4f41-a5d5-03ea06208797",
+      "src": "사람인",
       "desc": "",
-      "tags": [],
+      "tags": [
+        "채용",
+        "인턴"
+      ],
       "eligibility": {
         "grade": "",
         "gpa": "",
@@ -2599,92 +2779,12 @@
       }
     },
     {
-      "id": "lk_362546",
-      "title": "코딩스터디 Loop; 신입부원 모집",
-      "org": "코딩스터디 Loop;",
-      "cat": "activity",
-      "deadline": "2027-01-28",
-      "url": "https://linkareer.com/activity/362546",
-      "src": "링커리어",
-      "desc": "",
-      "tags": [],
-      "eligibility": {
-        "grade": "",
-        "gpa": "",
-        "note": ""
-      }
-    },
-    {
-      "id": "lk_362591",
-      "title": "아나운서•성우 체험 동아리 | 청음 |",
-      "org": "청음",
-      "cat": "activity",
-      "deadline": "2027-01-31",
-      "url": "https://linkareer.com/activity/362591",
-      "src": "링커리어",
-      "desc": "",
-      "tags": [],
-      "eligibility": {
-        "grade": "",
-        "gpa": "",
-        "note": ""
-      }
-    },
-    {
-      "id": "lk_362540",
-      "title": "< 엑셀런트 : 엑셀 스터디 동아리 >",
-      "org": "엑셀런트",
-      "cat": "activity",
-      "deadline": "2027-02-03",
-      "url": "https://linkareer.com/activity/362540",
-      "src": "링커리어",
-      "desc": "",
-      "tags": [],
-      "eligibility": {
-        "grade": "",
-        "gpa": "",
-        "note": ""
-      }
-    },
-    {
-      "id": "lk_362534",
-      "title": "스티치로그(Stitch Log) 모집",
-      "org": "스티치로그(Stitch Log) 모집",
-      "cat": "activity",
-      "deadline": "2027-02-03",
-      "url": "https://linkareer.com/activity/362534",
-      "src": "링커리어",
-      "desc": "",
-      "tags": [],
-      "eligibility": {
-        "grade": "",
-        "gpa": "",
-        "note": ""
-      }
-    },
-    {
-      "id": "lk_362526",
-      "title": "배드민턴 동아리 콕냥콕냥 인원모집",
-      "org": "콕냥콕냥",
-      "cat": "activity",
-      "deadline": "2027-02-03",
-      "url": "https://linkareer.com/activity/362526",
-      "src": "링커리어",
-      "desc": "",
-      "tags": [],
-      "eligibility": {
-        "grade": "",
-        "gpa": "",
-        "note": ""
-      }
-    },
-    {
-      "id": "lk_362525",
-      "title": "같이 방탈출 하실 <룸메이트> 인원 모집",
-      "org": "룸메이트",
-      "cat": "activity",
-      "deadline": "2027-02-03",
-      "url": "https://linkareer.com/activity/362525",
+      "id": "lk_362770",
+      "title": "[DUBU] Growth Marketing 인턴 모집",
+      "org": "주식회사 두부",
+      "cat": "corp",
+      "deadline": "2027-01-18",
+      "url": "https://linkareer.com/activity/362770",
       "src": "링커리어",
       "desc": "",
       "tags": [],
@@ -2743,12 +2843,12 @@
       }
     },
     {
-      "id": "lk_362497",
-      "title": "[Assistant] 안전보건센터 업무 보조",
-      "org": "카카오모빌리티",
-      "cat": "corp",
-      "deadline": "2027-02-03",
-      "url": "https://linkareer.com/activity/362497",
+      "id": "lk_362769",
+      "title": "마껭팀(Markkeng Team) 5기 크루 모집",
+      "org": "마껭팀(Markkeng Team) 5기 크루 모집",
+      "cat": "activity",
+      "deadline": "2027-02-04",
+      "url": "https://linkareer.com/activity/362769",
       "src": "링커리어",
       "desc": "",
       "tags": [],
@@ -2759,12 +2859,156 @@
       }
     },
     {
-      "id": "lk_362475",
-      "title": "[클래스101] [채용연계형인턴] 비즈니스 빌더(BD)",
-      "org": "클래스101",
-      "cat": "corp",
-      "deadline": "2027-02-03",
-      "url": "https://linkareer.com/activity/362475",
+      "id": "lk_362767",
+      "title": "독서 동아리 [ 도란도란 ] 3기",
+      "org": "독서 동아리 [ 도란도란 ] 3기",
+      "cat": "activity",
+      "deadline": "2027-02-04",
+      "url": "https://linkareer.com/activity/362767",
+      "src": "링커리어",
+      "desc": "",
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "lk_362759",
+      "title": "영어회화 동아리 SSG 4기 모집 - 생활영어/리스닝/회화의 완성!",
+      "org": "영어회화 동아리 SSG 4기 모집 - 생활영어/리스닝/회화의 완성!",
+      "cat": "activity",
+      "deadline": "2027-02-04",
+      "url": "https://linkareer.com/activity/362759",
+      "src": "링커리어",
+      "desc": "",
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "lk_362756",
+      "title": "[ 팝(Pop)니다 : 팝업제작 동아리 ] 26년도 4분기/27년도 1분기 프로젝트 팀원 모집",
+      "org": "팝(Pop)니다 : 팝업제작 동아리",
+      "cat": "activity",
+      "deadline": "2027-02-04",
+      "url": "https://linkareer.com/activity/362756",
+      "src": "링커리어",
+      "desc": "",
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "lk_362753",
+      "title": "에펙×프프 영상편집 스터디｜영상편집을낉여오너라",
+      "org": "영상편집을낉여오너라",
+      "cat": "media",
+      "deadline": "2027-02-04",
+      "url": "https://linkareer.com/activity/362753",
+      "src": "링커리어",
+      "desc": "",
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "lk_362752",
+      "title": "〈끌:림 | Move by Gravity〉4기 멤버 충원",
+      "org": "〈끌:림 | Move by Gravity〉4기 멤버 충원",
+      "cat": "activity",
+      "deadline": "2027-02-04",
+      "url": "https://linkareer.com/activity/362752",
+      "src": "링커리어",
+      "desc": "",
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "lk_362733",
+      "title": "Rewrite 4기 추가 모집 — 대학생 작문 동아리",
+      "org": "Rewrite",
+      "cat": "activity",
+      "deadline": "2027-02-04",
+      "url": "https://linkareer.com/activity/362733",
+      "src": "링커리어",
+      "desc": "",
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "lk_362693",
+      "title": "뽀짝팩토리 _DIY 취미 동아리 4기",
+      "org": "뽀짝팩토리",
+      "cat": "activity",
+      "deadline": "2027-02-04",
+      "url": "https://linkareer.com/activity/362693",
+      "src": "링커리어",
+      "desc": "",
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "lk_362672",
+      "title": "서울연합 클라이밍 동아리 클림업 6기 모집",
+      "org": "클라이밍 동아리 클림업",
+      "cat": "activity",
+      "deadline": "2027-02-04",
+      "url": "https://linkareer.com/activity/362672",
+      "src": "링커리어",
+      "desc": "",
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "lk_362668",
+      "title": "[기타는 샀는데] 어쿠스틱 기타 동아리 7기 신입부원 모집!",
+      "org": "[기타는 샀는데] 어쿠스틱 기타 동아리 7기 신입부원 모집!",
+      "cat": "activity",
+      "deadline": "2027-02-04",
+      "url": "https://linkareer.com/activity/362668",
+      "src": "링커리어",
+      "desc": "",
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "lk_362653",
+      "title": "대학연합 러닝 동아리 두런두런(Do Run! Do Run!) 신입 모집",
+      "org": "두런두런",
+      "cat": "activity",
+      "deadline": "2027-02-04",
+      "url": "https://linkareer.com/activity/362653",
       "src": "링커리어",
       "desc": "",
       "tags": [],
@@ -2791,44 +3035,12 @@
       }
     },
     {
-      "id": "lk_362639",
-      "title": "[영상편집 스터디] 모여봐요 편집의 숲 3기 모집",
-      "org": "모여봐요 편집의 숲",
+      "id": "lk_362738",
+      "title": "[더퓨어랩] 일본 퍼포먼스&콘텐츠 마케터 인턴 채용",
+      "org": "주식회사 더퓨어랩",
       "cat": "media",
       "deadline": "2027-02-04",
-      "url": "https://linkareer.com/activity/362639",
-      "src": "링커리어",
-      "desc": "",
-      "tags": [],
-      "eligibility": {
-        "grade": "",
-        "gpa": "",
-        "note": ""
-      }
-    },
-    {
-      "id": "lk_362563",
-      "title": "JPOP밴드 [YORU(夜) SOUND] 3기에 함께하실 부원들을 모집합니다",
-      "org": "[YORU(夜) SOUND 3기",
-      "cat": "activity",
-      "deadline": "2027-02-04",
-      "url": "https://linkareer.com/activity/362563",
-      "src": "링커리어",
-      "desc": "",
-      "tags": [],
-      "eligibility": {
-        "grade": "",
-        "gpa": "",
-        "note": ""
-      }
-    },
-    {
-      "id": "lk_362524",
-      "title": "• [인천] 20대 갓생 × 친목 크루 '월화수목금금금' 신입 모집",
-      "org": "월화수목금금금",
-      "cat": "activity",
-      "deadline": "2027-02-04",
-      "url": "https://linkareer.com/activity/362524",
+      "url": "https://linkareer.com/activity/362738",
       "src": "링커리어",
       "desc": "",
       "tags": [],
@@ -2909,6 +3121,22 @@
       "cat": "corp",
       "deadline": "2027-02-04",
       "url": "https://linkareer.com/activity/362660",
+      "src": "링커리어",
+      "desc": "",
+      "tags": [],
+      "eligibility": {
+        "grade": "",
+        "gpa": "",
+        "note": ""
+      }
+    },
+    {
+      "id": "lk_362675",
+      "title": "제6회 2026 청춘런",
+      "org": "런앤런",
+      "cat": "activity",
+      "deadline": "2027-02-20",
+      "url": "https://linkareer.com/activity/362675",
       "src": "링커리어",
       "desc": "",
       "tags": [],
